@@ -9,7 +9,7 @@ Installing the Credimus site requires several steps:
 - Configure Viva Connections
 - Configure the Credimus site
 
-![Credimus Home Page](./media/instructions-credimus/credimus-home-page.jpg)
+![Credimus Home Page](./media/credimus-home-page.jpg)
 
 These installation instructions are streamlined as much as possible, with the goal to get you from start to finish as quickly as possible. If you encounter a topic with which you are not familiar, the instructions link out to Microsoft Learn articles with more specifics.
 
@@ -87,17 +87,17 @@ Once you have the Brand Colors defined, you use them to set up a theme. For deta
 
 First, you add the colors to the theme. Add the colors in the order listed above.
 
-![](./media/instructions-credimus/credimus-add-theme-colors.jpg)
+![](./media/credimus-add-theme-colors.jpg)
 
 #### Name the theme
 
 Next, give the theme the name *Credimus.Theme*, and save.
-![](./media/instructions-credimus/credimus-name-theme.jpg)
+![](./media/credimus-name-theme.jpg)
 
 #### Review the theme
 
 Finally, the theme should look like this is you have set it up correctly.
-![](./media/instructions-credimus/credimus-view-theme.jpg)
+![](./media/credimus-view-theme.jpg)
 
 ### Upload fonts
 
@@ -119,22 +119,22 @@ Font Packages combine sets of fonts for use in a site which has the Font Package
 
 #### Choose your fonts
 
-![](./media/instructions-credimus/credimus-choose-your-fonts.jpg)
+![](./media/credimus-choose-your-fonts.jpg)
 
 
 #### Assign your fonts
 
-![](./media/instructions-credimus/credimus-assign-your-fonts.jpg)
+![](./media/credimus-assign-your-fonts.jpg)
 
 #### Give your package a name
 
-![](./media/instructions-credimus/credimus-give-your-package-a-name.jpg)
+![](./media/credimus-give-your-package-a-name.jpg)
 
 ### Review font package
 
 Review the settings to ensure you have created the Font Package correctly.
 
-![](./media/instructions-credimus/credimus-review-font-package.jpg)
+![](./media/credimus-review-font-package.jpg)
 
 
 
@@ -156,13 +156,13 @@ Go  to the gear, and Select Change the look.
 
 Select Theme and choose the Credimus.Theme and Save.
 
-![Apply Credimus Theme](./media/instructions-credimus/credimus-set-theme.jpg)
+![Apply Credimus Theme](./media/credimus-set-theme.jpg)
 
 #### Apply Font Package
 
 Enable the Font Package you created above under Fonts.
 
-![Apply Credimus Font Package](./media/instructions-credimus/credimus-apply-font-package.jpg)
+![Apply Credimus Font Package](./media/credimus-apply-font-package.jpg)
 
 
 #### Change Header settings
@@ -175,8 +175,8 @@ For this site, the Header settings should be as follows:
 | Design | Image | CredimusHeader.png |
 | Design | Overlay opacity | 19 |
 | Design | Site title visibility | Off |
-| Design | Site logo thumbnail | CredimusLogoThumbnail.png |
-| Design | Site logo | CredimusLogo.png |
+| Design | Site logo thumbnail | CredimusSiteLogoThumbnail.png |
+| Design | Site logo | CredimusSiteLogo.png |
 | | | |
 
 The images can be found in the *Header Images* folder.
