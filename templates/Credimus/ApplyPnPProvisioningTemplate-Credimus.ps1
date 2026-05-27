@@ -7,10 +7,11 @@
 # Load PnP.PowerShell, if it isn't already
 Import-Module PnP.PowerShell -Force
 
-# Set variables
+# Set variables - CHANGE THESE TO MATCH YOUR ENVIRONMENT
 $tenant = "spex003" # Your tenant name, without the .onmicrosoft.com or .com suffix
 $clientId = "be3b2a30-ea14-4707-adeb-3adb1a77beea" # The App Id from your App Registration for PnP.PowerShell
 $siteUrl = "MARCTEST1" # The URL name for the site you want to create.
+# Set variables - STOP HERE
 
 
 # Calculated variables
@@ -61,7 +62,7 @@ $depts = Import-Csv -Path "./templates/Credimus/PnPProvisioning/SitePagesLibrary
 foreach ($page in $sitePages) {
     $dept = ($depts | Where-Object { $_.Title -eq $page.FieldValues['Title'] }).Department
     if (!$dept) {
-        Write-Host -BackgroundColor Red "No Department value found for page '$($page.FieldValues['Title'])' in CSV. Skipping..."
+        #Write-Host -BackgroundColor Red "No Department value found for page '$($page.FieldValues['Title'])' in CSV. Skipping..."
         continue
     }
     else {
@@ -70,3 +71,6 @@ foreach ($page in $sitePages) {
         $pubItem = Set-PnPPage -Connection $newSiteConnection -Identity $newItem.FieldValues["FileLeafRef"] -Publish
     }
 }
+
+
+Write-Host -BackgroundColor Cyan "Provisioning complete for site at $destinationUrl"

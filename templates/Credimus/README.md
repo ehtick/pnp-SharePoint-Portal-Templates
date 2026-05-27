@@ -39,25 +39,13 @@ We recommend you extract the ZIP file into a folder in the root of your machine,
 
 ## Apply PnP Provisioning template
 
-A PowerShell script M365lpConfiguration.ps1 is included that you will need to execute to create three tenant properties that the solution uses. In addition, the script creates two single part app pages in the site pages library to host the admin and user web parts at a known location. This script was built to use PnP PowerShell. Ensure that you can run basic commands and connect before running the Learning Pathways installation script.
-
-The base definition for the site is contained the a PnP Provisioning export file. This file can be found in the folder *PnP Provisioning*, and is named *PnP-Provisioning-CredimusSite.pnp*.
+The base definition for the site is contained the a PnP Provisioning template file. This file can be found in the folder *PnP Provisioning*, and is named *PnP-Provisioning-CredimusSite - RAW.pnp*.
 
 The script *ApplyPnPProvisioningTemplate-Credimus.ps1* applies the PnP Provisioning template to the site you have created above. The template contains information about the lists and libraries, pages, and images contained in the site.
 
-The script also uploads some additional files to the site which cannot be contained in the PnP Provisioning template for technical reasons.
+The script also performs some additional configuration which cannot be contained in the PnP Provisioning template for technical reasons.
 
-To run the script, open it in Visual Studio Code
-
-[[More details!]]
-
-## Run some PowerShell to get additional "stuff" in place [e.g., automate what we feel we can]
-
-### Upload additional files (not contained in the template)
-
-### Change additional settings
-
-
+To run the script, you will need to update the variables at the top of the script to reflect your tenant and site information. Then, you can run the script. For detailed instructions, see [Apply a provisioning template](https://learn.microsoft.com/sharepoint/apply-provisioning-template).
 
 ## Configure Brand Center
 
