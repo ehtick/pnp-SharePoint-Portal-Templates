@@ -1,2 +1,2 @@
-# SharePoint-Portal-Templates
+# SharePoint Portal Templates
 Site templates used as demos
