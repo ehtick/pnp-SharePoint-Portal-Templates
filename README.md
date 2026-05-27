@@ -5,13 +5,10 @@ Site templates used as demos
 
 This repo contains portal demo sites. The sites are built using PnP Provisioning templates, which allow us to create a site with a specific configuration and content in a repeatable way. The templates are applied using PowerShell scripts, which also perform some additional configuration tasks that cannot be contained in the template for technical reasons.
 
-Each site can be installed in your tenant independently, so you can choose to install one or both. The instructions for each site are in their respective INSTRUCTIONS file.
+Each site can be installed in your tenant independently, so you can choose to install one or both. The instructions for each site are in their respective README file.
 
-[Credimus](./templates/Credimus/README.md) is a demo site for a financial services company
-
-[Solbound](./templates/Solbound/README.md) is a demo site for a manufacturing company
-
-
+- [Credimus](./templates/Credimus/README.md) is a demo site for a financial services company
+- [Solbound](./templates/Solbound/README.md) is a demo site for a solar installation company
 
 ## Author(s)
 - Julie Turner (Sympraxis Consulting) - @jfj1997
