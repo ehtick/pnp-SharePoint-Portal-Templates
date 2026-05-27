@@ -186,7 +186,7 @@ The images can be found in the *Header Images* folder.
 
 #### Add dashboard actions
 
-In the home page of the site, find the Dashboard Web Part. If you'd like to match the ACES you'vve seen in the demo site, you can set them up following the instructions in the following table. If you'd like to customize oit for your organization, you may choose to add ACES which reflect that thinking.
+In the home page of the site, find the Dashboard Web Part. If you'd like to match the ACES you'vve seen in the demo site, you can set them up following the instructions in the following table. If you'd like to customize it for your organization, you may choose to add ACES which reflect that thinking.
 
 | Link Name | Link Settings |
 |---|---|

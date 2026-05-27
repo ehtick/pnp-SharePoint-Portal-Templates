@@ -7,9 +7,9 @@ This repo contains portal demo sites. The sites are built using PnP Provisioning
 
 Each site can be installed in your tenant independently, so you can choose to install one or both. The instructions for each site are in their respective INSTRUCTIONS file.
 
-[Credimus](./Templates/Credimus/README.md) is a demo site for a financial services company
+[Credimus](./templates/Credimus/README.md) is a demo site for a financial services company
 
-[Solbound](./Templates/Solbound/README.md) is a demo site for a manufacturing company
+[Solbound](./templates/Solbound/README.md) is a demo site for a manufacturing company
 
 
 
