@@ -55,6 +55,7 @@ Set-PnPWebHeader -Connection $newSiteConnection `
     -HeaderBackgroundImageUrl "/sites/$siteUrl/SiteAssets/__extendedHeaderBackgroundImage__DEFAULT_CHROME_BG_IMAGE_NAME.png" `
     -SiteThumbnailUrl "/sites/$siteUrl/SiteAssets/__sitelogo__credimus-icon@2x.png" `
     -SiteLogoUrl "/sites/$siteUrl/SiteAssets/__rectSitelogo__credimus-full@2x.png"
+Set-PnPWeb -Connection $newSiteConnection -HideTitleInHeader
     
 # Update Site Pages library to add Department values
 $sitePages = Get-PnPListItem -Connection $newSiteConnection -List "Site Pages" -Fields "Id", "Title"

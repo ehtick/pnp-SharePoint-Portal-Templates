@@ -53,10 +53,10 @@ Write-Host -BackgroundColor Cyan "Performing additional configuration for site a
 # Set site header background image and other settings
 Set-PnPWebHeader -Connection $newSiteConnection `
     -HeaderLayout Extended `
-    -HeaderBackgroundImageUrl "/sites/$siteUrl/SiteAssets/__extendedHeaderBackgroundImage____extendedHeaderBackgroundImage__DEFAULT_CHROME_BG_IMAGE_NAME" `
-    -SiteThumbnailUrl "/sites/$siteUrl/SiteAssets/__rectSitelogo__solbound-logo" `
+    -HeaderBackgroundImageUrl "/sites/$siteUrl/SiteAssets/__extendedHeaderBackgroundImage__DEFAULT_CHROME_BG_IMAGE_NAME.png" `
+    -SiteThumbnailUrl "/sites/$siteUrl/SiteAssets/__rectSitelogo__solbound-logo.png" `
     -SiteLogoUrl "/sites/$siteUrl/SiteAssets/__sitelogo__solbound-logo.png"
-    
+Set-PnPWeb -Connection $newSiteConnection -HideTitleInHeader
 
 Write-Host -BackgroundColor Cyan "Provisioning complete for site at $destinationUrl"
 #endregion
