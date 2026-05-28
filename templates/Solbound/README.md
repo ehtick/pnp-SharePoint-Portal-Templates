@@ -65,10 +65,10 @@ For this site, you should add the following colors into your Brand Colors. Each 
 
 | Color Name | Color Code | Color |
 |---|---|---|
-| Solbound.Yellow | [#FAE300](https://placehold.co/30x30/FAE300/FAE300.png) | <span style="display:inline-block; width:20px; height:20px; background-color:#FAE300; border:1px solid #000;"></span> |
-| Solbound.Blue | [#0B1F2A](https://placehold.co/30x30/0B1F2A/0B1F2A.png) | <span style="display:inline-block; width:20px; height:20px; background-color:#0B1F2A; border:1px solid #000;"></span> |
-| Solbound.Orange | [#E8441A](https://placehold.co/30x30/E8441A/E8441A.png) | <span style="display:inline-block; width:20px; height:20px; background-color:#E8441A; border:1px solid #000;"></span> |
-| Solbound.Neutral | [#F2F2F2](https://placehold.co/30x30/F2F2F2/F2F2F2.png) | <span style="display:inline-block; width:20px; height:20px; background-color:#F2F2F2; border:1px solid #000;"></span> |
+| Solbound.Yellow | #FAE300 | ![#FAE300](https://placehold.co/30x30/FAE300/FAE300.png) |
+| Solbound.Blue | #0B1F2A | ![#0B1F2A](https://placehold.co/30x30/0B1F2A/0B1F2A.png) | 
+| Solbound.Orange | #E8441A | ![#E8441A](https://placehold.co/30x30/E8441A/E8441A.png) |
+| Solbound.Neutral | #F2F2F2 | ![#F2F2F2](https://placehold.co/30x30/F2F2F2/F2F2F2.png) | 
 | | |
 
 ### Set up theme
