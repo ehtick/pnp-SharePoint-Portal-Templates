@@ -1,2 +1,22 @@
 # SharePoint Portal Templates
 Site templates used as demos
+
+## Overview
+
+This repo contains portal demo sites. The sites are built using PnP Provisioning templates, which allow us to create a site with a specific configuration and content in a repeatable way. The templates are applied using PowerShell scripts, which also perform some additional configuration tasks that cannot be contained in the template for technical reasons.
+
+Each site can be installed in your tenant independently, so you can choose to install one or both. The instructions for each site are in their respective README file.
+
+- [Credimus](./templates/Credimus/README.md) is a demo site for a financial services company
+- [Solbound](./templates/Solbound/README.md) is a demo site for a solar installation company
+
+## Author(s)
+- Julie Turner (Sympraxis Consulting) - @jfj1997
+- Stefan Bauer (N8D) - @stfbauer
+- Marc D Anderson (Sympraxis Consulting) - @sympmarc
+
+## Disclaimer
+THIS CODE IS PROVIDED AS IS WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING ANY IMPLIED WARRANTIES OF FITNESS FOR A PARTICULAR PURPOSE, MERCHANTABILITY, OR NON-INFRINGEMENT.
+
+## Change Log
+For a list of issues/updates made in each release see the [CHANGELOG](./CHANGELOG.md).
