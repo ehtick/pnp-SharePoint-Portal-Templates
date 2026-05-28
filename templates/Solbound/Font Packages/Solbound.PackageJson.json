@@ -1,0 +1,37 @@
+﻿{
+    "fontFaces": [
+        {
+            "fontFamily": "Exo 2-724698146",
+            "path": "Exo2-Black.woff2",
+            "fontType": "displayFont"
+        },
+        {
+            "fontFamily": "Exo 2-851868182",
+            "path": "Exo2-ExtraBold.woff2",
+            "fontType": "displayFont"
+        },
+        {
+            "fontFamily": "Barlow-1829961169",
+            "path": "Barlow-Medium.woff2",
+            "fontType": "contentFont"
+        }
+    ],
+    "fontSlots": {
+        "title": {
+            "fontFamily": "Exo 2-724698146",
+            "fontFace": "Black"
+        },
+        "heading": {
+            "fontFamily": "Exo 2-851868182",
+            "fontFace": "ExtraBold"
+        },
+        "body": {
+            "fontFamily": "Barlow-1829961169",
+            "fontFace": "Medium"
+        },
+        "label": {
+            "fontFamily": "Exo 2-851868182",
+            "fontFace": "ExtraBold"
+        }
+    }
+}

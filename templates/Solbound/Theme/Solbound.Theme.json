@@ -1,0 +1,34 @@
+﻿{
+    "Name": "Solbound.Theme",
+    "Palette": null,
+    "ColorPairs": {
+        "light": [
+            {
+                "accentColor": "#0B1F2A",
+                "backgroundColor": "#F2F2F2"
+            },
+            {
+                "accentColor": "#F2F2F2",
+                "backgroundColor": "#0B1F2A"
+            },
+            {
+                "accentColor": "#0B1F2A",
+                "backgroundColor": "#FAE300"
+            },
+            {
+                "accentColor": "#FAE300",
+                "backgroundColor": "#0B1F2A"
+            },
+            {
+                "accentColor": "#E8441A",
+                "backgroundColor": "#F2F2F2"
+            },
+            {
+                "accentColor": "#F2F2F2",
+                "backgroundColor": "#E8441A"
+            }
+        ]
+    },
+    "IsInverted": false,
+    "Editable": true
+}
