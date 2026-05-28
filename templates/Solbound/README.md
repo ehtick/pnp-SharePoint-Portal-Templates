@@ -65,10 +65,10 @@ For this site, you should add the following colors into your Brand Colors. Each 
 
 | Color Name | Color Code | Color |
 |---|---|---|
-| Solbound.DarkTeal | #022C22 | <span style="display:inline-block; width:20px; height:20px; background-color:#022C22; border:1px solid #000;"></span> |
-| Solbound.DeepEmerald | #059669 | <span style="display:inline-block; width:20px; height:20px; background-color:#059669; border:1px solid #000;"></span> |
-| Solbound.CyanEdge | #06B6D4 | <span style="display:inline-block; width:20px; height:20px; background-color:#06B6D4; border:1px solid #000;"></span> |
-| Solbound.Carbon | #0A0F0D | <span style="display:inline-block; width:20px; height:20px; background-color:#0A0F0D; border:1px solid #000;"></span> |
+| Solbound.Yellow | [#FAE300](https://placehold.co/30x30/FAE300/FAE300.png) | <span style="display:inline-block; width:20px; height:20px; background-color:#FAE300; border:1px solid #000;"></span> |
+| Solbound.Blue | [#0B1F2A](https://placehold.co/30x30/0B1F2A/0B1F2A.png) | <span style="display:inline-block; width:20px; height:20px; background-color:#0B1F2A; border:1px solid #000;"></span> |
+| Solbound.Orange | [#E8441A](https://placehold.co/30x30/E8441A/E8441A.png) | <span style="display:inline-block; width:20px; height:20px; background-color:#E8441A; border:1px solid #000;"></span> |
+| Solbound.Neutral | [#F2F2F2](https://placehold.co/30x30/F2F2F2/F2F2F2.png) | <span style="display:inline-block; width:20px; height:20px; background-color:#F2F2F2; border:1px solid #000;"></span> |
 | | |
 
 ### Set up theme
