@@ -31,6 +31,8 @@ Throughout the rest of these instructions, you will be either making changes to 
 
 ### Download ZIP file
 
+Download the [Credimus ZIP file](./Credimus.zip). This ZIP file contains all the necessary files to apply the PnP Provisioning template, as well as the images and fonts used in the site.
+
 ### Extract all files in ZIP file
 
 >Note: The ZIP file contains additional files, should you want to automate more of the implementation. These files can also be used as documentation for the process, in addition to these instructions.
@@ -46,6 +48,8 @@ The script *ApplyPnPProvisioningTemplate-Credimus.ps1* applies the PnP Provision
 The script also performs some additional configuration which cannot be contained in the PnP Provisioning template for technical reasons.
 
 To run the script, you will need to update the variables at the top of the script to reflect your tenant and site information. Then, you can run the script. For detailed instructions, see [Apply a provisioning template](https://learn.microsoft.com/sharepoint/apply-provisioning-template).
+
+You will be asked to log in with your credentials twice, once to connect to the SharePoint Admin Center to ensure the site you specified exists, and a second time to connect to that site. Then the script will run through several steps, applying the template and making the additional configurations.
 
 ## Configure Brand Center
 
