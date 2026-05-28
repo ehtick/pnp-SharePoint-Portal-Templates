@@ -1,19 +1,22 @@
 # Requirements:
-# PowerShell 7.x
-# PnP.PowerShell module
-# PnP.PowerShell App Registration
-# Global Admin or SharePoint Admin permissions
+#   PowerShell 7.x
+#   PnP.PowerShell module
+#   PnP.PowerShell App Registration
+#   Global Admin or SharePoint Admin permissions
 
+#region Setup
 # Load PnP.PowerShell, if it isn't already
 Import-Module PnP.PowerShell -Force
+#endregion
 
+#region Variables
 # Set variables - CHANGE THESE TO MATCH YOUR ENVIRONMENT
 $tenant = "spex003" # Your tenant name, without the .onmicrosoft.com or .com suffix
 $clientId = "be3b2a30-ea14-4707-adeb-3adb1a77beea" # The App Id from your App Registration for PnP.PowerShell
 $siteUrl = "MARCTEST1" # The URL name for the site you want to create.
-# Set variables - STOP HERE
+#endregion
 
-
+#region Connections
 # Calculated variables
 $adminUrl = "https://$($tenant)-admin.sharepoint.com/"
 $destinationUrl = "https://$($tenant).sharepoint.com/sites/$($siteUrl)"
@@ -31,16 +34,19 @@ else {
 }
 
 $newSiteConnection = Connect-PnPOnline -ClientId $clientId -Url $destinationUrl -Interactive -ReturnConnection
+#endregion
 
+#region Apply PnP Template
 Write-Host -BackgroundColor Cyan "Applying PnP Provisioning Template to site at $destinationUrl..."
 
 # Apply PnP Template
 Invoke-PnPSiteTemplate `
     -Connection $newSiteConnection `
     -Path "./templates/Credimus/PnPProvisioning/PnP-Provisioning-CredimusSite - RAW.pnp"
+#endregion
 
-
-# Additional configuration that can't be done in the template for technical reasons
+#region Additional configuration
+#### Additional configuration that can't be done in the template for technical reasons ####
 Write-Host -BackgroundColor Cyan "Performing additional configuration for site at $destinationUrl..."
 
 # Set site header background image and other settings
@@ -74,3 +80,4 @@ foreach ($page in $sitePages) {
 
 
 Write-Host -BackgroundColor Cyan "Provisioning complete for site at $destinationUrl"
+#endregion
