@@ -876,78 +876,6 @@
           </pnp:Views>
           <pnp:Fields>
             <Field Type="Note" DisplayName="Image Tags_0" StaticName="lcf76f155ced4ddcb4097134ff3c332f" Name="lcf76f155ced4ddcb4097134ff3c332f" ID="{7c51d632-27e0-f6f7-a5d6-ed67b68bd369}" ShowInViewForms="FALSE" Required="FALSE" Hidden="TRUE" CanToggleHidden="TRUE" ColName="ntext8" RowOrdinal="0" />
-            <Field Type="TaxonomyFieldTypeMulti" DisplayName="Image Tags" ID="{5cf76f15-5ced-4ddc-b409-7134ff3c332f}" Name="MediaServiceImageTags" List="{listid:TaxonomyHiddenList}" WebId="{siteid}" ShowField="Term1033" SourceID="{{listid:Site Assets}}" StaticName="MediaServiceImageTags" ColName="int1" RowOrdinal="0" Version="2" Group="_Hidden" CustomFormatter="" Description="Field created by MediaTA" EnforceUniqueValues="FALSE" Hidden="FALSE" CanToggleHidden="TRUE" Indexed="FALSE" ReadOnly="FALSE" Required="FALSE" Mult="TRUE" Sortable="FALSE">
-              <Customization>
-                <ArrayOfProperty>
-                  <Property>
-                    <Name>SspId</Name>
-                    <Value xmlns:q1="http://www.w3.org/2001/XMLSchema" p4:type="q1:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">{sitecollectiontermstoreid}</Value>
-                  </Property>
-                  <Property>
-                    <Name>GroupId</Name>
-                  </Property>
-                  <Property>
-                    <Name>TermSetId</Name>
-                    <Value xmlns:q2="http://www.w3.org/2001/XMLSchema" p4:type="q2:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">{termsetid:System:Image Tags}</Value>
-                  </Property>
-                  <Property>
-                    <Name>AnchorId</Name>
-                    <Value xmlns:q3="http://www.w3.org/2001/XMLSchema" p4:type="q3:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">fba54fb3-c3e1-fe81-a776-ca4b69148c4d</Value>
-                  </Property>
-                  <Property>
-                    <Name>UserCreated</Name>
-                    <Value xmlns:q4="http://www.w3.org/2001/XMLSchema" p4:type="q4:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">false</Value>
-                  </Property>
-                  <Property>
-                    <Name>Open</Name>
-                    <Value xmlns:q5="http://www.w3.org/2001/XMLSchema" p4:type="q5:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">true</Value>
-                  </Property>
-                  <Property>
-                    <Name>TextField</Name>
-                    <Value xmlns:q6="http://www.w3.org/2001/XMLSchema" p4:type="q6:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">{7c51d632-27e0-f6f7-a5d6-ed67b68bd369}</Value>
-                  </Property>
-                  <Property>
-                    <Name>IsPathRendered</Name>
-                    <Value xmlns:q7="http://www.w3.org/2001/XMLSchema" p4:type="q7:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">false</Value>
-                  </Property>
-                  <Property>
-                    <Name>IsKeyword</Name>
-                    <Value xmlns:q8="http://www.w3.org/2001/XMLSchema" p4:type="q8:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">false</Value>
-                  </Property>
-                  <Property>
-                    <Name>TargetTemplate</Name>
-                  </Property>
-                  <Property>
-                    <Name>CreateValuesInEditForm</Name>
-                    <Value xmlns:q9="http://www.w3.org/2001/XMLSchema" p4:type="q9:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">true</Value>
-                  </Property>
-                  <Property>
-                    <Name>IsDocTagsEnabled</Name>
-                    <Value xmlns:q10="http://www.w3.org/2001/XMLSchema" p4:type="q10:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">false</Value>
-                  </Property>
-                  <Property>
-                    <Name>IsEnhancedImageTaggingEnabled</Name>
-                    <Value xmlns:q11="http://www.w3.org/2001/XMLSchema" p4:type="q11:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">false</Value>
-                  </Property>
-                  <Property>
-                    <Name>FilterAssemblyStrongName</Name>
-                    <Value xmlns:q12="http://www.w3.org/2001/XMLSchema" p4:type="q12:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">Microsoft.SharePoint.Taxonomy, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Value>
-                  </Property>
-                  <Property>
-                    <Name>FilterClassName</Name>
-                    <Value xmlns:q13="http://www.w3.org/2001/XMLSchema" p4:type="q13:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">Microsoft.SharePoint.Taxonomy.TaxonomyField</Value>
-                  </Property>
-                  <Property>
-                    <Name>FilterMethodName</Name>
-                    <Value xmlns:q14="http://www.w3.org/2001/XMLSchema" p4:type="q14:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">GetFilteringHtml</Value>
-                  </Property>
-                  <Property>
-                    <Name>FilterJavascriptProperty</Name>
-                    <Value xmlns:q15="http://www.w3.org/2001/XMLSchema" p4:type="q15:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">FilteringJavascript</Value>
-                  </Property>
-                </ArrayOfProperty>
-              </Customization>
-            </Field>
             <Field ID="{67aff0cf-8e19-43f2-9987-be89075e1467}" Type="Note" DisplayName="Extracted Text" Name="MediaServiceOCR" Group="_Hidden" Hidden="FALSE" Indexed="FALSE" Sealed="TRUE" ReadOnly="TRUE" ShowInNewForm="FALSE" ShowInDisplayForm="FALSE" ShowInEditForm="FALSE" ShowInListSettings="FALSE" Viewable="FALSE" Json="TRUE" SourceID="{907c478a-cf6b-4de9-90b0-b4f22bd27814}" StaticName="MediaServiceOCR" ColName="ntext9" RowOrdinal="0" />
             <Field ID="{3881510a-4e4a-4ee8-b102-8ee8e2d0dd4b}" ColName="tp_CheckoutUserId" RowOrdinal="0" ReadOnly="TRUE" Type="User" List="UserInfo" Name="CheckoutUser" DisplaceOnUpgrade="TRUE" DisplayName="Checked Out To" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="CheckoutUser" FromBaseType="TRUE" />
           </pnp:Fields>
@@ -1332,7 +1260,6 @@
           <pnp:Properties>
             <pnp:Property Key="ContentTypeId" Value="0x010100A982196F808F47428BB675BB5FCE9379" />
             <pnp:Property Key="FileLeafRef" Value="2217331093-solar-panel-1308944675.jpg" />
-            <pnp:Property Key="MediaServiceImageTags" Value="outdoor|ffffffff-ffff-ffff-ffff-fffffffff006" />
             <pnp:Property Key="lcf76f155ced4ddcb4097134ff3c332f" Value="outdoor|ffffffff-ffff-ffff-ffff-fffffffff006" />
             <pnp:Property Key="TaxCatchAll" Value="1" />
             <pnp:Property Key="Order" Value="300" />
@@ -1349,7 +1276,6 @@
           <pnp:Properties>
             <pnp:Property Key="ContentTypeId" Value="0x010100A982196F808F47428BB675BB5FCE9379" />
             <pnp:Property Key="FileLeafRef" Value="shape-485992886-1771834104361.png" />
-            <pnp:Property Key="MediaServiceImageTags" Value="outdoor|ffffffff-ffff-ffff-ffff-fffffffff006;person|ffffffff-ffff-ffff-ffff-ffffffffef3c" />
             <pnp:Property Key="lcf76f155ced4ddcb4097134ff3c332f" Value="outdoor|ffffffff-ffff-ffff-ffff-fffffffff006;person|ffffffff-ffff-ffff-ffff-ffffffffef3c" />
             <pnp:Property Key="TaxCatchAll" Value="2,1" />
             <pnp:Property Key="Order" Value="500" />
@@ -1359,7 +1285,6 @@
           <pnp:Properties>
             <pnp:Property Key="ContentTypeId" Value="0x010100A982196F808F47428BB675BB5FCE9379" />
             <pnp:Property Key="FileLeafRef" Value="shape-585085250-1771834526782.png" />
-            <pnp:Property Key="MediaServiceImageTags" Value="outdoor|ffffffff-ffff-ffff-ffff-fffffffff006" />
             <pnp:Property Key="lcf76f155ced4ddcb4097134ff3c332f" Value="outdoor|ffffffff-ffff-ffff-ffff-fffffffff006" />
             <pnp:Property Key="TaxCatchAll" Value="1" />
             <pnp:Property Key="Order" Value="600" />
@@ -1376,7 +1301,6 @@
           <pnp:Properties>
             <pnp:Property Key="ContentTypeId" Value="0x010100A982196F808F47428BB675BB5FCE9379" />
             <pnp:Property Key="FileLeafRef" Value="__extendedHeaderBackgroundImage__DEFAULT_CHROME_BG_IMAGE_NAME.png" />
-            <pnp:Property Key="MediaServiceImageTags" Value="outdoor|ffffffff-ffff-ffff-ffff-fffffffff006" />
             <pnp:Property Key="lcf76f155ced4ddcb4097134ff3c332f" Value="outdoor|ffffffff-ffff-ffff-ffff-fffffffff006" />
             <pnp:Property Key="TaxCatchAll" Value="1" />
             <pnp:Property Key="Order" Value="800" />
@@ -1393,7 +1317,6 @@
           <pnp:Properties>
             <pnp:Property Key="ContentTypeId" Value="0x010100A982196F808F47428BB675BB5FCE9379" />
             <pnp:Property Key="FileLeafRef" Value="2397539460-Firefly_Gemini-Flash_Generate-an-clean--young-hipster--isolated-femaie--multi-reacial-construction-worker--89866.png" />
-            <pnp:Property Key="MediaServiceImageTags" Value="person|ffffffff-ffff-ffff-ffff-ffffffffef3c" />
             <pnp:Property Key="lcf76f155ced4ddcb4097134ff3c332f" Value="person|ffffffff-ffff-ffff-ffff-ffffffffef3c" />
             <pnp:Property Key="TaxCatchAll" Value="2" />
             <pnp:Property Key="Order" Value="1000" />
@@ -1403,7 +1326,6 @@
           <pnp:Properties>
             <pnp:Property Key="ContentTypeId" Value="0x010100A982196F808F47428BB675BB5FCE9379" />
             <pnp:Property Key="FileLeafRef" Value="2241207486-Firefly_Gemini-Flash_make-background-transparent-750123.png" />
-            <pnp:Property Key="MediaServiceImageTags" Value="person|ffffffff-ffff-ffff-ffff-ffffffffef3c" />
             <pnp:Property Key="lcf76f155ced4ddcb4097134ff3c332f" Value="person|ffffffff-ffff-ffff-ffff-ffffffffef3c" />
             <pnp:Property Key="TaxCatchAll" Value="2" />
             <pnp:Property Key="Order" Value="1100" />
@@ -1413,7 +1335,6 @@
           <pnp:Properties>
             <pnp:Property Key="ContentTypeId" Value="0x010100A982196F808F47428BB675BB5FCE9379" />
             <pnp:Property Key="FileLeafRef" Value="4144475787-Firefly_Gemini-Flash_make-background-transparent-750123.png" />
-            <pnp:Property Key="MediaServiceImageTags" Value="person|ffffffff-ffff-ffff-ffff-ffffffffef3c" />
             <pnp:Property Key="lcf76f155ced4ddcb4097134ff3c332f" Value="person|ffffffff-ffff-ffff-ffff-ffffffffef3c" />
             <pnp:Property Key="TaxCatchAll" Value="2" />
             <pnp:Property Key="Order" Value="1200" />
@@ -1423,7 +1344,6 @@
           <pnp:Properties>
             <pnp:Property Key="ContentTypeId" Value="0x010100A982196F808F47428BB675BB5FCE9379" />
             <pnp:Property Key="FileLeafRef" Value="3583759614-woman-w-solar-panel.png" />
-            <pnp:Property Key="MediaServiceImageTags" Value="person|ffffffff-ffff-ffff-ffff-ffffffffef3c" />
             <pnp:Property Key="lcf76f155ced4ddcb4097134ff3c332f" Value="person|ffffffff-ffff-ffff-ffff-ffffffffef3c" />
             <pnp:Property Key="TaxCatchAll" Value="2" />
             <pnp:Property Key="Order" Value="1300" />
@@ -1433,7 +1353,6 @@
           <pnp:Properties>
             <pnp:Property Key="ContentTypeId" Value="0x010100A982196F808F47428BB675BB5FCE9379" />
             <pnp:Property Key="FileLeafRef" Value="3583759614-woman-w-solar-panel_1771923885501.png" />
-            <pnp:Property Key="MediaServiceImageTags" Value="outdoor|ffffffff-ffff-ffff-ffff-fffffffff006;person|ffffffff-ffff-ffff-ffff-ffffffffef3c" />
             <pnp:Property Key="lcf76f155ced4ddcb4097134ff3c332f" Value="outdoor|ffffffff-ffff-ffff-ffff-fffffffff006;person|ffffffff-ffff-ffff-ffff-ffffffffef3c" />
             <pnp:Property Key="TaxCatchAll" Value="2,1" />
             <pnp:Property Key="Order" Value="1400" />
@@ -1443,7 +1362,6 @@
           <pnp:Properties>
             <pnp:Property Key="ContentTypeId" Value="0x010100A982196F808F47428BB675BB5FCE9379" />
             <pnp:Property Key="FileLeafRef" Value="1594350956-Firefly_Gemini-Flash_make-the-background-exactly--fae300-241456.png" />
-            <pnp:Property Key="MediaServiceImageTags" Value="person|ffffffff-ffff-ffff-ffff-ffffffffef3c" />
             <pnp:Property Key="lcf76f155ced4ddcb4097134ff3c332f" Value="person|ffffffff-ffff-ffff-ffff-ffffffffef3c" />
             <pnp:Property Key="TaxCatchAll" Value="2" />
             <pnp:Property Key="Order" Value="1500" />
@@ -1453,7 +1371,6 @@
           <pnp:Properties>
             <pnp:Property Key="ContentTypeId" Value="0x010100A982196F808F47428BB675BB5FCE9379" />
             <pnp:Property Key="FileLeafRef" Value="2288630619-woman-w-solar-panel.png" />
-            <pnp:Property Key="MediaServiceImageTags" Value="person|ffffffff-ffff-ffff-ffff-ffffffffef3c" />
             <pnp:Property Key="lcf76f155ced4ddcb4097134ff3c332f" Value="person|ffffffff-ffff-ffff-ffff-ffffffffef3c" />
             <pnp:Property Key="TaxCatchAll" Value="2" />
             <pnp:Property Key="Order" Value="1600" />
@@ -1463,7 +1380,6 @@
           <pnp:Properties>
             <pnp:Property Key="ContentTypeId" Value="0x010100A982196F808F47428BB675BB5FCE9379" />
             <pnp:Property Key="FileLeafRef" Value="2288630619-woman-w-solar-panel_1771924362838.png" />
-            <pnp:Property Key="MediaServiceImageTags" Value="outdoor|ffffffff-ffff-ffff-ffff-fffffffff006;person|ffffffff-ffff-ffff-ffff-ffffffffef3c" />
             <pnp:Property Key="lcf76f155ced4ddcb4097134ff3c332f" Value="outdoor|ffffffff-ffff-ffff-ffff-fffffffff006;person|ffffffff-ffff-ffff-ffff-ffffffffef3c" />
             <pnp:Property Key="TaxCatchAll" Value="2,1" />
             <pnp:Property Key="Order" Value="1700" />
@@ -1473,7 +1389,6 @@
           <pnp:Properties>
             <pnp:Property Key="ContentTypeId" Value="0x010100A982196F808F47428BB675BB5FCE9379" />
             <pnp:Property Key="FileLeafRef" Value="1122411761-woman-w-solar-panel.png" />
-            <pnp:Property Key="MediaServiceImageTags" Value="person|ffffffff-ffff-ffff-ffff-ffffffffef3c" />
             <pnp:Property Key="lcf76f155ced4ddcb4097134ff3c332f" Value="person|ffffffff-ffff-ffff-ffff-ffffffffef3c" />
             <pnp:Property Key="TaxCatchAll" Value="2" />
             <pnp:Property Key="Order" Value="1800" />
@@ -1483,7 +1398,6 @@
           <pnp:Properties>
             <pnp:Property Key="ContentTypeId" Value="0x010100A982196F808F47428BB675BB5FCE9379" />
             <pnp:Property Key="FileLeafRef" Value="903450006-woman-solar-panle-yellow.jpg" />
-            <pnp:Property Key="MediaServiceImageTags" Value="person|ffffffff-ffff-ffff-ffff-ffffffffef3c" />
             <pnp:Property Key="lcf76f155ced4ddcb4097134ff3c332f" Value="person|ffffffff-ffff-ffff-ffff-ffffffffef3c" />
             <pnp:Property Key="TaxCatchAll" Value="2" />
             <pnp:Property Key="Order" Value="1900" />
@@ -1493,7 +1407,6 @@
           <pnp:Properties>
             <pnp:Property Key="ContentTypeId" Value="0x010100A982196F808F47428BB675BB5FCE9379" />
             <pnp:Property Key="FileLeafRef" Value="shape-1122411761-woman-w-solar-panel.png" />
-            <pnp:Property Key="MediaServiceImageTags" Value="person|ffffffff-ffff-ffff-ffff-ffffffffef3c" />
             <pnp:Property Key="lcf76f155ced4ddcb4097134ff3c332f" Value="person|ffffffff-ffff-ffff-ffff-ffffffffef3c" />
             <pnp:Property Key="TaxCatchAll" Value="2" />
             <pnp:Property Key="Order" Value="2000" />
@@ -1503,7 +1416,6 @@
           <pnp:Properties>
             <pnp:Property Key="ContentTypeId" Value="0x010100A982196F808F47428BB675BB5FCE9379" />
             <pnp:Property Key="FileLeafRef" Value="2208562633-woman-w-solar-panel.png" />
-            <pnp:Property Key="MediaServiceImageTags" Value="person|ffffffff-ffff-ffff-ffff-ffffffffef3c" />
             <pnp:Property Key="lcf76f155ced4ddcb4097134ff3c332f" Value="person|ffffffff-ffff-ffff-ffff-ffffffffef3c" />
             <pnp:Property Key="TaxCatchAll" Value="2" />
             <pnp:Property Key="Order" Value="2100" />
@@ -1513,7 +1425,6 @@
           <pnp:Properties>
             <pnp:Property Key="ContentTypeId" Value="0x010100A982196F808F47428BB675BB5FCE9379" />
             <pnp:Property Key="FileLeafRef" Value="shape-2208562633-woman-w-solar-panel.png" />
-            <pnp:Property Key="MediaServiceImageTags" Value="person|ffffffff-ffff-ffff-ffff-ffffffffef3c" />
             <pnp:Property Key="lcf76f155ced4ddcb4097134ff3c332f" Value="person|ffffffff-ffff-ffff-ffff-ffffffffef3c" />
             <pnp:Property Key="TaxCatchAll" Value="2" />
             <pnp:Property Key="Order" Value="2200" />
@@ -1523,7 +1434,6 @@
           <pnp:Properties>
             <pnp:Property Key="ContentTypeId" Value="0x010100A982196F808F47428BB675BB5FCE9379" />
             <pnp:Property Key="FileLeafRef" Value="4151797873-woman-w-solar-panel.png" />
-            <pnp:Property Key="MediaServiceImageTags" Value="person|ffffffff-ffff-ffff-ffff-ffffffffef3c" />
             <pnp:Property Key="lcf76f155ced4ddcb4097134ff3c332f" Value="person|ffffffff-ffff-ffff-ffff-ffffffffef3c" />
             <pnp:Property Key="TaxCatchAll" Value="2" />
             <pnp:Property Key="Order" Value="2300" />
@@ -1533,7 +1443,6 @@
           <pnp:Properties>
             <pnp:Property Key="ContentTypeId" Value="0x010100A982196F808F47428BB675BB5FCE9379" />
             <pnp:Property Key="FileLeafRef" Value="shape-4151797873-woman-w-solar-panel.png" />
-            <pnp:Property Key="MediaServiceImageTags" Value="person|ffffffff-ffff-ffff-ffff-ffffffffef3c" />
             <pnp:Property Key="lcf76f155ced4ddcb4097134ff3c332f" Value="person|ffffffff-ffff-ffff-ffff-ffffffffef3c" />
             <pnp:Property Key="TaxCatchAll" Value="2" />
             <pnp:Property Key="Order" Value="2400" />
@@ -1543,7 +1452,6 @@
           <pnp:Properties>
             <pnp:Property Key="ContentTypeId" Value="0x010100A982196F808F47428BB675BB5FCE9379" />
             <pnp:Property Key="FileLeafRef" Value="2184123430-woman-w-solar-panel-wide.png" />
-            <pnp:Property Key="MediaServiceImageTags" Value="person|ffffffff-ffff-ffff-ffff-ffffffffef3c" />
             <pnp:Property Key="lcf76f155ced4ddcb4097134ff3c332f" Value="person|ffffffff-ffff-ffff-ffff-ffffffffef3c" />
             <pnp:Property Key="TaxCatchAll" Value="2" />
             <pnp:Property Key="Order" Value="2500" />
@@ -1560,7 +1468,6 @@
           <pnp:Properties>
             <pnp:Property Key="ContentTypeId" Value="0x010100A982196F808F47428BB675BB5FCE9379" />
             <pnp:Property Key="FileLeafRef" Value="1069572805-woman-w-solar-panel-condensed.png" />
-            <pnp:Property Key="MediaServiceImageTags" Value="person|ffffffff-ffff-ffff-ffff-ffffffffef3c" />
             <pnp:Property Key="lcf76f155ced4ddcb4097134ff3c332f" Value="person|ffffffff-ffff-ffff-ffff-ffffffffef3c" />
             <pnp:Property Key="TaxCatchAll" Value="2" />
             <pnp:Property Key="Order" Value="3100" />
@@ -1570,7 +1477,6 @@
           <pnp:Properties>
             <pnp:Property Key="ContentTypeId" Value="0x010100A982196F808F47428BB675BB5FCE9379" />
             <pnp:Property Key="FileLeafRef" Value="shape-1069572805-woman-w-solar-panel-condensed.png" />
-            <pnp:Property Key="MediaServiceImageTags" Value="person|ffffffff-ffff-ffff-ffff-ffffffffef3c" />
             <pnp:Property Key="lcf76f155ced4ddcb4097134ff3c332f" Value="person|ffffffff-ffff-ffff-ffff-ffffffffef3c" />
             <pnp:Property Key="TaxCatchAll" Value="2" />
             <pnp:Property Key="Order" Value="3200" />
@@ -1587,7 +1493,6 @@
           <pnp:Properties>
             <pnp:Property Key="ContentTypeId" Value="0x010100A982196F808F47428BB675BB5FCE9379" />
             <pnp:Property Key="FileLeafRef" Value="575320127-Toolbox.png" />
-            <pnp:Property Key="MediaServiceImageTags" Value="outdoor|ffffffff-ffff-ffff-ffff-fffffffff006" />
             <pnp:Property Key="lcf76f155ced4ddcb4097134ff3c332f" Value="outdoor|ffffffff-ffff-ffff-ffff-fffffffff006" />
             <pnp:Property Key="TaxCatchAll" Value="1" />
             <pnp:Property Key="Order" Value="3400" />
@@ -1597,7 +1502,6 @@
           <pnp:Properties>
             <pnp:Property Key="ContentTypeId" Value="0x010100A982196F808F47428BB675BB5FCE9379" />
             <pnp:Property Key="FileLeafRef" Value="shape-575320127-Toolbox.png" />
-            <pnp:Property Key="MediaServiceImageTags" Value="outdoor|ffffffff-ffff-ffff-ffff-fffffffff006" />
             <pnp:Property Key="lcf76f155ced4ddcb4097134ff3c332f" Value="outdoor|ffffffff-ffff-ffff-ffff-fffffffff006" />
             <pnp:Property Key="TaxCatchAll" Value="1" />
             <pnp:Property Key="Order" Value="3500" />
@@ -1607,7 +1511,6 @@
           <pnp:Properties>
             <pnp:Property Key="ContentTypeId" Value="0x010100A982196F808F47428BB675BB5FCE9379" />
             <pnp:Property Key="FileLeafRef" Value="1880863995-toolbox.png" />
-            <pnp:Property Key="MediaServiceImageTags" Value="outdoor|ffffffff-ffff-ffff-ffff-fffffffff006" />
             <pnp:Property Key="lcf76f155ced4ddcb4097134ff3c332f" Value="outdoor|ffffffff-ffff-ffff-ffff-fffffffff006" />
             <pnp:Property Key="TaxCatchAll" Value="1" />
             <pnp:Property Key="Order" Value="3600" />
@@ -1617,7 +1520,6 @@
           <pnp:Properties>
             <pnp:Property Key="ContentTypeId" Value="0x010100A982196F808F47428BB675BB5FCE9379" />
             <pnp:Property Key="FileLeafRef" Value="shape-1880863995-toolbox.png" />
-            <pnp:Property Key="MediaServiceImageTags" Value="screenshot|ffffffff-ffff-ffff-ffff-ffffffffec2e" />
             <pnp:Property Key="lcf76f155ced4ddcb4097134ff3c332f" Value="screenshot|ffffffff-ffff-ffff-ffff-ffffffffec2e" />
             <pnp:Property Key="TaxCatchAll" Value="3" />
             <pnp:Property Key="Order" Value="3700" />
@@ -1627,7 +1529,6 @@
           <pnp:Properties>
             <pnp:Property Key="ContentTypeId" Value="0x010100A982196F808F47428BB675BB5FCE9379" />
             <pnp:Property Key="FileLeafRef" Value="1880863995-toolbox_1772018305977.png" />
-            <pnp:Property Key="MediaServiceImageTags" Value="outdoor|ffffffff-ffff-ffff-ffff-fffffffff006" />
             <pnp:Property Key="lcf76f155ced4ddcb4097134ff3c332f" Value="outdoor|ffffffff-ffff-ffff-ffff-fffffffff006" />
             <pnp:Property Key="TaxCatchAll" Value="1" />
             <pnp:Property Key="Order" Value="3800" />
@@ -1637,7 +1538,6 @@
           <pnp:Properties>
             <pnp:Property Key="ContentTypeId" Value="0x010100A982196F808F47428BB675BB5FCE9379" />
             <pnp:Property Key="FileLeafRef" Value="1880863995-toolbox_1772018340633.png" />
-            <pnp:Property Key="MediaServiceImageTags" Value="outdoor|ffffffff-ffff-ffff-ffff-fffffffff006" />
             <pnp:Property Key="lcf76f155ced4ddcb4097134ff3c332f" Value="outdoor|ffffffff-ffff-ffff-ffff-fffffffff006" />
             <pnp:Property Key="TaxCatchAll" Value="1" />
             <pnp:Property Key="Order" Value="3900" />
@@ -1647,7 +1547,6 @@
           <pnp:Properties>
             <pnp:Property Key="ContentTypeId" Value="0x010100A982196F808F47428BB675BB5FCE9379" />
             <pnp:Property Key="FileLeafRef" Value="87669-29ec1c92-fa72-4f97-86ae-626f2aa0fbf5.jpg" />
-            <pnp:Property Key="MediaServiceImageTags" Value="person|ffffffff-ffff-ffff-ffff-ffffffffef3c;text|ffffffff-ffff-ffff-ffff-ffffffffe8c6" />
             <pnp:Property Key="lcf76f155ced4ddcb4097134ff3c332f" Value="person|ffffffff-ffff-ffff-ffff-ffffffffef3c;text|ffffffff-ffff-ffff-ffff-ffffffffe8c6" />
             <pnp:Property Key="TaxCatchAll" Value="2,4" />
             <pnp:Property Key="Order" Value="4100" />
@@ -1657,7 +1556,6 @@
           <pnp:Properties>
             <pnp:Property Key="ContentTypeId" Value="0x010100A982196F808F47428BB675BB5FCE9379" />
             <pnp:Property Key="FileLeafRef" Value="28089-isna_esna_logo_lockup_rgb.png" />
-            <pnp:Property Key="MediaServiceImageTags" Value="text|ffffffff-ffff-ffff-ffff-ffffffffe8c6" />
             <pnp:Property Key="lcf76f155ced4ddcb4097134ff3c332f" Value="text|ffffffff-ffff-ffff-ffff-ffffffffe8c6" />
             <pnp:Property Key="TaxCatchAll" Value="4" />
             <pnp:Property Key="Order" Value="4300" />
@@ -1667,7 +1565,6 @@
           <pnp:Properties>
             <pnp:Property Key="ContentTypeId" Value="0x010100A982196F808F47428BB675BB5FCE9379" />
             <pnp:Property Key="FileLeafRef" Value="33197-seia-solar-energy-industries-logo.png" />
-            <pnp:Property Key="MediaServiceImageTags" Value="screenshot|ffffffff-ffff-ffff-ffff-ffffffffec2e;text|ffffffff-ffff-ffff-ffff-ffffffffe8c6" />
             <pnp:Property Key="lcf76f155ced4ddcb4097134ff3c332f" Value="screenshot|ffffffff-ffff-ffff-ffff-ffffffffec2e;text|ffffffff-ffff-ffff-ffff-ffffffffe8c6" />
             <pnp:Property Key="TaxCatchAll" Value="4,3" />
             <pnp:Property Key="Order" Value="4500" />
@@ -1684,7 +1581,6 @@
           <pnp:Properties>
             <pnp:Property Key="ContentTypeId" Value="0x010100A982196F808F47428BB675BB5FCE9379" />
             <pnp:Property Key="FileLeafRef" Value="3346357340-grad-background.png" />
-            <pnp:Property Key="MediaServiceImageTags" Value="screenshot|ffffffff-ffff-ffff-ffff-ffffffffec2e" />
             <pnp:Property Key="lcf76f155ced4ddcb4097134ff3c332f" Value="screenshot|ffffffff-ffff-ffff-ffff-ffffffffec2e" />
             <pnp:Property Key="TaxCatchAll" Value="3" />
             <pnp:Property Key="Order" Value="4800" />
@@ -1694,7 +1590,6 @@
           <pnp:Properties>
             <pnp:Property Key="ContentTypeId" Value="0x010100A982196F808F47428BB675BB5FCE9379" />
             <pnp:Property Key="FileLeafRef" Value="3388519302-grad-background.png" />
-            <pnp:Property Key="MediaServiceImageTags" Value="screenshot|ffffffff-ffff-ffff-ffff-ffffffffec2e" />
             <pnp:Property Key="lcf76f155ced4ddcb4097134ff3c332f" Value="screenshot|ffffffff-ffff-ffff-ffff-ffffffffec2e" />
             <pnp:Property Key="TaxCatchAll" Value="3" />
             <pnp:Property Key="Order" Value="4900" />
@@ -1704,7 +1599,6 @@
           <pnp:Properties>
             <pnp:Property Key="ContentTypeId" Value="0x010100A982196F808F47428BB675BB5FCE9379" />
             <pnp:Property Key="FileLeafRef" Value="2914594503-grad-background.png" />
-            <pnp:Property Key="MediaServiceImageTags" Value="screenshot|ffffffff-ffff-ffff-ffff-ffffffffec2e" />
             <pnp:Property Key="lcf76f155ced4ddcb4097134ff3c332f" Value="screenshot|ffffffff-ffff-ffff-ffff-ffffffffec2e" />
             <pnp:Property Key="TaxCatchAll" Value="3" />
             <pnp:Property Key="Order" Value="5000" />
@@ -1714,7 +1608,6 @@
           <pnp:Properties>
             <pnp:Property Key="ContentTypeId" Value="0x010100A982196F808F47428BB675BB5FCE9379" />
             <pnp:Property Key="FileLeafRef" Value="3600029400-grad-background.png" />
-            <pnp:Property Key="MediaServiceImageTags" Value="screenshot|ffffffff-ffff-ffff-ffff-ffffffffec2e" />
             <pnp:Property Key="lcf76f155ced4ddcb4097134ff3c332f" Value="screenshot|ffffffff-ffff-ffff-ffff-ffffffffec2e" />
             <pnp:Property Key="TaxCatchAll" Value="3" />
             <pnp:Property Key="Order" Value="5100" />
@@ -1724,7 +1617,6 @@
           <pnp:Properties>
             <pnp:Property Key="ContentTypeId" Value="0x010100A982196F808F47428BB675BB5FCE9379" />
             <pnp:Property Key="FileLeafRef" Value="2880319663-grad-background.png" />
-            <pnp:Property Key="MediaServiceImageTags" Value="screenshot|ffffffff-ffff-ffff-ffff-ffffffffec2e" />
             <pnp:Property Key="lcf76f155ced4ddcb4097134ff3c332f" Value="screenshot|ffffffff-ffff-ffff-ffff-ffffffffec2e" />
             <pnp:Property Key="TaxCatchAll" Value="3" />
             <pnp:Property Key="Order" Value="5200" />
@@ -1734,7 +1626,6 @@
           <pnp:Properties>
             <pnp:Property Key="ContentTypeId" Value="0x010100A982196F808F47428BB675BB5FCE9379" />
             <pnp:Property Key="FileLeafRef" Value="3180978121-grad-background.png" />
-            <pnp:Property Key="MediaServiceImageTags" Value="screenshot|ffffffff-ffff-ffff-ffff-ffffffffec2e" />
             <pnp:Property Key="lcf76f155ced4ddcb4097134ff3c332f" Value="screenshot|ffffffff-ffff-ffff-ffff-ffffffffec2e" />
             <pnp:Property Key="TaxCatchAll" Value="3" />
             <pnp:Property Key="Order" Value="5300" />
@@ -1744,7 +1635,6 @@
           <pnp:Properties>
             <pnp:Property Key="ContentTypeId" Value="0x010100A982196F808F47428BB675BB5FCE9379" />
             <pnp:Property Key="FileLeafRef" Value="4146956946-grad-background.png" />
-            <pnp:Property Key="MediaServiceImageTags" Value="screenshot|ffffffff-ffff-ffff-ffff-ffffffffec2e" />
             <pnp:Property Key="lcf76f155ced4ddcb4097134ff3c332f" Value="screenshot|ffffffff-ffff-ffff-ffff-ffffffffec2e" />
             <pnp:Property Key="TaxCatchAll" Value="3" />
             <pnp:Property Key="Order" Value="5400" />
@@ -1754,7 +1644,6 @@
           <pnp:Properties>
             <pnp:Property Key="ContentTypeId" Value="0x010100A982196F808F47428BB675BB5FCE9379" />
             <pnp:Property Key="FileLeafRef" Value="3660726509-Artboard-1.png" />
-            <pnp:Property Key="MediaServiceImageTags" Value="screenshot|ffffffff-ffff-ffff-ffff-ffffffffec2e;text|ffffffff-ffff-ffff-ffff-ffffffffe8c6" />
             <pnp:Property Key="lcf76f155ced4ddcb4097134ff3c332f" Value="screenshot|ffffffff-ffff-ffff-ffff-ffffffffec2e;text|ffffffff-ffff-ffff-ffff-ffffffffe8c6" />
             <pnp:Property Key="TaxCatchAll" Value="4,3" />
             <pnp:Property Key="Order" Value="5500" />
@@ -1764,7 +1653,6 @@
           <pnp:Properties>
             <pnp:Property Key="ContentTypeId" Value="0x010100A982196F808F47428BB675BB5FCE9379" />
             <pnp:Property Key="FileLeafRef" Value="3097951448-Artboard-1.png" />
-            <pnp:Property Key="MediaServiceImageTags" Value="screenshot|ffffffff-ffff-ffff-ffff-ffffffffec2e;text|ffffffff-ffff-ffff-ffff-ffffffffe8c6" />
             <pnp:Property Key="lcf76f155ced4ddcb4097134ff3c332f" Value="screenshot|ffffffff-ffff-ffff-ffff-ffffffffec2e;text|ffffffff-ffff-ffff-ffff-ffffffffe8c6" />
             <pnp:Property Key="TaxCatchAll" Value="4,3" />
             <pnp:Property Key="Order" Value="5600" />
@@ -1774,7 +1662,6 @@
           <pnp:Properties>
             <pnp:Property Key="ContentTypeId" Value="0x010100A982196F808F47428BB675BB5FCE9379" />
             <pnp:Property Key="FileLeafRef" Value="2493943488-g-trans.png" />
-            <pnp:Property Key="MediaServiceImageTags" Value="screenshot|ffffffff-ffff-ffff-ffff-ffffffffec2e" />
             <pnp:Property Key="lcf76f155ced4ddcb4097134ff3c332f" Value="screenshot|ffffffff-ffff-ffff-ffff-ffffffffec2e" />
             <pnp:Property Key="TaxCatchAll" Value="3" />
             <pnp:Property Key="Order" Value="5700" />
@@ -1791,7 +1678,6 @@
           <pnp:Properties>
             <pnp:Property Key="ContentTypeId" Value="0x010100A982196F808F47428BB675BB5FCE9379" />
             <pnp:Property Key="FileLeafRef" Value="943445846-bg-top.png" />
-            <pnp:Property Key="MediaServiceImageTags" Value="screenshot|ffffffff-ffff-ffff-ffff-ffffffffec2e" />
             <pnp:Property Key="lcf76f155ced4ddcb4097134ff3c332f" Value="screenshot|ffffffff-ffff-ffff-ffff-ffffffffec2e" />
             <pnp:Property Key="TaxCatchAll" Value="3" />
             <pnp:Property Key="Order" Value="5900" />
@@ -1801,7 +1687,6 @@
           <pnp:Properties>
             <pnp:Property Key="ContentTypeId" Value="0x010100A982196F808F47428BB675BB5FCE9379" />
             <pnp:Property Key="FileLeafRef" Value="829681730-bg-bottom.png" />
-            <pnp:Property Key="MediaServiceImageTags" Value="screenshot|ffffffff-ffff-ffff-ffff-ffffffffec2e" />
             <pnp:Property Key="lcf76f155ced4ddcb4097134ff3c332f" Value="screenshot|ffffffff-ffff-ffff-ffff-ffffffffec2e" />
             <pnp:Property Key="TaxCatchAll" Value="3" />
             <pnp:Property Key="Order" Value="6000" />
@@ -1811,7 +1696,6 @@
           <pnp:Properties>
             <pnp:Property Key="ContentTypeId" Value="0x010100A982196F808F47428BB675BB5FCE9379" />
             <pnp:Property Key="FileLeafRef" Value="1294795948-bg-top.png" />
-            <pnp:Property Key="MediaServiceImageTags" Value="screenshot|ffffffff-ffff-ffff-ffff-ffffffffec2e" />
             <pnp:Property Key="lcf76f155ced4ddcb4097134ff3c332f" Value="screenshot|ffffffff-ffff-ffff-ffff-ffffffffec2e" />
             <pnp:Property Key="TaxCatchAll" Value="3" />
             <pnp:Property Key="Order" Value="6100" />
@@ -1821,7 +1705,6 @@
           <pnp:Properties>
             <pnp:Property Key="ContentTypeId" Value="0x010100A982196F808F47428BB675BB5FCE9379" />
             <pnp:Property Key="FileLeafRef" Value="1148676821-bg-bottom.png" />
-            <pnp:Property Key="MediaServiceImageTags" Value="screenshot|ffffffff-ffff-ffff-ffff-ffffffffec2e" />
             <pnp:Property Key="lcf76f155ced4ddcb4097134ff3c332f" Value="screenshot|ffffffff-ffff-ffff-ffff-ffffffffec2e" />
             <pnp:Property Key="TaxCatchAll" Value="3" />
             <pnp:Property Key="Order" Value="6200" />
@@ -1831,7 +1714,6 @@
           <pnp:Properties>
             <pnp:Property Key="ContentTypeId" Value="0x010100A982196F808F47428BB675BB5FCE9379" />
             <pnp:Property Key="FileLeafRef" Value="3217840649-bg-top.png" />
-            <pnp:Property Key="MediaServiceImageTags" Value="screenshot|ffffffff-ffff-ffff-ffff-ffffffffec2e;text|ffffffff-ffff-ffff-ffff-ffffffffe8c6" />
             <pnp:Property Key="lcf76f155ced4ddcb4097134ff3c332f" Value="screenshot|ffffffff-ffff-ffff-ffff-ffffffffec2e;text|ffffffff-ffff-ffff-ffff-ffffffffe8c6" />
             <pnp:Property Key="TaxCatchAll" Value="4,3" />
             <pnp:Property Key="Order" Value="6300" />
@@ -1841,7 +1723,6 @@
           <pnp:Properties>
             <pnp:Property Key="ContentTypeId" Value="0x010100A982196F808F47428BB675BB5FCE9379" />
             <pnp:Property Key="FileLeafRef" Value="863472624-bg-bottom.png" />
-            <pnp:Property Key="MediaServiceImageTags" Value="screenshot|ffffffff-ffff-ffff-ffff-ffffffffec2e;text|ffffffff-ffff-ffff-ffff-ffffffffe8c6" />
             <pnp:Property Key="lcf76f155ced4ddcb4097134ff3c332f" Value="screenshot|ffffffff-ffff-ffff-ffff-ffffffffec2e;text|ffffffff-ffff-ffff-ffff-ffffffffe8c6" />
             <pnp:Property Key="TaxCatchAll" Value="4,3" />
             <pnp:Property Key="Order" Value="6400" />
@@ -1851,7 +1732,6 @@
           <pnp:Properties>
             <pnp:Property Key="ContentTypeId" Value="0x010100A982196F808F47428BB675BB5FCE9379" />
             <pnp:Property Key="FileLeafRef" Value="3718650941-bg-top.png" />
-            <pnp:Property Key="MediaServiceImageTags" Value="screenshot|ffffffff-ffff-ffff-ffff-ffffffffec2e;text|ffffffff-ffff-ffff-ffff-ffffffffe8c6" />
             <pnp:Property Key="lcf76f155ced4ddcb4097134ff3c332f" Value="screenshot|ffffffff-ffff-ffff-ffff-ffffffffec2e;text|ffffffff-ffff-ffff-ffff-ffffffffe8c6" />
             <pnp:Property Key="TaxCatchAll" Value="4,3" />
             <pnp:Property Key="Order" Value="6500" />
@@ -1861,7 +1741,6 @@
           <pnp:Properties>
             <pnp:Property Key="ContentTypeId" Value="0x010100A982196F808F47428BB675BB5FCE9379" />
             <pnp:Property Key="FileLeafRef" Value="3915280274-bg-bottom.png" />
-            <pnp:Property Key="MediaServiceImageTags" Value="screenshot|ffffffff-ffff-ffff-ffff-ffffffffec2e" />
             <pnp:Property Key="lcf76f155ced4ddcb4097134ff3c332f" Value="screenshot|ffffffff-ffff-ffff-ffff-ffffffffec2e" />
             <pnp:Property Key="TaxCatchAll" Value="3" />
             <pnp:Property Key="Order" Value="6600" />
@@ -1871,7 +1750,6 @@
           <pnp:Properties>
             <pnp:Property Key="ContentTypeId" Value="0x010100A982196F808F47428BB675BB5FCE9379" />
             <pnp:Property Key="FileLeafRef" Value="2066642434-bg-top.png" />
-            <pnp:Property Key="MediaServiceImageTags" Value="screenshot|ffffffff-ffff-ffff-ffff-ffffffffec2e;text|ffffffff-ffff-ffff-ffff-ffffffffe8c6" />
             <pnp:Property Key="lcf76f155ced4ddcb4097134ff3c332f" Value="screenshot|ffffffff-ffff-ffff-ffff-ffffffffec2e;text|ffffffff-ffff-ffff-ffff-ffffffffe8c6" />
             <pnp:Property Key="TaxCatchAll" Value="4,3" />
             <pnp:Property Key="Order" Value="6700" />
@@ -1895,7 +1773,6 @@
           <pnp:Properties>
             <pnp:Property Key="ContentTypeId" Value="0x010100A982196F808F47428BB675BB5FCE9379" />
             <pnp:Property Key="FileLeafRef" Value="eployee-handbook.png" />
-            <pnp:Property Key="MediaServiceImageTags" Value="text|ffffffff-ffff-ffff-ffff-ffffffffe8c6" />
             <pnp:Property Key="lcf76f155ced4ddcb4097134ff3c332f" Value="text|ffffffff-ffff-ffff-ffff-ffffffffe8c6" />
             <pnp:Property Key="TaxCatchAll" Value="4" />
             <pnp:Property Key="Order" Value="7100" />
@@ -1905,7 +1782,6 @@
           <pnp:Properties>
             <pnp:Property Key="ContentTypeId" Value="0x010100A982196F808F47428BB675BB5FCE9379" />
             <pnp:Property Key="FileLeafRef" Value="eployee-handbook@2x.png" />
-            <pnp:Property Key="MediaServiceImageTags" Value="text|ffffffff-ffff-ffff-ffff-ffffffffe8c6" />
             <pnp:Property Key="lcf76f155ced4ddcb4097134ff3c332f" Value="text|ffffffff-ffff-ffff-ffff-ffffffffe8c6" />
             <pnp:Property Key="TaxCatchAll" Value="4" />
             <pnp:Property Key="Order" Value="7200" />
@@ -1922,7 +1798,6 @@
           <pnp:Properties>
             <pnp:Property Key="ContentTypeId" Value="0x010100A982196F808F47428BB675BB5FCE9379" />
             <pnp:Property Key="FileLeafRef" Value="employee-handbook@2x.png" />
-            <pnp:Property Key="MediaServiceImageTags" Value="text|ffffffff-ffff-ffff-ffff-ffffffffe8c6" />
             <pnp:Property Key="lcf76f155ced4ddcb4097134ff3c332f" Value="text|ffffffff-ffff-ffff-ffff-ffffffffe8c6" />
             <pnp:Property Key="TaxCatchAll" Value="4" />
             <pnp:Property Key="Order" Value="7400" />
@@ -1932,7 +1807,6 @@
           <pnp:Properties>
             <pnp:Property Key="ContentTypeId" Value="0x010100A982196F808F47428BB675BB5FCE9379" />
             <pnp:Property Key="FileLeafRef" Value="org-chart@2x.png" />
-            <pnp:Property Key="MediaServiceImageTags" Value="screenshot|ffffffff-ffff-ffff-ffff-ffffffffec2e;text|ffffffff-ffff-ffff-ffff-ffffffffe8c6" />
             <pnp:Property Key="lcf76f155ced4ddcb4097134ff3c332f" Value="screenshot|ffffffff-ffff-ffff-ffff-ffffffffec2e;text|ffffffff-ffff-ffff-ffff-ffffffffe8c6" />
             <pnp:Property Key="TaxCatchAll" Value="4,3" />
             <pnp:Property Key="Order" Value="7500" />
@@ -1942,7 +1816,6 @@
           <pnp:Properties>
             <pnp:Property Key="ContentTypeId" Value="0x010100A982196F808F47428BB675BB5FCE9379" />
             <pnp:Property Key="FileLeafRef" Value="pay-stubs@2x.png" />
-            <pnp:Property Key="MediaServiceImageTags" Value="screenshot|ffffffff-ffff-ffff-ffff-ffffffffec2e;text|ffffffff-ffff-ffff-ffff-ffffffffe8c6" />
             <pnp:Property Key="lcf76f155ced4ddcb4097134ff3c332f" Value="screenshot|ffffffff-ffff-ffff-ffff-ffffffffec2e;text|ffffffff-ffff-ffff-ffff-ffffffffe8c6" />
             <pnp:Property Key="TaxCatchAll" Value="4,3" />
             <pnp:Property Key="Order" Value="7600" />
@@ -1959,7 +1832,6 @@
           <pnp:Properties>
             <pnp:Property Key="ContentTypeId" Value="0x010100A982196F808F47428BB675BB5FCE9379" />
             <pnp:Property Key="FileLeafRef" Value="brand-assets@2x.png" />
-            <pnp:Property Key="MediaServiceImageTags" Value="clipart|ffffffff-ffff-ffff-ffff-fffffffffb0a" />
             <pnp:Property Key="lcf76f155ced4ddcb4097134ff3c332f" Value="clipart|ffffffff-ffff-ffff-ffff-fffffffffb0a" />
             <pnp:Property Key="TaxCatchAll" Value="5" />
             <pnp:Property Key="Order" Value="7800" />
@@ -1969,7 +1841,6 @@
           <pnp:Properties>
             <pnp:Property Key="ContentTypeId" Value="0x010100A982196F808F47428BB675BB5FCE9379" />
             <pnp:Property Key="FileLeafRef" Value="Internal-job-board@2x.png" />
-            <pnp:Property Key="MediaServiceImageTags" Value="clipart|ffffffff-ffff-ffff-ffff-fffffffffb0a" />
             <pnp:Property Key="lcf76f155ced4ddcb4097134ff3c332f" Value="clipart|ffffffff-ffff-ffff-ffff-fffffffffb0a" />
             <pnp:Property Key="TaxCatchAll" Value="5" />
             <pnp:Property Key="Order" Value="7900" />
@@ -1979,7 +1850,6 @@
           <pnp:Properties>
             <pnp:Property Key="ContentTypeId" Value="0x010100A982196F808F47428BB675BB5FCE9379" />
             <pnp:Property Key="FileLeafRef" Value="sustainability-report@2x.png" />
-            <pnp:Property Key="MediaServiceImageTags" Value="screenshot|ffffffff-ffff-ffff-ffff-ffffffffec2e" />
             <pnp:Property Key="lcf76f155ced4ddcb4097134ff3c332f" Value="screenshot|ffffffff-ffff-ffff-ffff-ffffffffec2e" />
             <pnp:Property Key="TaxCatchAll" Value="3" />
             <pnp:Property Key="Order" Value="8000" />
@@ -1989,7 +1859,6 @@
           <pnp:Properties>
             <pnp:Property Key="ContentTypeId" Value="0x010100A982196F808F47428BB675BB5FCE9379" />
             <pnp:Property Key="FileLeafRef" Value="training-library@2x.png" />
-            <pnp:Property Key="MediaServiceImageTags" Value="text|ffffffff-ffff-ffff-ffff-ffffffffe8c6" />
             <pnp:Property Key="lcf76f155ced4ddcb4097134ff3c332f" Value="text|ffffffff-ffff-ffff-ffff-ffffffffe8c6" />
             <pnp:Property Key="TaxCatchAll" Value="4" />
             <pnp:Property Key="Order" Value="8100" />
@@ -1999,7 +1868,6 @@
           <pnp:Properties>
             <pnp:Property Key="ContentTypeId" Value="0x010100A982196F808F47428BB675BB5FCE9379" />
             <pnp:Property Key="FileLeafRef" Value="employee-handbook.png" />
-            <pnp:Property Key="MediaServiceImageTags" Value="screenshot|ffffffff-ffff-ffff-ffff-ffffffffec2e;text|ffffffff-ffff-ffff-ffff-ffffffffe8c6" />
             <pnp:Property Key="lcf76f155ced4ddcb4097134ff3c332f" Value="screenshot|ffffffff-ffff-ffff-ffff-ffffffffec2e;text|ffffffff-ffff-ffff-ffff-ffffffffe8c6" />
             <pnp:Property Key="TaxCatchAll" Value="4,3" />
             <pnp:Property Key="Order" Value="8200" />
@@ -2009,7 +1877,6 @@
           <pnp:Properties>
             <pnp:Property Key="ContentTypeId" Value="0x010100A982196F808F47428BB675BB5FCE9379" />
             <pnp:Property Key="FileLeafRef" Value="org-chart.png" />
-            <pnp:Property Key="MediaServiceImageTags" Value="clipart|ffffffff-ffff-ffff-ffff-fffffffffb0a;screenshot|ffffffff-ffff-ffff-ffff-ffffffffec2e;text|ffffffff-ffff-ffff-ffff-ffffffffe8c6" />
             <pnp:Property Key="lcf76f155ced4ddcb4097134ff3c332f" Value="clipart|ffffffff-ffff-ffff-ffff-fffffffffb0a;screenshot|ffffffff-ffff-ffff-ffff-ffffffffec2e;text|ffffffff-ffff-ffff-ffff-ffffffffe8c6" />
             <pnp:Property Key="TaxCatchAll" Value="5,4,3" />
             <pnp:Property Key="Order" Value="8300" />
@@ -2019,7 +1886,6 @@
           <pnp:Properties>
             <pnp:Property Key="ContentTypeId" Value="0x010100A982196F808F47428BB675BB5FCE9379" />
             <pnp:Property Key="FileLeafRef" Value="pay-stubs.png" />
-            <pnp:Property Key="MediaServiceImageTags" Value="screenshot|ffffffff-ffff-ffff-ffff-ffffffffec2e;text|ffffffff-ffff-ffff-ffff-ffffffffe8c6" />
             <pnp:Property Key="lcf76f155ced4ddcb4097134ff3c332f" Value="screenshot|ffffffff-ffff-ffff-ffff-ffffffffec2e;text|ffffffff-ffff-ffff-ffff-ffffffffe8c6" />
             <pnp:Property Key="TaxCatchAll" Value="4,3" />
             <pnp:Property Key="Order" Value="8400" />
@@ -2029,7 +1895,6 @@
           <pnp:Properties>
             <pnp:Property Key="ContentTypeId" Value="0x010100A982196F808F47428BB675BB5FCE9379" />
             <pnp:Property Key="FileLeafRef" Value="benefits-insurance.png" />
-            <pnp:Property Key="MediaServiceImageTags" Value="clipart|ffffffff-ffff-ffff-ffff-fffffffffb0a;screenshot|ffffffff-ffff-ffff-ffff-ffffffffec2e" />
             <pnp:Property Key="lcf76f155ced4ddcb4097134ff3c332f" Value="clipart|ffffffff-ffff-ffff-ffff-fffffffffb0a;screenshot|ffffffff-ffff-ffff-ffff-ffffffffec2e" />
             <pnp:Property Key="TaxCatchAll" Value="5,3" />
             <pnp:Property Key="Order" Value="8500" />
@@ -2039,7 +1904,6 @@
           <pnp:Properties>
             <pnp:Property Key="ContentTypeId" Value="0x010100A982196F808F47428BB675BB5FCE9379" />
             <pnp:Property Key="FileLeafRef" Value="brand-assets.png" />
-            <pnp:Property Key="MediaServiceImageTags" Value="clipart|ffffffff-ffff-ffff-ffff-fffffffffb0a;text|ffffffff-ffff-ffff-ffff-ffffffffe8c6" />
             <pnp:Property Key="lcf76f155ced4ddcb4097134ff3c332f" Value="clipart|ffffffff-ffff-ffff-ffff-fffffffffb0a;text|ffffffff-ffff-ffff-ffff-ffffffffe8c6" />
             <pnp:Property Key="TaxCatchAll" Value="5,4" />
             <pnp:Property Key="Order" Value="8600" />
@@ -2049,7 +1913,6 @@
           <pnp:Properties>
             <pnp:Property Key="ContentTypeId" Value="0x010100A982196F808F47428BB675BB5FCE9379" />
             <pnp:Property Key="FileLeafRef" Value="Internal-job-board.png" />
-            <pnp:Property Key="MediaServiceImageTags" Value="clipart|ffffffff-ffff-ffff-ffff-fffffffffb0a" />
             <pnp:Property Key="lcf76f155ced4ddcb4097134ff3c332f" Value="clipart|ffffffff-ffff-ffff-ffff-fffffffffb0a" />
             <pnp:Property Key="TaxCatchAll" Value="5" />
             <pnp:Property Key="Order" Value="8700" />
@@ -2059,7 +1922,6 @@
           <pnp:Properties>
             <pnp:Property Key="ContentTypeId" Value="0x010100A982196F808F47428BB675BB5FCE9379" />
             <pnp:Property Key="FileLeafRef" Value="training-library.png" />
-            <pnp:Property Key="MediaServiceImageTags" Value="text|ffffffff-ffff-ffff-ffff-ffffffffe8c6" />
             <pnp:Property Key="lcf76f155ced4ddcb4097134ff3c332f" Value="text|ffffffff-ffff-ffff-ffff-ffffffffe8c6" />
             <pnp:Property Key="TaxCatchAll" Value="4" />
             <pnp:Property Key="Order" Value="8800" />
@@ -2069,7 +1931,6 @@
           <pnp:Properties>
             <pnp:Property Key="ContentTypeId" Value="0x010100A982196F808F47428BB675BB5FCE9379" />
             <pnp:Property Key="FileLeafRef" Value="sustainability-report.png" />
-            <pnp:Property Key="MediaServiceImageTags" Value="clipart|ffffffff-ffff-ffff-ffff-fffffffffb0a;screenshot|ffffffff-ffff-ffff-ffff-ffffffffec2e" />
             <pnp:Property Key="lcf76f155ced4ddcb4097134ff3c332f" Value="clipart|ffffffff-ffff-ffff-ffff-fffffffffb0a;screenshot|ffffffff-ffff-ffff-ffff-ffffffffec2e" />
             <pnp:Property Key="TaxCatchAll" Value="5,3" />
             <pnp:Property Key="Order" Value="8900" />
@@ -2079,7 +1940,6 @@
           <pnp:Properties>
             <pnp:Property Key="ContentTypeId" Value="0x010100A982196F808F47428BB675BB5FCE9379" />
             <pnp:Property Key="FileLeafRef" Value="1335339194-pattie-fernandez.jpeg" />
-            <pnp:Property Key="MediaServiceImageTags" Value="outdoor|ffffffff-ffff-ffff-ffff-fffffffff006;person|ffffffff-ffff-ffff-ffff-ffffffffef3c" />
             <pnp:Property Key="lcf76f155ced4ddcb4097134ff3c332f" Value="outdoor|ffffffff-ffff-ffff-ffff-fffffffff006;person|ffffffff-ffff-ffff-ffff-ffffffffef3c" />
             <pnp:Property Key="TaxCatchAll" Value="2,1" />
             <pnp:Property Key="Order" Value="9000" />
@@ -2089,7 +1949,6 @@
           <pnp:Properties>
             <pnp:Property Key="ContentTypeId" Value="0x010100A982196F808F47428BB675BB5FCE9379" />
             <pnp:Property Key="FileLeafRef" Value="shape-1335339194-pattie-fernandez-1772131246889.png" />
-            <pnp:Property Key="MediaServiceImageTags" Value="outdoor|ffffffff-ffff-ffff-ffff-fffffffff006;person|ffffffff-ffff-ffff-ffff-ffffffffef3c" />
             <pnp:Property Key="lcf76f155ced4ddcb4097134ff3c332f" Value="outdoor|ffffffff-ffff-ffff-ffff-fffffffff006;person|ffffffff-ffff-ffff-ffff-ffffffffef3c" />
             <pnp:Property Key="TaxCatchAll" Value="2,1" />
             <pnp:Property Key="Order" Value="9100" />
@@ -2099,7 +1958,6 @@
           <pnp:Properties>
             <pnp:Property Key="ContentTypeId" Value="0x010100A982196F808F47428BB675BB5FCE9379" />
             <pnp:Property Key="FileLeafRef" Value="3243399918-nestor-wilken.jpeg" />
-            <pnp:Property Key="MediaServiceImageTags" Value="person|ffffffff-ffff-ffff-ffff-ffffffffef3c" />
             <pnp:Property Key="lcf76f155ced4ddcb4097134ff3c332f" Value="person|ffffffff-ffff-ffff-ffff-ffffffffef3c" />
             <pnp:Property Key="TaxCatchAll" Value="2" />
             <pnp:Property Key="Order" Value="9200" />
@@ -2109,7 +1967,6 @@
           <pnp:Properties>
             <pnp:Property Key="ContentTypeId" Value="0x010100A982196F808F47428BB675BB5FCE9379" />
             <pnp:Property Key="FileLeafRef" Value="shape-3243399918-nestor-wilken-1772132200001.png" />
-            <pnp:Property Key="MediaServiceImageTags" Value="person|ffffffff-ffff-ffff-ffff-ffffffffef3c" />
             <pnp:Property Key="lcf76f155ced4ddcb4097134ff3c332f" Value="person|ffffffff-ffff-ffff-ffff-ffffffffef3c" />
             <pnp:Property Key="TaxCatchAll" Value="2" />
             <pnp:Property Key="Order" Value="9300" />
@@ -2119,7 +1976,6 @@
           <pnp:Properties>
             <pnp:Property Key="ContentTypeId" Value="0x010100A982196F808F47428BB675BB5FCE9379" />
             <pnp:Property Key="FileLeafRef" Value="shape-3243399918-nestor-wilken-1772132239457.png" />
-            <pnp:Property Key="MediaServiceImageTags" Value="person|ffffffff-ffff-ffff-ffff-ffffffffef3c" />
             <pnp:Property Key="lcf76f155ced4ddcb4097134ff3c332f" Value="person|ffffffff-ffff-ffff-ffff-ffffffffef3c" />
             <pnp:Property Key="TaxCatchAll" Value="2" />
             <pnp:Property Key="Order" Value="9400" />
@@ -2129,7 +1985,6 @@
           <pnp:Properties>
             <pnp:Property Key="ContentTypeId" Value="0x010100A982196F808F47428BB675BB5FCE9379" />
             <pnp:Property Key="FileLeafRef" Value="1103686574-nestor-wilken.jpeg" />
-            <pnp:Property Key="MediaServiceImageTags" Value="person|ffffffff-ffff-ffff-ffff-ffffffffef3c" />
             <pnp:Property Key="lcf76f155ced4ddcb4097134ff3c332f" Value="person|ffffffff-ffff-ffff-ffff-ffffffffef3c" />
             <pnp:Property Key="TaxCatchAll" Value="2" />
             <pnp:Property Key="Order" Value="9500" />
@@ -2139,7 +1994,6 @@
           <pnp:Properties>
             <pnp:Property Key="ContentTypeId" Value="0x010100A982196F808F47428BB675BB5FCE9379" />
             <pnp:Property Key="FileLeafRef" Value="shape-1103686574-nestor-wilken-1772132442843.png" />
-            <pnp:Property Key="MediaServiceImageTags" Value="person|ffffffff-ffff-ffff-ffff-ffffffffef3c" />
             <pnp:Property Key="lcf76f155ced4ddcb4097134ff3c332f" Value="person|ffffffff-ffff-ffff-ffff-ffffffffef3c" />
             <pnp:Property Key="TaxCatchAll" Value="2" />
             <pnp:Property Key="Order" Value="9600" />
@@ -2149,7 +2003,6 @@
           <pnp:Properties>
             <pnp:Property Key="ContentTypeId" Value="0x010100A982196F808F47428BB675BB5FCE9379" />
             <pnp:Property Key="FileLeafRef" Value="2534133050-nestor-wilken.jpeg" />
-            <pnp:Property Key="MediaServiceImageTags" Value="outdoor|ffffffff-ffff-ffff-ffff-fffffffff006;person|ffffffff-ffff-ffff-ffff-ffffffffef3c" />
             <pnp:Property Key="lcf76f155ced4ddcb4097134ff3c332f" Value="outdoor|ffffffff-ffff-ffff-ffff-fffffffff006;person|ffffffff-ffff-ffff-ffff-ffffffffef3c" />
             <pnp:Property Key="TaxCatchAll" Value="2,1" />
             <pnp:Property Key="Order" Value="9700" />
@@ -2159,7 +2012,6 @@
           <pnp:Properties>
             <pnp:Property Key="ContentTypeId" Value="0x010100A982196F808F47428BB675BB5FCE9379" />
             <pnp:Property Key="FileLeafRef" Value="shape-2534133050-nestor-wilken-1772132499389.png" />
-            <pnp:Property Key="MediaServiceImageTags" Value="outdoor|ffffffff-ffff-ffff-ffff-fffffffff006;person|ffffffff-ffff-ffff-ffff-ffffffffef3c" />
             <pnp:Property Key="lcf76f155ced4ddcb4097134ff3c332f" Value="outdoor|ffffffff-ffff-ffff-ffff-fffffffff006;person|ffffffff-ffff-ffff-ffff-ffffffffef3c" />
             <pnp:Property Key="TaxCatchAll" Value="2,1" />
             <pnp:Property Key="Order" Value="9800" />
@@ -2169,7 +2021,6 @@
           <pnp:Properties>
             <pnp:Property Key="ContentTypeId" Value="0x010100A982196F808F47428BB675BB5FCE9379" />
             <pnp:Property Key="FileLeafRef" Value="1557238947-Miram-Graham.jpeg" />
-            <pnp:Property Key="MediaServiceImageTags" Value="person|ffffffff-ffff-ffff-ffff-ffffffffef3c" />
             <pnp:Property Key="lcf76f155ced4ddcb4097134ff3c332f" Value="person|ffffffff-ffff-ffff-ffff-ffffffffef3c" />
             <pnp:Property Key="TaxCatchAll" Value="2" />
             <pnp:Property Key="Order" Value="9900" />
@@ -2179,7 +2030,6 @@
           <pnp:Properties>
             <pnp:Property Key="ContentTypeId" Value="0x010100A982196F808F47428BB675BB5FCE9379" />
             <pnp:Property Key="FileLeafRef" Value="shape-1557238947-Miram-Graham-1772132981264.png" />
-            <pnp:Property Key="MediaServiceImageTags" Value="outdoor|ffffffff-ffff-ffff-ffff-fffffffff006;person|ffffffff-ffff-ffff-ffff-ffffffffef3c" />
             <pnp:Property Key="lcf76f155ced4ddcb4097134ff3c332f" Value="outdoor|ffffffff-ffff-ffff-ffff-fffffffff006;person|ffffffff-ffff-ffff-ffff-ffffffffef3c" />
             <pnp:Property Key="TaxCatchAll" Value="2,1" />
             <pnp:Property Key="Order" Value="10000" />
@@ -2189,7 +2039,6 @@
           <pnp:Properties>
             <pnp:Property Key="ContentTypeId" Value="0x010100A982196F808F47428BB675BB5FCE9379" />
             <pnp:Property Key="FileLeafRef" Value="314114618-Miram-Graham.jpeg" />
-            <pnp:Property Key="MediaServiceImageTags" Value="person|ffffffff-ffff-ffff-ffff-ffffffffef3c" />
             <pnp:Property Key="lcf76f155ced4ddcb4097134ff3c332f" Value="person|ffffffff-ffff-ffff-ffff-ffffffffef3c" />
             <pnp:Property Key="TaxCatchAll" Value="2" />
             <pnp:Property Key="Order" Value="10100" />
@@ -2199,7 +2048,6 @@
           <pnp:Properties>
             <pnp:Property Key="ContentTypeId" Value="0x010100A982196F808F47428BB675BB5FCE9379" />
             <pnp:Property Key="FileLeafRef" Value="shape-314114618-Miram-Graham-1772133060467.png" />
-            <pnp:Property Key="MediaServiceImageTags" Value="person|ffffffff-ffff-ffff-ffff-ffffffffef3c" />
             <pnp:Property Key="lcf76f155ced4ddcb4097134ff3c332f" Value="person|ffffffff-ffff-ffff-ffff-ffffffffef3c" />
             <pnp:Property Key="TaxCatchAll" Value="2" />
             <pnp:Property Key="Order" Value="10200" />
