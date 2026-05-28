@@ -95,7 +95,7 @@ Finally, the theme should look like this is you have set it up correctly.
 
 The site uses several custom fonts to enhance its look and feel In this session, you'll upload specific font files to support the site. These font files are not prefixed. For each font family, we need to upload a set of font files, each oof which contains variants on the font for use the Font Package, which we will create next. For detailed instructions, see [Brand Fonts](https://learn.microsoft.com/sharepoint/brand-fonts).
 
-Solbound uses the custom fonts *DM Sans* and *Playfair*. The appropriate files are in the *Fonts* folder.
+Solbound uses the custom fonts *Exo 2* and *Barlow*. The appropriate files are in the *Fonts* folder.
 
 ### Create Font Package
 
@@ -103,16 +103,15 @@ Font Packages combine sets of fonts for use in a site which has the Font Package
 
 | Font Slot | Font Name | Font Variant |
 |---|---|---|
-| Title | DM Sans | ExtraBold |
-| Headline | DM Sans | Bold |
-| Body | Playfair | Medium |
-| Interactive | DM Sans | Bold |
+| Title | Exo 2 | Black |
+| Headline | Exo 2 | ExtraBold |
+| Body | Barlow | Medium |
+| Interactive | Exo 2 | ExtraBold |
 | | | |
 
 #### Choose your fonts
 
 ![](./media/Solbound-choose-your-fonts.jpg)
-
 
 #### Assign your fonts
 
@@ -128,8 +127,6 @@ Review the settings to ensure you have created the Font Package correctly.
 
 ![](./media/Solbound-review-font-package.jpg)
 
-
-
 ## Viva Connections
 
 Viva Connections - coon to be renamed SharePoint Connections - enables us to create experiences for use in a site or sites. By enabling the experience in a site, you can use the Dashboard Web Part in pages to provide ACES.
@@ -142,7 +139,7 @@ These final steps apply the configurations you have set up above in the site its
 
 ### Change the look
 
-Go  to the gear, and Select Change the look.
+Go to the gear, and Select Change the look.
 
 #### Apply theme
 
