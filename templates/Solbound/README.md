@@ -79,17 +79,17 @@ Once you have the Brand Colors defined, you use them to set up a theme. For deta
 
 First, you add the colors to the theme. Add the colors in the order listed above.
 
-![](./media/solbound-add-theme-colors.jpg)
+![Add the theme colors](./media/solbound-add-theme-colors.jpg)
 
 #### Name the theme
 
 Next, give the theme the name *Solbound.Theme*, and save.
-![](./media/solbound-name-theme.jpg)
+![Name the theme](./media/solbound-name-theme.jpg)
 
 #### Review the theme
 
 Finally, the theme should look like this is you have set it up correctly.
-![](./media/solbound-view-theme.jpg)
+![Review the theme](./media/solbound-view-theme.jpg)
 
 ### Upload fonts
 
@@ -111,21 +111,21 @@ Font Packages combine sets of fonts for use in a site which has the Font Package
 
 #### Choose your fonts
 
-![](./media/solbound-choose-your-fonts.jpg)
+![Choose your fonts](./media/solbound-choose-your-fonts.jpg)
 
 #### Assign your fonts
 
-![](./media/solbound-assign-your-fonts.jpg)
+![Assign your fonts](./media/solbound-assign-your-fonts.jpg)
 
 #### Give your package a name
 
-![](./media/solbound-give-your-package-a-name.jpg)
+![Give your package a name](./media/solbound-give-your-package-a-name.jpg)
 
 ### Review font package
 
 Review the settings to ensure you have created the Font Package correctly.
 
-![](./media/solbound-review-font-package.jpg)
+![Review font package](./media/solbound-review-font-package.jpg)
 
 ## Viva Connections
 
