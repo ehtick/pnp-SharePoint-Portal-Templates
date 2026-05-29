@@ -134,6 +134,8 @@ Viva Connections - coon to be renamed SharePoint Connections - enables us to cre
 
 ### Create Viva Connections experience for site
 
+TBD
+
 ## Final site configuration
 
 These final steps apply the configurations you have set up above in the site itself.
