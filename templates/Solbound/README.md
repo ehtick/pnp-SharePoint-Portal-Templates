@@ -31,7 +31,7 @@ Throughout the rest of these instructions, you will be either making changes to 
 
 ### Download ZIP file
 
-Download the [Solbound ZIP file](./solbound.zip). This ZIP file contains all the necessary files to apply the PnP Provisioning template, as well as the images and fonts used in the site.
+Download the [Solbound ZIP file](./Solbound.zip). This ZIP file contains all the necessary files to apply the PnP Provisioning template, as well as the images and fonts used in the site.
 
 ### Extract all files in ZIP file
 
@@ -41,9 +41,9 @@ We recommend you extract the ZIP file into a folder in the root of your machine,
 
 ## Apply PnP Provisioning template
 
-The base definition for the site is contained the a PnP Provisioning template file. This file can be found in the folder *PnP Provisioning*, and is named *pnp-provisioning-solboundsite - RAW.pnp*.
+The base definition for the site is contained the a PnP Provisioning template file. This file can be found in the folder *PnP Provisioning*, and is named *PnP-Provisioning-SolboundSite - RAW.pnp*.
 
-The script *applyPnPProvisioningTemplate-solbound.ps1* applies the PnP Provisioning template to the site you have created above. The template contains information about the lists and libraries, pages, and images contained in the site.
+The script *ApplyPnPProvisioningTemplate-Solbound.ps1* applies the PnP Provisioning template to the site you have created above. The template contains information about the lists and libraries, pages, and images contained in the site.
 
 The script also performs some additional configuration which cannot be contained in the PnP Provisioning template for technical reasons.
 
