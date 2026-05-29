@@ -9,6 +9,7 @@ Each site can be installed in your tenant independently, so you can choose to in
 
 - [Credimus](./templates/Credimus/README.md) is a demo site for a financial services company
 - [Solbound](./templates/Solbound/README.md) is a demo site for a solar installation company
+- [Forage](./templates/Forage/README.md) is a demo site for a fictional company
 
 ## Author(s)
 - [Julie Turner](https://www.linkedin.com/in/juliemturner/), MVP (Sympraxis Consulting)
