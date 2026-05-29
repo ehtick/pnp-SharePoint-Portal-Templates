@@ -13,7 +13,7 @@ Import-Module PnP.PowerShell -Force
 # Set variables - CHANGE THESE TO MATCH YOUR ENVIRONMENT
 $tenant = "spex003" # Your tenant name, without the .onmicrosoft.com or .com suffix
 $clientId = "be3b2a30-ea14-4707-adeb-3adb1a77beea" # The App Id from your App Registration for PnP.PowerShell
-$siteUrl = "MARCTEST2" # The URL name for the site you want to create.
+$siteUrl = "MARCTEST2" # The URL name for the site you want to update.
 #endregion
 
 #region Connections
@@ -39,6 +39,7 @@ $newSiteConnection = Connect-PnPOnline -ClientId $clientId -Url $destinationUrl 
 #region Apply PnP Template
 Write-Host -BackgroundColor Cyan "Applying PnP Provisioning Template to site at $destinationUrl..."
 
+
 # Apply PnP Template
 Invoke-PnPSiteTemplate `
     -Connection $newSiteConnection `
@@ -52,11 +53,52 @@ Write-Host -BackgroundColor Cyan "Performing additional configuration for site a
 
 # Set site header background image and other settings
 Set-PnPWebHeader -Connection $newSiteConnection `
-    -HeaderLayout Extended `
-    -HeaderBackgroundImageUrl "/sites/$siteUrl/SiteAssets/__extendedHeaderBackgroundImage____extendedHeaderBackgroundImage__DEFAULT_CHROME_BG_IMAGE_NAME" `
-    -SiteThumbnailUrl "/sites/$siteUrl/SiteAssets/__rectSitelogo__solbound-logo" `
+    -HeaderLayout Standard `
+    -HeaderBackgroundImageUrl "/sites/$siteUrl/SiteAssets/__extendedHeaderBackgroundImage__DEFAULT_CHROME_BG_IMAGE_NAME.png" `
+    -SiteThumbnailUrl "/sites/$siteUrl/SiteAssets/__rectSitelogo__solbound-logo.png" `
     -SiteLogoUrl "/sites/$siteUrl/SiteAssets/__sitelogo__solbound-logo.png"
-    
+Set-PnPWeb -Connection $newSiteConnection -HideTitleInHeader
+
+# Add events to Events list
+
+# $newSiteConnection = Connect-PnPOnline -ClientId e6f6cea5-3653-448b-b4fc-5ddb2a4b376f -Url https://sympraxisdesign.sharepoint.com/sites/solbound -Interactive -ReturnConnection
+
+# $events = Get-PnPListItem -Connection $newSiteConnection -List "Events" 
+
+
+# $events = $events | Select-Object `
+# @{Name = "Id"; Expression = { $_.Id } }, `
+# @{Name = "Title"; Expression = { $_.FieldValues.Title } }, `
+# @{Name = "EventDate"; Expression = { $_.FieldValues.EventDate } }, `
+# @{Name = "EndDate"; Expression = { $_.FieldValues.EndDate } }, `
+# @{Name = "Location"; Expression = { $_.FieldValues.Location } }, `
+# @{Name = "Description"; Expression = { $_.FieldValues.Description } }, `
+# @{Name = "Category"; Expression = { $_.FieldValues.Category } }, `
+# @{Name = "AllDayEvent"; Expression = { $_.FieldValues.fAllDayEvent } }, `
+# @{Name = "BannerUrl"; Expression = { $_.FieldValues.BannerUrl.Url.Replace("https://sympraxisdesign.sharepoint.com", "") } }
+
+# $events | Export-Csv -Path "./templates/Solbound/PnPProvisioning/EventsListData.csv" -NoTypeInformation -Force
+
+
+
+$events = Import-Csv -Path "./templates/Solbound/PnPProvisioning/EventsListData.csv"
+
+foreach ($event in $events) {
+    Write-Host -BackgroundColor Green "Adding event '$($event.Title)' to Events list"
+    $values = @{
+        "Title"        = $event.Title
+        "EventDate"    = $event.EventDate
+        "EndDate"      = $event.EndDate
+        "Location"     = $event.Location
+        "Description"  = $event.Description
+        "Category"     = $event.Category
+        "fAllDayEvent" = $event.AllDayEvent
+        "BannerUrl"    = $event.BannerUrl.Replace("/sites/Solbound/", "/sites/$siteUrl/")
+    }
+    $newItem = Add-PnPListItem -Connection $newSiteConnection -List "Events" -Values $values
+}
+
+
 
 Write-Host -BackgroundColor Cyan "Provisioning complete for site at $destinationUrl"
 #endregion

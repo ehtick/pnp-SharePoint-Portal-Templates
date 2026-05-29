@@ -11,9 +11,9 @@ Each site can be installed in your tenant independently, so you can choose to in
 - [Solbound](./templates/Solbound/README.md) is a demo site for a solar installation company
 
 ## Author(s)
-- Julie Turner (Sympraxis Consulting) - @jfj1997
-- Stefan Bauer (N8D) - @stfbauer
-- Marc D Anderson (Sympraxis Consulting) - @sympmarc
+- [Julie Turner](https://www.linkedin.com/in/juliemturner/), MVP (Sympraxis Consulting)
+- [Stefan Bauer](https://www.linkedin.com/in/stfbauer/), MVP (N8D)
+- [Marc D Anderson](https://www.linkedin.com/in/marcanderson/), MVP (Sympraxis Consulting)
 
 ## Disclaimer
 THIS CODE IS PROVIDED AS IS WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING ANY IMPLIED WARRANTIES OF FITNESS FOR A PARTICULAR PURPOSE, MERCHANTABILITY, OR NON-INFRINGEMENT.
