@@ -113,7 +113,6 @@ Font Packages combine sets of fonts for use in a site which has the Font Package
 
 ![](./media/credimus-choose-your-fonts.jpg)
 
-
 #### Assign your fonts
 
 ![](./media/credimus-assign-your-fonts.jpg)
@@ -136,6 +135,8 @@ Viva Connections - coon to be renamed SharePoint Connections - enables us to cre
 
 ### Create Viva Connections experience for site
 
+TBD
+
 ## Final site configuration
 
 These final steps apply the configurations you have set up above in the site itself.
@@ -155,23 +156,6 @@ Select Theme and choose the Credimus.Theme and Save.
 Enable the Font Package you created above under Fonts.
 
 ![Apply Credimus Font Package](./media/credimus-apply-font-package.jpg)
-
-
-#### Change Header settings
-
-For this site, the Header settings should be as follows:
-
-| Property Panel | Setting | Value |
-|---|---|---|
-| Layout | Extended | NA |
-| Design | Image | CredimusHeader.png |
-| Design | Overlay opacity | 19 |
-| Design | Site title visibility | Off |
-| Design | Site logo thumbnail | CredimusSiteLogoThumbnail.png |
-| Design | Site logo | CredimusSiteLogo.png |
-| | | |
-
-The images can be found in the *Header Images* folder.
 
 
 ### Edit home page

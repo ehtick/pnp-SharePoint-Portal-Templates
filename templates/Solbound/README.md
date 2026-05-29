@@ -84,6 +84,7 @@ First, you add the colors to the theme. Add the colors in the order listed above
 #### Name the theme
 
 Next, give the theme the name *Solbound.Theme*, and save.
+
 ![Name the theme](./media/solbound-name-theme.jpg)
 
 #### Review the theme
