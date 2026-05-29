@@ -1,0 +1,14 @@
+﻿{
+    "Name":  "Forage.Theme",
+    "Palette":  null,
+    "ColorPairs":  {
+                       "light":  [
+                                     {
+                                         "accentColor":  "#FAF6EC",
+                                         "backgroundColor":  "#0A1F0C"
+                                     }
+                                 ]
+                   },
+    "IsInverted":  true,
+    "Editable":  true
+}
