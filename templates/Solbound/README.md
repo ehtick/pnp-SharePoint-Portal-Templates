@@ -9,7 +9,7 @@ Installing the Solbound site requires several steps:
 - Configure Viva Connections
 - Configure the Solbound site
 
-![Solbound Home Page](./media/Solbound-home-page.jpg)
+![Solbound Home Page](./media/solbound-home-page.jpg)
 
 These installation instructions are streamlined as much as possible, with the goal to get you from start to finish as quickly as possible. If you encounter a topic with which you are not familiar, the instructions link out to Microsoft Learn articles with more specifics.
 
@@ -31,7 +31,7 @@ Throughout the rest of these instructions, you will be either making changes to 
 
 ### Download ZIP file
 
-Download the [Solbound ZIP file](./Solbound.zip). This ZIP file contains all the necessary files to apply the PnP Provisioning template, as well as the images and fonts used in the site.
+Download the [Solbound ZIP file](./solbound.zip). This ZIP file contains all the necessary files to apply the PnP Provisioning template, as well as the images and fonts used in the site.
 
 ### Extract all files in ZIP file
 
@@ -41,9 +41,9 @@ We recommend you extract the ZIP file into a folder in the root of your machine,
 
 ## Apply PnP Provisioning template
 
-The base definition for the site is contained the a PnP Provisioning template file. This file can be found in the folder *PnP Provisioning*, and is named *PnP-Provisioning-SolboundSite - RAW.pnp*.
+The base definition for the site is contained the a PnP Provisioning template file. This file can be found in the folder *PnP Provisioning*, and is named *pnp-provisioning-solboundsite - RAW.pnp*.
 
-The script *ApplyPnPProvisioningTemplate-Solbound.ps1* applies the PnP Provisioning template to the site you have created above. The template contains information about the lists and libraries, pages, and images contained in the site.
+The script *applyPnPProvisioningTemplate-solbound.ps1* applies the PnP Provisioning template to the site you have created above. The template contains information about the lists and libraries, pages, and images contained in the site.
 
 The script also performs some additional configuration which cannot be contained in the PnP Provisioning template for technical reasons.
 
@@ -79,17 +79,17 @@ Once you have the Brand Colors defined, you use them to set up a theme. For deta
 
 First, you add the colors to the theme. Add the colors in the order listed above.
 
-![](./media/Solbound-add-theme-colors.jpg)
+![](./media/solbound-add-theme-colors.jpg)
 
 #### Name the theme
 
 Next, give the theme the name *Solbound.Theme*, and save.
-![](./media/Solbound-name-theme.jpg)
+![](./media/solbound-name-theme.jpg)
 
 #### Review the theme
 
 Finally, the theme should look like this is you have set it up correctly.
-![](./media/Solbound-view-theme.jpg)
+![](./media/solbound-view-theme.jpg)
 
 ### Upload fonts
 
@@ -111,21 +111,21 @@ Font Packages combine sets of fonts for use in a site which has the Font Package
 
 #### Choose your fonts
 
-![](./media/Solbound-choose-your-fonts.jpg)
+![](./media/solbound-choose-your-fonts.jpg)
 
 #### Assign your fonts
 
-![](./media/Solbound-assign-your-fonts.jpg)
+![](./media/solbound-assign-your-fonts.jpg)
 
 #### Give your package a name
 
-![](./media/Solbound-give-your-package-a-name.jpg)
+![](./media/solbound-give-your-package-a-name.jpg)
 
 ### Review font package
 
 Review the settings to ensure you have created the Font Package correctly.
 
-![](./media/Solbound-review-font-package.jpg)
+![](./media/solbound-review-font-package.jpg)
 
 ## Viva Connections
 
@@ -145,13 +145,13 @@ Go to the gear, and Select Change the look.
 
 Select Theme and choose the Solbound.Theme and Save.
 
-![Apply Solbound Theme](./media/Solbound-set-theme.jpg)
+![Apply Solbound Theme](./media/solbound-set-theme.jpg)
 
 #### Apply Font Package
 
 Enable the Font Package you created above under Fonts.
 
-![Apply Solbound Font Package](./media/Solbound-apply-font-package.jpg)
+![Apply Solbound Font Package](./media/solbound-apply-font-package.jpg)
 
 
 #### Change Header settings
