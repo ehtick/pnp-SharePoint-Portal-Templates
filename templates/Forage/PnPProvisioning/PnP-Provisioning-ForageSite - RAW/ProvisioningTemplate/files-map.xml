@@ -1,0 +1,20 @@
+<PnPFilesMap xmlns="clr-namespace:PnP.Framework.Provisioning.Connectors.OpenXML.Model;assembly=PnP.Framework" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <PnPFilesMap.Map>
+    <scg:Dictionary x:TypeArguments="x:String, x:String">
+      <x:String x:Key="7da44587-c945-4e8f-9b70-b9e041c70819.svg">SiteAssets/SitePages/Home/2329737969-Artboard-1_old.svg</x:String>
+      <x:String x:Key="d6552114-bd08-48f9-bd9b-567a0c44379a.svg">SiteAssets/SitePages/Home/2329737969-Artboard-1.svg</x:String>
+      <x:String x:Key="c135d617-8e0a-42ce-820f-d3683cb1a0a3.jpg">SiteAssets/SitePages/Home/hero-background.jpg</x:String>
+      <x:String x:Key="9a49f486-8922-4f97-bf7f-3d0b6cabdcf9.png">SiteAssets/SitePages/Home/1572854389-Artboard-1.png</x:String>
+      <x:String x:Key="537f6660-0ec9-440a-93be-800bb06f8996.svg">SiteAssets/SitePages/Home/4029825037-Forage-Logo.svg</x:String>
+      <x:String x:Key="df77a374-e1cf-48e9-b56b-d3c14b051604.png">SiteAssets/SitePages/Home/2834619153-hr.png</x:String>
+      <x:String x:Key="74bb9c14-3279-40d3-b7a4-f7d361fc0616.png">SiteAssets/SitePages/Home/2413042413-hr.png</x:String>
+      <x:String x:Key="e3957b56-93ac-4c24-979e-49eaf1a9e3b8.png">SiteAssets/__sitelogo__LogoArt.png</x:String>
+      <x:String x:Key="e92c59ad-80d4-4d1e-9a7b-126ddf6bcf27.png">SiteAssets/__rectSitelogo__LogoArt.png</x:String>
+      <x:String x:Key="19a889d5-4249-4e0e-8367-fa8951636be5.svg">SiteAssets/SitePages/Home/1523857649-glass-panel-standalone.svg</x:String>
+      <x:String x:Key="716d267e-bfeb-4e18-8567-bb2a60e8456e.svg">SiteAssets/SitePages/Home/2782304456-glass-panel-standalone.svg</x:String>
+      <x:String x:Key="35f6da88-1d2e-4c18-9ea0-17ad7df71de9.png">SiteAssets/SitePages/Home/copy-(1)-__rectSitelogo__LogoArt-496425.png</x:String>
+      <x:String x:Key="3a89a724-7da4-4d32-aa3e-cb80ddab7505.svg">SiteAssets/SitePages/Home/1899396937-LogoArt.svg</x:String>
+      <x:String x:Key="be2e0ea7-86bf-43ae-8970-822569fdb9e7.xml">PnP-Provisioning-ForageSite - RAW.xml</x:String>
+    </scg:Dictionary>
+  </PnPFilesMap.Map>
+</PnPFilesMap>

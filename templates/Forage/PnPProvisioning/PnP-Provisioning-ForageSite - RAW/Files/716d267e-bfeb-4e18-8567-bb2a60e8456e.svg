@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 340 420">
+
+  <!--
+    Standalone glass panel — transparent background.
+    Drop this over any surface; no background is baked in.
+    rx = min(340,420) × 0.06 = 20.4
+  -->
+
+  <defs>
+
+    <!-- Subtle top-catch highlight simulating a glass sheen -->
+    <linearGradient id="glass-sheen" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="white" stop-opacity="0.10"/>
+      <stop offset="40%"  stop-color="white" stop-opacity="0.03"/>
+      <stop offset="100%" stop-color="white" stop-opacity="0.00"/>
+    </linearGradient>
+
+    <!-- Soft inner-shadow at the bottom to add depth -->
+    <linearGradient id="glass-depth" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="60%"  stop-color="black" stop-opacity="0.00"/>
+      <stop offset="100%" stop-color="black" stop-opacity="0.18"/>
+    </linearGradient>
+
+    <clipPath id="cp-panel-sa">
+      <rect x="0" y="0" width="340" height="420" rx="20.4"/>
+    </clipPath>
+
+  </defs>
+
+  <!-- Layer 1 — dark semi-transparent base -->
+  <rect x="0" y="0" width="340" height="420" rx="20.4"
+        fill="black" fill-opacity="0.80"/>
+
+  <!-- Layer 2 — top-light sheen -->
+  <rect x="0" y="0" width="340" height="420" rx="20.4"
+        fill="url(#glass-sheen)"
+        clip-path="url(#cp-panel-sa)"/>
+
+  <!-- Layer 3 — bottom depth shadow -->
+  <rect x="0" y="0" width="340" height="420" rx="20.4"
+        fill="url(#glass-depth)"
+        clip-path="url(#cp-panel-sa)"/>
+
+  <!-- Layer 4 — inner top highlight line (glass edge catch) -->
+  <rect x="1" y="1" width="338" height="60" rx="20.4"
+        fill="url(#glass-sheen)"
+        clip-path="url(#cp-panel-sa)"/>
+
+</svg>

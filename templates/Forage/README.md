@@ -77,23 +77,27 @@ Once you have the Brand Colors defined, you use them to set up a theme. For deta
 
 First, you add the colors to the theme. Add the colors in the order listed above.
 
+TBD - add screenshots for theme configuration steps, similar to Solbound instructions.
 ![Add the theme colors](./media/forage-add-theme-colors.jpg)
 
 #### Name the theme
 
+TBD - add screenshots for theme configuration steps, similar to Solbound instructions.
 Next, give the theme the name *Forage.Theme*, and save.
 ![Name the theme](./media/forage-name-theme.jpg)
 
 #### Review the theme
 
 Finally, the theme should look like this is you have set it up correctly.
+
+TBD - add screenshots for theme configuration steps, similar to Solbound instructions.
 ![Review the theme](./media/forage-view-theme.jpg)
 
 ### Upload fonts
 
 The site uses several custom fonts to enhance its look and feel In this session, you'll upload specific font files to support the site. These font files are not prefixed. For each font family, we need to upload a set of font files, each oof which contains variants on the font for use the Font Package, which we will create next. For detailed instructions, see [Brand Fonts](https://learn.microsoft.com/sharepoint/brand-fonts).
 
-Forage uses the custom fonts *Exo 2* and *Barlow*. The appropriate files are in the *Fonts* folder.
+Forage uses the custom fonts *Baloo 2* and *Plus Jakarta Sans*. The appropriate files are in the *Fonts* folder.
 
 ### Create Font Package
 
@@ -101,10 +105,10 @@ Font Packages combine sets of fonts for use in a site which has the Font Package
 
 | Font Slot | Font Name | Font Variant |
 |---|---|---|
-| Title | Exo 2 | Black |
-| Headline | Exo 2 | ExtraBold |
-| Body | Barlow | Medium |
-| Interactive | Exo 2 | ExtraBold |
+| Title | Baloo 2 | ExtraBold |
+| Headline | Baloo 2 | ExtraBold |
+| Body | Plus Jakarta Sans | Medium |
+| Interactive | Plus Jakarta Sans | Medium |
 | | | |
 
 #### Choose your fonts
@@ -158,7 +162,7 @@ For this site, the Header settings should be as follows:
 
 | Property Panel | Setting | Value |
 |---|---|---|
-| Design | Overlay opacity | 72 |
+| Design | Overlay opacity | nn |
 | | | |
 
 ### Edit home page
