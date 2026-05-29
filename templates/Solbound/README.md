@@ -160,16 +160,8 @@ For this site, the Header settings should be as follows:
 
 | Property Panel | Setting | Value |
 |---|---|---|
-| Layout | Extended | NA |
-| Design | Image | SolboundHeader.png |
-| Design | Overlay opacity | 19 |
-| Design | Site title visibility | Off |
-| Design | Site logo thumbnail | SolboundSiteLogoThumbnail.png |
-| Design | Site logo | SolboundSiteLogo.png |
+| Design | Overlay opacity | 72 |
 | | | |
-
-The images can be found in the *Header Images* folder.
-
 
 ### Edit home page
 
