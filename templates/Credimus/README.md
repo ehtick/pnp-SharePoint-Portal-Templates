@@ -1,6 +1,8 @@
 
 # Installation Instructions
 
+These installation instructions are streamlined as much as possible, with the goal to get you from start to finish as quickly as possible. If you encounter a topic with which you are not familiar, the instructions link out to Microsoft Learn articles with more specifics.
+
 Installing the Credimus site requires several steps:
 
 - Create a new Communication Site in your tenant
@@ -10,8 +12,6 @@ Installing the Credimus site requires several steps:
 - Configure the Credimus site
 
 ![Credimus Home Page](./media/credimus-home-page.jpg)
-
-These installation instructions are streamlined as much as possible, with the goal to get you from start to finish as quickly as possible. If you encounter a topic with which you are not familiar, the instructions link out to Microsoft Learn articles with more specifics.
 
 ## Prerequisites
 
