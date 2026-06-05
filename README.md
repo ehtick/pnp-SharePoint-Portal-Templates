@@ -1,5 +1,6 @@
 # SharePoint Portal Templates
-Site templates used as demos
+
+Site templates used as demos from Microsoft
 
 ## Overview
 

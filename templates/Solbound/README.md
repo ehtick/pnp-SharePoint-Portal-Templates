@@ -1,6 +1,8 @@
 
 # Installation Instructions
 
+These installation instructions are streamlined as much as possible, with the goal to get you from start to finish as quickly as possible. If you encounter a topic with which you are not familiar, the instructions link out to Microsoft Learn articles with more specifics.
+
 Installing the Solbound site requires several steps:
 
 - Create a new Communication Site in your tenant
@@ -10,8 +12,6 @@ Installing the Solbound site requires several steps:
 - Configure the Solbound site
 
 ![Solbound Home Page](./media/solbound-home-page.jpg)
-
-These installation instructions are streamlined as much as possible, with the goal to get you from start to finish as quickly as possible. If you encounter a topic with which you are not familiar, the instructions link out to Microsoft Learn articles with more specifics.
 
 ## Prerequisites
 
@@ -23,7 +23,7 @@ Any exceptions to the above (for example, where Global Administrator permissions
 
 ### Create a new Communication Site
 
-Create a new Communication Site named *Solbound*, using the default template. If you need instructions to create this site, please refer to the support article [Create a communication site in SharePoint](https://support.microsoft.com/office/create-a-communication-site-in-sharepoint-7fb44b20-a72f-4d2c-9173-fc8f59ba50eb)
+Create a new Communication Site named *Solbound*, using the default template. If you need instructions to create this site, please refer to the support article [Create a communication site in SharePoint](https://support.microsoft.com/office/create-a-communication-site-in-sharepoint-7fb44b20-a72f-4d2c-9173-fc8f59ba50eb).
 
 Be sure to make yourself the Site Owner of the Communication Site. You can add additional Site Owners or Site Members now or later in the site itself.
 
@@ -35,19 +35,19 @@ Download the [Solbound ZIP file](./Solbound.zip). This ZIP file contains all the
 
 ### Extract all files in ZIP file
 
->Note: The ZIP file contains additional files, should you want to automate more of the implementation. These files can also be used as documentation for the process, in addition to these instructions.
-
 We recommend you extract the ZIP file into a folder in the root of your machine, for example */code/Solbound*. This will ensure that the folder paths won't be too long for the script to run successfully.
+
+>Note: The ZIP file contains additional files, should you want to automate more of the implementation. These files can also be used as documentation for the process, in addition to these instructions.
 
 ## Apply PnP Provisioning template
 
-The base definition for the site is contained the a PnP Provisioning template file. This file can be found in the folder *PnP Provisioning*, and is named *PnP-Provisioning-SolboundSite - RAW.pnp*.
+The base definition for the site is contained in the PnP Provisioning template file. This file can be found in the folder *PnP Provisioning*, and is named *PnP-Provisioning-SolboundSite - RAW.pnp*.
 
-The script *ApplyPnPProvisioningTemplate-Solbound.ps1* applies the PnP Provisioning template to the site you have created above. The template contains information about the lists and libraries, pages, and images contained in the site.
+The script *ApplyPnPProvisioningTemplate-Solbound.ps1* applies the PnP Provisioning template to the site you have created above. The script also performs some additional configuration which cannot be contained in the PnP Provisioning template for technical reasons.
 
-The script also performs some additional configuration which cannot be contained in the PnP Provisioning template for technical reasons.
+The template contains information about the lists and libraries, pages, and images contained in the site.
 
-To run the script, you will need to update the variables at the top of the script to reflect your tenant and site information. Then, you can run the script. For detailed instructions, see [Apply a provisioning template](https://learn.microsoft.com/sharepoint/apply-provisioning-template).
+To run the script, you will need to update the variables at the top of the script to reflect your tenant and site information. Then, you can run the script. For detailed instructions, see [Applying PnP Templates to SharePoint Sites](https://learn.microsoft.com/sharepoint/dev/solution-guidance/applying-pnp-templates).
 
 You will be asked to log in with your credentials twice, once to connect to the SharePoint Admin Center to ensure the site you specified exists, and a second time to connect to that site. Then the script will run through several steps, applying the template and making the additional configurations.
 
@@ -61,7 +61,9 @@ If you already have a Brand Center, the default location is */sites/BrandGuide*,
 
 ### Create theme colors
 
-For this site, you should add the following colors into your Brand Colors. Each is prefixed with the name of the site so you can identify them easily. Note that there is no way to remove Brand Colors in the UI, though you can do so with PowerShell. For detailed instructions, see [Brand Colors](https://learn.microsoft.com/sharepoint/brand-colors).
+For this site, you should add the following colors into your Brand Colors. Each is prefixed with the name of the site so you can identify them easily. 
+
+>Note: There is no way to remove Brand Colors in the UI, though you can do so with PowerShell. For detailed instructions, see [Brand Colors](https://learn.microsoft.com/sharepoint/brand-colors).
 
 | Color Name | Color Code | Color |
 |---|---|---|
@@ -83,7 +85,7 @@ First, you add the colors to the theme. Add the colors in the order listed above
 
 #### Name the theme
 
-Next, give the theme the name *Solbound.Theme*, and save.
+Next, give the theme the name *Solbound.Theme*, and Save.
 
 ![Name the theme](./media/solbound-name-theme.jpg)
 
@@ -94,7 +96,7 @@ Finally, the theme should look like this is you have set it up correctly.
 
 ### Upload fonts
 
-The site uses several custom fonts to enhance its look and feel In this session, you'll upload specific font files to support the site. These font files are not prefixed. For each font family, we need to upload a set of font files, each oof which contains variants on the font for use the Font Package, which we will create next. For detailed instructions, see [Brand Fonts](https://learn.microsoft.com/sharepoint/brand-fonts).
+The site uses several custom fonts to enhance its look and feel. You need to upload specific font files to support the site. These font files are not prefixed. For each font family, you need to upload a set of font files, each of which contains variants on the font for use the Font Package, which we will create next. For detailed instructions, see [Brand Fonts](https://learn.microsoft.com/sharepoint/brand-fonts).
 
 Solbound uses the custom fonts *Exo 2* and *Barlow*. The appropriate files are in the *Fonts* folder.
 
@@ -130,7 +132,7 @@ Review the settings to ensure you have created the Font Package correctly.
 
 ## Viva Connections
 
-Viva Connections - coon to be renamed SharePoint Connections - enables us to create experiences for use in a site or sites. By enabling the experience in a site, you can use the Dashboard Web Part in pages to provide ACES.
+Viva Connections - soon to be renamed SharePoint Connections - enables us to create experiences for use in a site or sites. By enabling the experience in a site, you can use the Dashboard Web Part in pages to provide ACES.
 
 ### Create Viva Connections experience for site
 
@@ -142,7 +144,7 @@ These final steps apply the configurations you have set up above in the site its
 
 ### Change the look
 
-Go to the gear, and Select Change the look.
+Go to the gear, and select Change the look.
 
 #### Apply theme
 
