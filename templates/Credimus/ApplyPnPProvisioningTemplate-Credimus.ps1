@@ -13,7 +13,7 @@ Import-Module PnP.PowerShell -Force
 # Set variables - CHANGE THESE TO MATCH YOUR ENVIRONMENT
 $tenant = "spex003" # Your tenant name, without the .onmicrosoft.com or .com suffix
 $clientId = "be3b2a30-ea14-4707-adeb-3adb1a77beea" # The App Id from your App Registration for PnP.PowerShell
-$siteUrl = "MARCTEST4" # The URL name for the site you want to create.
+$siteUrl = "Credimus" # The URL name for the site you want to create.
 #endregion
 
 #region Connections
@@ -56,7 +56,6 @@ Set-PnPWebHeader -Connection $newSiteConnection `
     -SiteThumbnailUrl "/sites/$siteUrl/SiteAssets/__sitelogo__credimus-icon@2x.png" `
     -SiteLogoUrl "/sites/$siteUrl/SiteAssets/__rectSitelogo__credimus-full@2x.png"
 Set-PnPWeb -Connection $newSiteConnection -HideTitleInHeader
-
 
 # Update Site Pages library to add Department values and set thumbnails
 $sitePages = Get-PnPListItem -Connection $newSiteConnection -List "Site Pages" -Fields "Id", "Title"

@@ -13,7 +13,7 @@ Import-Module PnP.PowerShell -Force
 # Set variables - CHANGE THESE TO MATCH YOUR ENVIRONMENT
 $tenant = "spex003" # Your tenant name, without the .onmicrosoft.com or .com suffix
 $clientId = "be3b2a30-ea14-4707-adeb-3adb1a77beea" # The App Id from your App Registration for PnP.PowerShell
-$siteUrl = "MARCTEST3" # The URL name for the site you want to update.
+$siteUrl = "MARCTEST2" # The URL name for the site you want to update.
 #endregion
 
 #region Connections
@@ -60,27 +60,6 @@ Set-PnPWebHeader -Connection $newSiteConnection `
 Set-PnPWeb -Connection $newSiteConnection -HideTitleInHeader
 
 # Add events to Events list
-
-# $newSiteConnection = Connect-PnPOnline -ClientId e6f6cea5-3653-448b-b4fc-5ddb2a4b376f -Url https://sympraxisdesign.sharepoint.com/sites/solbound -Interactive -ReturnConnection
-
-# $events = Get-PnPListItem -Connection $newSiteConnection -List "Events" 
-
-
-# $events = $events | Select-Object `
-# @{Name = "Id"; Expression = { $_.Id } }, `
-# @{Name = "Title"; Expression = { $_.FieldValues.Title } }, `
-# @{Name = "EventDate"; Expression = { $_.FieldValues.EventDate } }, `
-# @{Name = "EndDate"; Expression = { $_.FieldValues.EndDate } }, `
-# @{Name = "Location"; Expression = { $_.FieldValues.Location } }, `
-# @{Name = "Description"; Expression = { $_.FieldValues.Description } }, `
-# @{Name = "Category"; Expression = { $_.FieldValues.Category } }, `
-# @{Name = "AllDayEvent"; Expression = { $_.FieldValues.fAllDayEvent } }, `
-# @{Name = "BannerUrl"; Expression = { $_.FieldValues.BannerUrl.Url.Replace("https://sympraxisdesign.sharepoint.com", "") } }
-
-# $events | Export-Csv -Path "./templates/Solbound/PnPProvisioning/EventsListData.csv" -NoTypeInformation -Force
-
-
-
 $events = Import-Csv -Path "./templates/Solbound/PnPProvisioning/EventsListData.csv"
 
 foreach ($event in $events) {
@@ -97,6 +76,61 @@ foreach ($event in $events) {
     }
     $newItem = Add-PnPListItem -Connection $newSiteConnection -List "Events" -Values $values
 }
+
+# Update Site Pages library to add Department values and set thumbnails
+$sitePages = Get-PnPListItem -Connection $newSiteConnection -List "Site Pages" -Fields "Id", "Title"
+
+$pagesMetadata = Import-Csv -Path "$PSScriptRoot/Pages Metadata/Solbound_PagesMetadata.csv"
+
+# $sitePages | Select-Object `
+# @{Name = "ID"; Expression = { $_.FieldValues["ID"] } },
+# @{Name = "Title"; Expression = { $_.FieldValues["Title"] } } # | Export-Csv -Path "$PSScriptRoot/PnPProvisioning/SitePagesLibrary.csv" -NoTypeInformation -Force
+
+foreach ($page in $sitePages) {
+
+    Write-Host -BackgroundColor Green "Processing page '$($page.FieldValues['Title'])'"
+
+    $pageMetadata = ($pagesMetadata | Where-Object { $_.Title -eq $page.FieldValues['Title'] })
+    $folder = "$PSScriptRoot\Pages Metadata\$($pageMetadata.Id)"
+
+    if ($pageMetadata -and (Test-Path $folder)) {
+
+        $thumbUrl = $pageMetadata.ThumbnailUrl
+
+        $saSitePages = "/sites/$($siteUrl)/SiteAssets/SitePages"
+        $saFolderName = $pageMetadata.PageName.Replace('.aspx', '')
+        $saFolder = "$saSitePages/$($saFolderName)"
+
+        $pageFolder = Get-PnPFolder -Connection $newSiteConnection -Url $saFolder -ErrorAction SilentlyContinue
+
+        if (!$pageFolder) {
+            Add-PnPFolder -Connection $newSiteConnection -Name $saFolderName -Folder $saSitePages | Out-Null
+            # New-Item -ItemType Directory -Path $saFolder | Out-Null
+        }
+        $fileName = [System.IO.Path]::GetFileName(([uri]$thumbUrl).AbsolutePath)
+            
+        # Upload the file in $folder to the Site Assets library
+        Write-Host -BackgroundColor Cyan "  Uploading thumbnail $($fileName) to $saFolder"
+
+        Add-PnPFile -Connection $newSiteConnection -Path "$($folder)\$($fileName)" -Folder $saFolder | Out-Null
+
+        Set-PnPPage `
+            -Connection $newSiteConnection `
+            -Identity $page.FieldValues["FileLeafRef"] `
+            -ThumbnailUrl "/sites/$($siteUrl)/SiteAssets/SitePages/$($pageMetadata.PageName.Replace('.aspx', ''))/$fileName" `
+        | Out-Null
+
+        Write-Host -BackgroundColor Cyan "  Republishing page '$($page.FieldValues['Title'])' with new thumbnail and metadata"
+
+        $pubItem = Set-PnPPage -Connection $newSiteConnection -Identity $newItem.FieldValues["FileLeafRef"] -Publish
+
+    }
+}
+
+Write-Host -BackgroundColor Cyan "Provisioning complete for site at $destinationUrl"
+#endregion
+
+
 
 
 
