@@ -6,10 +6,10 @@ These installation instructions are streamlined as much as possible, with the go
 Installing the Credimus site requires several steps:
 
 - Create a new Communication Site in your tenant
-- Run the PowerShell script to apply the PnP Provisioning template
+- Run the PowerShell script to apply the PnP Provisioning template and apply additional configurations
 - Configure the Brand Center
-- Configure Viva Connections
-- Configure the Credimus site
+- Configure Viva Connections (???)
+- Configure the Credimus site settings which can't be automated
 
 ![Credimus Home Page](./media/credimus-home-page.jpg)
 
