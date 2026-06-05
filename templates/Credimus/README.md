@@ -172,4 +172,4 @@ In the home page of the site, find the Dashboard Web Part. If you'd like to matc
 
 At this point, you should have a fully functioning Credimus site, with the theme and fonts applied, and the ACES set up in the Dashboard Web Part on the home page. You can continue to customize the site as you see fit, adding additional content, pages, and web parts to make it your own.
 
-If you've had issues with setting up the site, please create an  issue in the GitHub repo, and we will do our best to assist you.
+If you've had issues with setting up the site, please [create an  issue](https://github.com/pnp/SharePoint-Portal-Templates/issues) in the GitHub repo, and we will do our best to assist you.
