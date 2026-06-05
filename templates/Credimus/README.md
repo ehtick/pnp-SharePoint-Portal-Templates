@@ -1,4 +1,3 @@
-
 # Installation Instructions
 
 These installation instructions are streamlined as much as possible, with the goal to get you from start to finish as quickly as possible. If you encounter a topic with which you are not familiar, the instructions link out to Microsoft Learn articles with more specifics.
@@ -6,7 +5,7 @@ These installation instructions are streamlined as much as possible, with the go
 Installing the Credimus site requires several steps:
 
 - Create a new Communication Site in your tenant
-- Run the PowerShell script to apply the PnP Provisioning template and apply additional configurations
+- Run the PowerShell script to apply the PnP Provisioning template and set additional configurations
 - Configure the Brand Center
 - Configure Viva Connections (???)
 - Configure the Credimus site settings which can't be automated
@@ -49,7 +48,7 @@ The template contains information about the lists and libraries, pages, and imag
 
 To run the script, you will need to update the variables at the top of the script to reflect your tenant and site information. Then, you can run the script. For detailed instructions, see [Applying PnP Templates to SharePoint Sites](https://learn.microsoft.com/sharepoint/dev/solution-guidance/applying-pnp-templates).
 
-You will be asked to log in with your credentials twice, once to connect to the SharePoint Admin Center to ensure the site you specified exists, and a second time to connect to that site. Then the script will run through several steps, applying the template and making the additional configurations.
+You will be asked to log in with your credentials twice, once to connect to the SharePoint Admin Center to ensure the site you specified exists, and a second time to connect to that site. Then the script will run through several steps, applying the template and making the additional configuration changes.
 
 ## Configure Brand Center
 
@@ -86,11 +85,13 @@ First, you add the colors to the theme. Add the colors in the order listed above
 #### Name the theme
 
 Next, give the theme the name *Credimus.Theme*, and Save.
+
 ![](./media/credimus-name-theme.jpg)
 
 #### Review the theme
 
 Finally, the theme should look like this is you have set it up correctly.
+
 ![](./media/credimus-view-theme.jpg)
 
 ### Upload fonts
@@ -167,6 +168,8 @@ In the home page of the site, find the Dashboard Web Part. If you'd like to matc
 |---|---|
 | | |
 
+## Summary
 
+At this point, you should have a fully functioning Credimus site, with the theme and fonts applied, and the ACES set up in the Dashboard Web Part on the home page. You can continue to customize the site as you see fit, adding additional content, pages, and web parts to make it your own.
 
-
+If you've had issues with setting up the site, please create an  issue in the GitHub repo, and we will do our best to assist you.
