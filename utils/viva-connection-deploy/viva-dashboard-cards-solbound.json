@@ -1,6 +1,7 @@
 {
   "$schema": "https://raw.githubusercontent.com/pnp/sp-dev-fx-extensions/main/schemas/viva-dashboard-cards.schema.json",
-  "_comment": "Tenant-agnostic Viva Connections Dashboard card definitions — training cards for compliance/HR portals. Sourced from spex003.sharepoint.com/sites/credimus (same cards as solbound). Exported 2026-06-11.",
+  "_comment": "Tenant-agnostic Viva Connections Dashboard card definitions — exported from spex003.sharepoint.com/sites/solbound dashboard.aspx",
+  "_structureNote": "Cards use native position{} format. cardSize at webPartData top level. Compatible with Fluid Framework co-authoring.",
   "tokens": {
     "fqdn": "Target tenant FQDN, e.g. contoso.sharepoint.com",
     "site": "Target site path, e.g. /sites/mysite",
@@ -11,7 +12,7 @@
   },
   "urlReplacements": [
     {
-      "from": "https://spex003.sharepoint.com/sites/credimus",
+      "from": "https://spex003.sharepoint.com/sites/solbound",
       "to": "{targetTenantUrl}{targetSitePath}"
     },
     {
@@ -24,26 +25,50 @@
     "1906732923-atrium.png"
   ],
   "sourceInfo": {
-    "note": "These are the 5 ACE training/compliance cards (My Trainings, My Goal Review, My Certification, Compliance Hub, Wellbeing). Originally provisioned on both /sites/solbound (item 17) and /sites/credimus (item 7).",
-    "sourcedFrom": "spex003.sharepoint.com/sites/credimus dashboard.aspx",
-    "exportedOn": "2026-06-11T15:51:54.999Z"
+    "sourcedFrom": "spex003.sharepoint.com/sites/solbound dashboard.aspx (item 17)",
+    "exportedOn": "2026-06-11T16:46:05.357Z"
   },
   "cardDesignerWebPartId": "ede49c75-a1a6-4762-ba1c-9b5ba3f2a61b",
   "approvalsAceWebPartId": "6e6f5d23-0f3c-41c8-a979-af0d6d9d6f95",
   "cards": [
     {
-      "id": "9593e615-7320-4b8b-be98-09b97112b12f",
-      "zoneId": "",
+      "position": {
+        "zoneIndex": 1,
+        "sectionIndex": 1,
+        "controlIndex": 0.5,
+        "sectionFactor": -1,
+        "layoutIndex": 1
+      },
+      "controlType": 3,
+      "id": "2b4668b5-4383-4572-8bf8-1bde694f9bdc",
+      "webPartId": "9593e615-7320-4b8b-be98-09b97112b12f",
+      "emphasis": {},
+      "zoneGroupMetadata": {
+        "type": 0
+      },
+      "reservedHeight": 180,
+      "reservedWidth": 164,
+      "addedFromPersistedData": true,
       "webPartData": {
         "id": "9593e615-7320-4b8b-be98-09b97112b12f",
-        "instanceId": "938fe37f-676d-47d2-94dc-6ff93c0afed3",
-        "title": "My Trainings",
+        "instanceId": "2b4668b5-4383-4572-8bf8-1bde694f9bdc",
+        "title": "Last Incident",
         "description": "Design a Viva Connections dashboard card with a quick view using available templates.",
+        "audiences": [],
+        "hideOn": {
+          "mobile": false
+        },
+        "serverProcessedContent": {
+          "htmlStrings": {},
+          "searchablePlainTexts": {},
+          "imageSources": {},
+          "links": {}
+        },
         "dataVersion": "1.7.3",
         "properties": {
           "iconProperty": "",
           "templateType": "image",
-          "cardIconSourceType": 2,
+          "cardIconSourceType": 1,
           "cardImageSourceType": 1,
           "cardSelectionAction": {
             "type": "ExternalLink",
@@ -54,7 +79,7 @@
           "numberCardButtonActions": 1,
           "cardButtonActions": [
             {
-              "title": "Check Upcoming",
+              "title": "Button",
               "style": "positive",
               "action": {
                 "type": "ExternalLink",
@@ -73,42 +98,37 @@
                   "view": "quickView"
                 }
               },
-              "isVisible": false
+              "isVisible": true
             }
           ],
           "quickViews": [
             {
-              "id": "quickView",
-              "displayName": "Default Quick View",
               "data": "{\n  \"Url\": \"http://adaptivecards.io/schemas/adaptive-card.json\",\n  \"Text\": \"Hello, World!\"\n}",
-              "template": "{\n  \"type\": \"AdaptiveCard\",\n  \"body\": [\n    {\n      \"type\": \"TextBlock\",\n      \"size\": \"Medium\",\n      \"weight\": \"Bolder\",\n      \"text\": \"${Text}\",\n      \"wrap\": true\n    }\n  ],\n  \"actions\": [\n    {\n      \"type\": \"Action.OpenUrl\",\n      \"title\": \"View\",\n      \"url\": \"${Url}\"\n    }\n  ],\n  \"$schema\": \"http://adaptivecards.io/schemas/adaptive-card.json\",\n  \"version\": \"1.2\"\n}"
+              "template": "{\n  \"type\": \"AdaptiveCard\",\n  \"body\": [\n    {\n      \"type\": \"TextBlock\",\n      \"size\": \"Medium\",\n      \"weight\": \"Bolder\",\n      \"text\": \"${Text}\",\n      \"wrap\": true\n    }\n  ],\n  \"actions\": [\n    {\n      \"type\": \"Action.OpenUrl\",\n      \"title\": \"View\",\n      \"url\": \"${Url}\"\n    }\n  ],\n  \"$schema\": \"http://adaptivecards.io/schemas/adaptive-card.json\",\n  \"version\": \"1.2\"\n}",
+              "id": "quickView",
+              "displayName": "Default Quick View"
             }
           ],
           "currentQuickViewIndex": 0,
-          "title": "My Trainings",
-          "primaryText": "AML Certification in 20 days",
-          "description": "AML Deadline",
-          "aceData": {
-            "cardSize": "Large"
-          },
-          "cardIconCustomIconName": "person_question_mark",
-          "iconPicker": "person_question_mark",
+          "title": "Last Incident",
+          "primaryText": "320 days ago.",
+          "description": "Description text",
           "cardImageCustomImageSettings": {
             "type": 1,
             "altText": "Image thumbnail preview",
-            "imageUrl": "https://cdn.hubblecontent.osi.office.net/m365content/publish/30cbd960-d375-420c-b257-4ac2109cff86/529700670.jpg"
+            "imageUrl": "https://cdn.hubblecontent.osi.office.net/m365content/publish/4d4f120a-ec1b-4d99-b327-c735d8f09239/1128737268.jpg"
           },
-          "imagePicker": "https://cdn.hubblecontent.osi.office.net/m365content/publish/30cbd960-d375-420c-b257-4ac2109cff86/529700670.jpg",
+          "imagePicker": "https://cdn.hubblecontent.osi.office.net/m365content/publish/4d4f120a-ec1b-4d99-b327-c735d8f09239/1128737268.jpg",
           "cardDesignerPlusPlusProperties": {
             "dataSources": [
               {
                 "type": "Static",
-                "id": "af5d7b75-90f2-4a71-828e-3690dda0abf1",
+                "id": "8e3818c1-f5b3-4929-8a56-345a45b122e7",
                 "data": "{\n  \"Url\": \"http://adaptivecards.io/schemas/adaptive-card.json\",\n  \"Text\": \"Hello, World!\"\n}"
               },
               {
                 "type": "Static",
-                "id": "dbad951b-3810-4258-bbfb-b679d232fa2d",
+                "id": "5c98f8d2-a95a-4958-9de0-320216fe864a",
                 "displayName": "Static",
                 "data": "{\n  \"Url\": \"http://adaptivecards.io/schemas/adaptive-card.json\",\n  \"Text\": \"Hello, World!\"\n}"
               }
@@ -116,347 +136,247 @@
             "quickViews": [],
             "primaryQuickViewId": "quickView"
           }
-        }
+        },
+        "containsDynamicDataSource": false,
+        "iconProperty": "https://res-1.public.onecdn.static.microsoft/files/sp-client/icn_card_designer_card_c83ddf6998bc3a2cc677.svg",
+        "cardSize": "Medium"
       }
     },
     {
-      "id": "9593e615-7320-4b8b-be98-09b97112b12f",
-      "zoneId": "",
+      "position": {
+        "zoneIndex": 1,
+        "sectionIndex": 1,
+        "controlIndex": 1,
+        "sectionFactor": -1,
+        "layoutIndex": 1
+      },
+      "controlType": 3,
+      "id": "d4a3d6c5-0334-48a9-87b2-99c4cf43b26d",
+      "webPartId": "c9925e96-32e6-4acb-a012-20e913d03410",
+      "emphasis": {},
+      "zoneGroupMetadata": {
+        "type": 0
+      },
+      "reservedHeight": 180,
+      "reservedWidth": 164,
+      "addedFromPersistedData": true,
       "webPartData": {
-        "id": "9593e615-7320-4b8b-be98-09b97112b12f",
-        "instanceId": "4cc41790-228f-46bd-9737-0a96a814645d",
-        "title": "My Goal Review",
-        "description": "Design a Viva Connections dashboard card with a quick view using available templates.",
-        "dataVersion": "1.7.3",
-        "properties": {
-          "iconProperty": "",
-          "templateType": "primaryText",
-          "cardIconSourceType": 2,
-          "cardImageSourceType": 1,
-          "cardSelectionAction": {
-            "type": "ExternalLink",
-            "parameters": {
-              "target": "https://adaptivecards.io/"
-            }
-          },
-          "numberCardButtonActions": 1,
-          "cardButtonActions": [
-            {
-              "title": "View Goals",
-              "style": "positive",
-              "action": {
-                "type": "ExternalLink",
-                "parameters": {
-                  "target": "https://adaptivecards.io/"
-                }
-              },
-              "isVisible": true
-            },
-            {
-              "title": "Button",
-              "style": "default",
-              "action": {
-                "type": "QuickView",
-                "parameters": {
-                  "view": "quickView"
-                }
-              },
-              "isVisible": true
-            }
-          ],
-          "quickViews": [
-            {
-              "id": "quickView",
-              "displayName": "Default Quick View",
-              "data": "{\n  \"Url\": \"http://adaptivecards.io/schemas/adaptive-card.json\",\n  \"Text\": \"Hello, World!\"\n}",
-              "template": "{\n  \"type\": \"AdaptiveCard\",\n  \"body\": [\n    {\n      \"type\": \"TextBlock\",\n      \"size\": \"Medium\",\n      \"weight\": \"Bolder\",\n      \"text\": \"${Text}\",\n      \"wrap\": true\n    }\n  ],\n  \"actions\": [\n    {\n      \"type\": \"Action.OpenUrl\",\n      \"title\": \"View\",\n      \"url\": \"${Url}\"\n    }\n  ],\n  \"$schema\": \"http://adaptivecards.io/schemas/adaptive-card.json\",\n  \"version\": \"1.2\"\n}"
-            }
-          ],
-          "currentQuickViewIndex": 0,
-          "title": "My Goal Review",
-          "primaryText": "June 15, 2026",
-          "description": "Manager: Elena Vasquez",
-          "cardIconCustomImageSettings": {
-            "type": 1,
-            "altText": "Icon thumbnail preview",
-            "imageUrl": "{targetTenantUrl}{targetSitePath}/SiteAssets/SitePages/Home/1906732923-atrium.png"
-          },
-          "imagePicker": "{targetTenantUrl}{targetSitePath}/SiteAssets/SitePages/Home/1906732923-atrium.png",
-          "cardIconCustomIconName": "premium",
-          "iconPicker": "premium",
-          "cardDesignerPlusPlusProperties": {
-            "dataSources": [
-              {
-                "type": "Static",
-                "id": "0f46411f-1bb0-45f6-9c17-1972b97180a8",
-                "data": "{\n  \"Url\": \"http://adaptivecards.io/schemas/adaptive-card.json\",\n  \"Text\": \"Hello, World!\"\n}"
-              },
-              {
-                "type": "Static",
-                "id": "e71a15f1-9a39-4670-ba89-613446b1a600",
-                "displayName": "Static",
-                "data": "{\n  \"Url\": \"http://adaptivecards.io/schemas/adaptive-card.json\",\n  \"Text\": \"Hello, World!\"\n}"
-              }
-            ],
-            "quickViews": [],
-            "primaryQuickViewId": "quickView"
-          }
-        }
+        "id": "c9925e96-32e6-4acb-a012-20e913d03410",
+        "instanceId": "d4a3d6c5-0334-48a9-87b2-99c4cf43b26d",
+        "title": "Shifts",
+        "description": "Shows users a preview of their scheduled shifts from the Shifts app in Teams. They can also clock in and out and track break time when the time clock is enabled in Shifts.",
+        "audiences": [],
+        "hideOn": {
+          "mobile": false
+        },
+        "serverProcessedContent": {
+          "htmlStrings": {},
+          "searchablePlainTexts": {},
+          "imageSources": {},
+          "links": {}
+        },
+        "dataVersion": "1.0",
+        "properties": {},
+        "containsDynamicDataSource": false,
+        "iconProperty": "https://res-1.public.onecdn.static.microsoft:443/files/sp-client/app_icon_outline_24_cd73c67481802e26ed4f0273d9e9ebfc.svg",
+        "cardSize": "Medium"
       }
     },
     {
-      "id": "9593e615-7320-4b8b-be98-09b97112b12f",
-      "zoneId": "",
+      "position": {
+        "zoneIndex": 1,
+        "sectionIndex": 1,
+        "controlIndex": 2,
+        "sectionFactor": -1,
+        "layoutIndex": 1
+      },
+      "controlType": 3,
+      "id": "20dfee1b-63d9-4715-a582-2da8f349280c",
+      "webPartId": "c7d7f2dd-eead-4688-bd55-8d8ff4d5792c",
+      "emphasis": {},
+      "zoneGroupMetadata": {
+        "type": 0
+      },
+      "reservedHeight": 180,
+      "reservedWidth": 344,
+      "addedFromPersistedData": true,
       "webPartData": {
-        "id": "9593e615-7320-4b8b-be98-09b97112b12f",
-        "instanceId": "a93aa336-3f0f-475b-a057-7881304baffb",
-        "title": "My Certification",
-        "description": "Design a Viva Connections dashboard card with a quick view using available templates.",
-        "dataVersion": "1.7.3",
-        "properties": {
-          "iconProperty": "",
-          "templateType": "primaryText",
-          "cardIconSourceType": 2,
-          "cardImageSourceType": 1,
-          "cardSelectionAction": {
-            "type": "ExternalLink",
-            "parameters": {
-              "target": "https://adaptivecards.io/"
-            }
-          },
-          "numberCardButtonActions": 1,
-          "cardButtonActions": [
-            {
-              "title": "View All",
-              "style": "positive",
-              "action": {
-                "type": "ExternalLink",
-                "parameters": {
-                  "target": "https://adaptivecards.io/"
-                }
-              },
-              "isVisible": true
-            },
-            {
-              "title": "Button",
-              "style": "default",
-              "action": {
-                "type": "QuickView",
-                "parameters": {
-                  "view": "quickView"
-                }
-              },
-              "isVisible": true
-            }
-          ],
-          "quickViews": [
-            {
-              "id": "quickView",
-              "displayName": "Default Quick View",
-              "data": "{\n  \"Url\": \"http://adaptivecards.io/schemas/adaptive-card.json\",\n  \"Text\": \"Hello, World!\"\n}",
-              "template": "{\n  \"type\": \"AdaptiveCard\",\n  \"body\": [\n    {\n      \"type\": \"TextBlock\",\n      \"size\": \"Medium\",\n      \"weight\": \"Bolder\",\n      \"text\": \"${Text}\",\n      \"wrap\": true\n    }\n  ],\n  \"actions\": [\n    {\n      \"type\": \"Action.OpenUrl\",\n      \"title\": \"View\",\n      \"url\": \"${Url}\"\n    }\n  ],\n  \"$schema\": \"http://adaptivecards.io/schemas/adaptive-card.json\",\n  \"version\": \"1.2\"\n}"
-            }
-          ],
-          "currentQuickViewIndex": 0,
-          "title": "My Certification",
-          "primaryText": "CFA Level 1 Active",
-          "description": "Expires Dec 2026",
-          "cardIconCustomIconName": "ribbon",
-          "iconPicker": "ribbon",
-          "cardImageCustomImageSettings": {
-            "type": 1,
-            "altText": "Image thumbnail preview",
-            "imageUrl": "https://res-1.cdn.office.net/files/fabric-cdn-prod_20260113.001/assets/item-types/64/spo.png"
-          },
-          "cardDesignerPlusPlusProperties": {
-            "dataSources": [
-              {
-                "type": "Static",
-                "id": "c28a2ef2-1794-4300-b24f-ad8a8c77fb0b",
-                "data": "{\n  \"Url\": \"http://adaptivecards.io/schemas/adaptive-card.json\",\n  \"Text\": \"Hello, World!\"\n}"
-              },
-              {
-                "type": "Static",
-                "id": "cdbcafc6-b1e7-4681-9e6d-c6a4a1a97caa",
-                "displayName": "Static",
-                "data": "{\n  \"Url\": \"http://adaptivecards.io/schemas/adaptive-card.json\",\n  \"Text\": \"Hello, World!\"\n}"
-              }
-            ],
-            "quickViews": [],
-            "primaryQuickViewId": "quickView"
-          }
-        }
+        "id": "c7d7f2dd-eead-4688-bd55-8d8ff4d5792c",
+        "instanceId": "20dfee1b-63d9-4715-a582-2da8f349280c",
+        "title": "People",
+        "description": "Search and find people within your organization.",
+        "audiences": [],
+        "hideOn": {
+          "mobile": false
+        },
+        "serverProcessedContent": {
+          "htmlStrings": {},
+          "searchablePlainTexts": {},
+          "imageSources": {},
+          "links": {}
+        },
+        "dataVersion": "1.0",
+        "properties": {},
+        "containsDynamicDataSource": false,
+        "iconProperty": "https://res-1.public.onecdn.static.microsoft:443/files/sp-client/people-search_0dc208a15dfbb53713187233a5ed5380.svg",
+        "cardSize": "Large"
       }
     },
     {
-      "id": "9593e615-7320-4b8b-be98-09b97112b12f",
-      "zoneId": "",
+      "position": {
+        "zoneIndex": 1,
+        "sectionIndex": 1,
+        "controlIndex": 3,
+        "sectionFactor": -1,
+        "layoutIndex": 1
+      },
+      "controlType": 3,
+      "id": "4e1180be-affd-4967-baae-786ba6bd8916",
+      "webPartId": "31feacc2-1e40-415e-9f98-e17e004645eb",
+      "emphasis": {},
+      "zoneGroupMetadata": {
+        "type": 0
+      },
+      "reservedHeight": 180,
+      "reservedWidth": 164,
+      "addedFromPersistedData": true,
       "webPartData": {
-        "id": "9593e615-7320-4b8b-be98-09b97112b12f",
-        "instanceId": "897d82e3-8249-486a-accd-5f855178f939",
-        "title": "Compliance Hub",
-        "description": "Design a Viva Connections dashboard card with a quick view using available templates.",
-        "dataVersion": "1.7.3",
-        "properties": {
-          "iconProperty": "",
-          "templateType": "image",
-          "cardIconSourceType": 2,
-          "cardImageSourceType": 1,
-          "cardSelectionAction": {
-            "type": "QuickView",
-            "parameters": {
-              "view": "quickView"
-            }
-          },
-          "numberCardButtonActions": 1,
-          "cardButtonActions": [
-            {
-              "title": "Open Hub",
-              "style": "positive",
-              "action": {
-                "type": "ExternalLink",
-                "parameters": {
-                  "target": "https://adaptivecards.io/"
-                }
-              },
-              "isVisible": true
-            },
-            {
-              "title": "Button",
-              "style": "default",
-              "action": {
-                "type": "QuickView",
-                "parameters": {
-                  "view": "quickView"
-                }
-              },
-              "isVisible": true
-            }
-          ],
-          "quickViews": [
-            {
-              "id": "quickView",
-              "displayName": "Default Quick View",
-              "data": "{\n}",
-              "template": "{\n  \"type\": \"AdaptiveCard\",\n  \"$schema\": \"http://adaptivecards.io/schemas/adaptive-card.json\",\n  \"version\": \"1.5\",\n  \"body\": [\n    {\"type\":\"TextBlock\",\"text\":\"Compliance Hub\",\"weight\":\"Bolder\",\"size\":\"Large\",\"wrap\":true},\n    {\"type\":\"TextBlock\",\"text\":\"Your compliance status at a glance\",\"isSubtle\":true,\"spacing\":\"None\",\"wrap\":true},\n    {\"type\":\"ColumnSet\",\"spacing\":\"Medium\",\"columns\":[{\"type\":\"Column\",\"width\":\"stretch\",\"items\":[{\"type\":\"TextBlock\",\"text\":\"4 of 6\",\"weight\":\"Bolder\",\"size\":\"ExtraLarge\",\"color\":\"Good\"},{\"type\":\"TextBlock\",\"text\":\"Trainings complete\",\"spacing\":\"None\",\"isSubtle\":true,\"wrap\":true}]},{\"type\":\"Column\",\"width\":\"stretch\",\"items\":[{\"type\":\"TextBlock\",\"text\":\"2\",\"weight\":\"Bolder\",\"size\":\"ExtraLarge\",\"color\":\"Attention\"},{\"type\":\"TextBlock\",\"text\":\"Action required\",\"spacing\":\"None\",\"isSubtle\":true,\"wrap\":true}]}]},\n    {\"type\":\"Container\",\"spacing\":\"Medium\",\"items\":[{\"type\":\"TextBlock\",\"text\":\"MANDATORY TRAININGS\",\"weight\":\"Bolder\",\"size\":\"Small\",\"spacing\":\"Medium\"},{\"type\":\"ColumnSet\",\"columns\":[{\"type\":\"Column\",\"width\":\"stretch\",\"items\":[{\"type\":\"TextBlock\",\"text\":\"AML Annual Refresher\",\"wrap\":true}]},{\"type\":\"Column\",\"width\":\"auto\",\"items\":[{\"type\":\"TextBlock\",\"text\":\"✓ Complete\",\"color\":\"Good\",\"weight\":\"Bolder\"}]}]},{\"type\":\"ColumnSet\",\"columns\":[{\"type\":\"Column\",\"width\":\"stretch\",\"items\":[{\"type\":\"TextBlock\",\"text\":\"KYC Procedures Update\",\"wrap\":true}]},{\"type\":\"Column\",\"width\":\"auto\",\"items\":[{\"type\":\"TextBlock\",\"text\":\"✓ Complete\",\"color\":\"Good\",\"weight\":\"Bolder\"}]}]},{\"type\":\"ColumnSet\",\"columns\":[{\"type\":\"Column\",\"width\":\"stretch\",\"items\":[{\"type\":\"TextBlock\",\"text\":\"Data Privacy (GDPR)\",\"wrap\":true}]},{\"type\":\"Column\",\"width\":\"auto\",\"items\":[{\"type\":\"TextBlock\",\"text\":\"⏳ In progress\",\"color\":\"Warning\",\"weight\":\"Bolder\"}]}]},{\"type\":\"ColumnSet\",\"columns\":[{\"type\":\"Column\",\"width\":\"stretch\",\"items\":[{\"type\":\"TextBlock\",\"text\":\"Market Abuse Regulation\",\"wrap\":true}]},{\"type\":\"Column\",\"width\":\"auto\",\"items\":[{\"type\":\"TextBlock\",\"text\":\"⚠ Overdue\",\"color\":\"Attention\",\"weight\":\"Bolder\"}]}]},{\"type\":\"ColumnSet\",\"columns\":[{\"type\":\"Column\",\"width\":\"stretch\",\"items\":[{\"type\":\"TextBlock\",\"text\":\"Sanctions Screening\",\"wrap\":true}]},{\"type\":\"Column\",\"width\":\"auto\",\"items\":[{\"type\":\"TextBlock\",\"text\":\"✓ Complete\",\"color\":\"Good\",\"weight\":\"Bolder\"}]}]},{\"type\":\"ColumnSet\",\"columns\":[{\"type\":\"Column\",\"width\":\"stretch\",\"items\":[{\"type\":\"TextBlock\",\"text\":\"Cybersecurity Awareness\",\"wrap\":true}]},{\"type\":\"Column\",\"width\":\"auto\",\"items\":[{\"type\":\"TextBlock\",\"text\":\"✓ Complete\",\"color\":\"Good\",\"weight\":\"Bolder\"}]}]}]},\n    {\"type\":\"TextBlock\",\"text\":\"QUICK LINKS\",\"weight\":\"Bolder\",\"size\":\"Small\",\"spacing\":\"Large\"},\n    {\"type\":\"ActionSet\",\"actions\":[{\"type\":\"Action.OpenUrl\",\"title\":\"📋 Policy Library\",\"url\":\"{targetTenantUrl}{targetSitePath}/policies\"},{\"type\":\"Action.OpenUrl\",\"title\":\"🚨 Report an Incident\",\"url\":\"{targetTenantUrl}{targetSitePath}/reporting\"},{\"type\":\"Action.OpenUrl\",\"title\":\"📅 Regulatory Calendar\",\"url\":\"{targetTenantUrl}{targetSitePath}/calendar\"}]}\n  ]\n}"
-            }
-          ],
-          "currentQuickViewIndex": 0,
-          "title": "Compliance Hub",
-          "primaryText": "Policies, reporting & regulatory updates",
-          "description": "Stay Compliant",
-          "cardIconCustomIconName": "ribbon",
-          "iconPicker": "ribbon",
-          "cardImageCustomImageSettings": {
-            "type": 1,
-            "altText": "Image thumbnail preview",
-            "imageUrl": "{targetTenantUrl}{targetSitePath}/SiteAssets/SitePages/Home/3748214284-credimus_hero_mesh_gradient.png"
-          },
-          "imagePicker": "{targetTenantUrl}{targetSitePath}/SiteAssets/SitePages/Home/3748214284-credimus_hero_mesh_gradient.png",
-          "cardDesignerPlusPlusProperties": {
-            "dataSources": [
-              {
-                "type": "Static",
-                "id": "6800bfd0-1a1b-47a7-9e11-8c83c74cb21f",
-                "data": "{\n}"
-              },
-              {
-                "type": "Static",
-                "id": "3fb19c51-9757-4390-b489-23861ea64c87",
-                "displayName": "Static",
-                "data": "{\n  \"Url\": \"http://adaptivecards.io/schemas/adaptive-card.json\",\n  \"Text\": \"Hello, World!\"\n}"
-              }
-            ],
-            "quickViews": [],
-            "primaryQuickViewId": "quickView"
-          }
-        }
-      }
-    },
-    {
-      "id": "2d500f2b-bb35-4f27-af9f-b873359966fc",
-      "zoneId": "",
-      "webPartData": {
-        "id": "2d500f2b-bb35-4f27-af9f-b873359966fc",
-        "instanceId": "e9af00d1-8f48-4ea6-b9e8-7125f8ae6898",
-        "title": "Wellbeing",
-        "description": "",
+        "id": "31feacc2-1e40-415e-9f98-e17e004645eb",
+        "instanceId": "4e1180be-affd-4967-baae-786ba6bd8916",
+        "title": "Praise",
+        "description": "Show gratitude for peers who went above and beyond at work",
+        "audiences": [],
+        "hideOn": {
+          "mobile": false
+        },
+        "serverProcessedContent": {
+          "htmlStrings": {},
+          "searchablePlainTexts": {},
+          "imageSources": {},
+          "links": {}
+        },
         "dataVersion": "1.0",
         "properties": {
-          "cardViewImageUrl": "https://cdn.hubblecontent.osi.office.net/m365content/publish/4990bc9a-af47-4356-a258-6bc0281fd767/1267045601.jpg",
-          "quickLinks": [
-            {
-              "sourceItem": {
-                "url": "{targetTenantUrl}{targetSitePath}/sitepages/dashboard.aspx",
-                "guids": {
-                  "siteId": "{siteCollectionId}",
-                  "webId": "{webId}",
-                  "listId": "{listId}",
-                  "uniqueId": "{pageUniqueId}"
-                },
-                "itemType": 0,
-                "fileExtension": ".ASPX",
-                "progId": null
-              },
-              "thumbnailType": 2,
-              "id": 1,
-              "title": "Health, ponsion & support resources",
-              "description": "",
-              "image": {
-                "url": "https://res-1.cdn.office.net/files/fabric-cdn-prod_20260113.001/assets/item-types/64/spo.png",
-                "imageFit": 0
-              },
-              "fabricReactIcon": {
-                "iconName": "heartfill"
-              },
-              "altText": "",
-              "index": 0
-            }
-          ],
-          "title": "Wellbeing",
           "aceData": {
             "cardSize": "Medium"
-          },
-          "imagePicker": "https://cdn.hubblecontent.osi.office.net/m365content/publish/4990bc9a-af47-4356-a258-6bc0281fd767/1267045601.jpg",
-          "addQuickLink": {
-            "sourceItem": {
-              "url": "{targetTenantUrl}{targetSitePath}/sitepages/dashboard.aspx",
-              "guids": {
-                "siteId": "{siteCollectionId}",
-                "webId": "{webId}",
-                "listId": "{listId}",
-                "uniqueId": "{pageUniqueId}"
-              },
-              "itemType": 0,
-              "fileExtension": ".ASPX",
-              "progId": null
-            },
-            "thumbnailType": 2,
-            "id": 1,
-            "title": "Health, ponsion & support resources",
-            "description": "",
-            "image": {
-              "url": "https://res-1.cdn.office.net/files/fabric-cdn-prod_20260113.001/assets/item-types/64/spo.png",
-              "imageFit": 0
-            },
-            "fabricReactIcon": {
-              "iconName": "heartfill"
-            },
-            "altText": "",
-            "index": 0
-          },
-          "quicklink": {
-            "title": [
-              "Health, ponsion & support resources"
-            ],
-            "thumbnailSourceType": [
-              "library"
-            ],
-            "iconName": [
-              "heartfill"
-            ]
           }
-        }
+        },
+        "containsDynamicDataSource": false,
+        "iconProperty": "https://res-1.public.onecdn.static.microsoft/files/sp-client/odm_viva-insights-praise-logo-filled_b15edaa0.png",
+        "cardSize": "Medium"
+      }
+    },
+    {
+      "position": {
+        "zoneIndex": 1,
+        "sectionIndex": 1,
+        "controlIndex": 4,
+        "sectionFactor": -1,
+        "layoutIndex": 1
+      },
+      "controlType": 3,
+      "id": "181d0d81-070c-4291-9544-cf1f59868f82",
+      "webPartId": "9593e615-7320-4b8b-be98-09b97112b12f",
+      "emphasis": {},
+      "zoneGroupMetadata": {
+        "type": 0
+      },
+      "reservedHeight": 180,
+      "reservedWidth": 164,
+      "addedFromPersistedData": true,
+      "webPartData": {
+        "id": "9593e615-7320-4b8b-be98-09b97112b12f",
+        "instanceId": "181d0d81-070c-4291-9544-cf1f59868f82",
+        "title": "M365 Copilot",
+        "description": "Design a Viva Connections dashboard card with a quick view using available templates.",
+        "audiences": [],
+        "hideOn": {
+          "mobile": false
+        },
+        "serverProcessedContent": {
+          "htmlStrings": {},
+          "searchablePlainTexts": {},
+          "imageSources": {},
+          "links": {}
+        },
+        "dataVersion": "1.7.3",
+        "properties": {
+          "iconProperty": "",
+          "templateType": "image",
+          "cardIconSourceType": 2,
+          "cardImageSourceType": 1,
+          "cardSelectionAction": {
+            "type": "ExternalLink",
+            "parameters": {
+              "target": "https://adaptivecards.io/"
+            }
+          },
+          "numberCardButtonActions": 1,
+          "cardButtonActions": [
+            {
+              "title": "Button",
+              "style": "positive",
+              "action": {
+                "type": "ExternalLink",
+                "parameters": {
+                  "target": "https://adaptivecards.io/"
+                }
+              },
+              "isVisible": true
+            },
+            {
+              "title": "Button",
+              "style": "default",
+              "action": {
+                "type": "QuickView",
+                "parameters": {
+                  "view": "quickView"
+                }
+              },
+              "isVisible": true
+            }
+          ],
+          "quickViews": [
+            {
+              "data": "{\n  \"Url\": \"http://adaptivecards.io/schemas/adaptive-card.json\",\n  \"Text\": \"Hello, World!\"\n}",
+              "template": "{\n  \"type\": \"AdaptiveCard\",\n  \"body\": [\n    {\n      \"type\": \"TextBlock\",\n      \"size\": \"Medium\",\n      \"weight\": \"Bolder\",\n      \"text\": \"${Text}\",\n      \"wrap\": true\n    }\n  ],\n  \"actions\": [\n    {\n      \"type\": \"Action.OpenUrl\",\n      \"title\": \"View\",\n      \"url\": \"${Url}\"\n    }\n  ],\n  \"$schema\": \"http://adaptivecards.io/schemas/adaptive-card.json\",\n  \"version\": \"1.2\"\n}",
+              "id": "quickView",
+              "displayName": "Default Quick View"
+            }
+          ],
+          "currentQuickViewIndex": 0,
+          "title": "M365 Copilot",
+          "primaryText": "Your AI Assistent for Solbound. Ask me anything you like.",
+          "description": "Description text",
+          "cardImageCustomImageSettings": {
+            "type": 1,
+            "altText": "Image thumbnail preview",
+            "imageUrl": "{targetTenantUrl}{targetSitePath}/SiteAssets/SitePages/Dashboard/Copilot.png"
+          },
+          "imagePicker": "{targetTenantUrl}{targetSitePath}/SiteAssets/SitePages/Dashboard/Copilot.png",
+          "cardIconCustomIconName": "hat_graduation",
+          "iconPicker": "hat_graduation",
+          "cardDesignerPlusPlusProperties": {
+            "dataSources": [
+              {
+                "type": "Static",
+                "id": "91bd22f4-e19d-41cc-8c16-0b586f58071a",
+                "data": "{\n  \"Url\": \"http://adaptivecards.io/schemas/adaptive-card.json\",\n  \"Text\": \"Hello, World!\"\n}"
+              },
+              {
+                "type": "Static",
+                "id": "67f4e9aa-8ebe-4ae0-b91e-39dff34f129d",
+                "displayName": "Static",
+                "data": "{\n  \"Url\": \"http://adaptivecards.io/schemas/adaptive-card.json\",\n  \"Text\": \"Hello, World!\"\n}"
+              }
+            ],
+            "quickViews": [],
+            "primaryQuickViewId": "quickView"
+          }
+        },
+        "containsDynamicDataSource": false,
+        "iconProperty": "hat_graduation",
+        "cardSize": "Medium"
       }
     }
   ]
