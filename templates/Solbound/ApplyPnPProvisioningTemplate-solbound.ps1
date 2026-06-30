@@ -129,10 +129,3 @@ foreach ($page in $sitePages) {
 
 Write-Host -BackgroundColor Cyan "Provisioning complete for site at $destinationUrl"
 #endregion
-
-
-
-
-
-Write-Host -BackgroundColor Cyan "Provisioning complete for site at $destinationUrl"
-#endregion
