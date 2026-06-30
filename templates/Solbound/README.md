@@ -41,7 +41,7 @@ We recommend you extract the ZIP file into a folder in the root of your machine,
 
 ## Apply PnP Provisioning template
 
-The base definition for the site is contained in the PnP Provisioning template file. This file can be found in the folder *PnP Provisioning*, and is named *PnP-Provisioning-SolboundSite - RAW.pnp*.
+The base definition for the site is contained in the PnP Provisioning template file. This file can be found in the folder *PnP Provisioning*, and is named *PnP-Provisioning-SolboundSite.pnp*.
 
 The script *ApplyPnPProvisioningTemplate-Solbound.ps1* applies the PnP Provisioning template to the site you have created above. The script also performs some additional configuration which cannot be contained in the PnP Provisioning template for technical reasons.
 

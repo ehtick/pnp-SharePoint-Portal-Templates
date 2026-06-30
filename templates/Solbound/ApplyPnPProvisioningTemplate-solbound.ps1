@@ -43,7 +43,7 @@ Write-Host -BackgroundColor Cyan "Applying PnP Provisioning Template to site at 
 # Apply PnP Template
 Invoke-PnPSiteTemplate `
     -Connection $newSiteConnection `
-    -Path "./templates/Solbound/PnPProvisioning/PnP-Provisioning-SolboundSite - RAW.pnp"
+    -Path "./templates/Solbound/PnPProvisioning/PnP-Provisioning-SolboundSite.pnp"
 
 #endregion
 
