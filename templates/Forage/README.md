@@ -41,7 +41,7 @@ We recommend you extract the ZIP file into a folder in the root of your machine,
 
 ## Apply PnP Provisioning template
 
-The base definition for the site is contained the a PnP Provisioning template file. This file can be found in the folder *PnP Provisioning*, and is named *PnP-Provisioning-ForageSite - RAW.pnp*.
+The base definition for the site is contained the a PnP Provisioning template file. This file can be found in the folder *PnP Provisioning*, and is named *PnP-Provisioning-ForageSite.pnp*.
 
 The script *ApplyPnPProvisioningTemplate-Forage.ps1* applies the PnP Provisioning template to the site you have created above. The template contains information about the lists and libraries, pages, and images contained in the site.
 
