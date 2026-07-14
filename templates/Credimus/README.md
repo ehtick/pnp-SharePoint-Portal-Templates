@@ -5,9 +5,9 @@ These installation instructions are streamlined as much as possible, with the go
 Installing the Credimus site requires several steps:
 
 - Create a new Communication Site in your tenant
+- [Optional] Configure Viva Connections
 - Run the PowerShell script to apply the PnP Provisioning template and set additional configurations
 - Configure the Brand Center
-- Configure Viva Connections (???)
 - Configure the Credimus site settings which can't be automated
 
 ![Credimus Home Page](./media/credimus-home-page.jpg)
@@ -27,6 +27,12 @@ Create a new Communication Site named *Credimus*, using the default template. If
 Be sure to make yourself the Site Owner of the Communication Site. You can add additional Site Owners or Site Members now or later in the site itself.
 
 Throughout the rest of these instructions, you will be either making changes to this site or setting up artifacts in other locations which will support this site, its branding, and its functionality.
+
+### Create Viva Connections experience for the site
+
+You will need to create a Viva Connections experience for the site you've just created if you'd like to have the Dashboard and Resources displaying properly. For detailed instructions, see [Set up Viva Connections in the Microsoft 365 admin center](https://learn.microsoft.com/en-us/viva/connections/set-up-admin-center). This is a long article, but you don't need to follow all the steps. You'll want to choose the option to `Build from an existing portal to set a home site`. This will make the Credimus site a home site for your tenant.
+
+The provisioning script adds the ACES to the Dashboard Web Part on the home page of the site and sets up the links in the Resources Web Part. Prior to running the provisioning script, you will need to create the experience in order for them to be visible.
 
 ### Download ZIP file
 
@@ -132,11 +138,8 @@ Review the settings to ensure you have created the Font Package correctly.
 
 ## Viva Connections
 
-Viva Connections - soon to be renamed SharePoint Connections - enables us to create experiences for use in a site or sites. By enabling the experience in a site, you can use the Dashboard Web Part in pages to provide ACES.
+Viva Connections - soon to be renamed SharePoint Connections - enables us to create experiences for use in a site or sites. By enabling the experience in a site, you can use the Dashboard Web Part in pages to provide ACEs to your users. For detailed instructions, see [Viva Connections](https://learn.microsoft.com/sharepoint/viva-connections).
 
-### Create Viva Connections experience for site
-
-TBD
 
 ## Final site configuration
 
@@ -144,11 +147,11 @@ These final steps apply the configurations you have set up above in the site its
 
 ### Change the look
 
-Go  to the gear, and select Change the look.
+Go to the gear, and select Change the look.
 
 #### Apply theme
 
-Select Theme and choose the Credimus.Theme and Save.
+Select Theme and choose the `Credimus.Theme` and Save.
 
 ![Apply Credimus Theme](./media/credimus-set-theme.jpg)
 
@@ -160,16 +163,12 @@ Enable the Font Package you created above under Fonts.
 
 ### Edit home page
 
-#### Add dashboard actions
+#### Add Resources links
 
-In the home page of the site, find the Dashboard Web Part. If you'd like to match the ACES you've seen in the demo site, you can set them up following the instructions in the following table. If you'd like to customize it for your organization, you may choose to add ACES which reflect that thinking.
-
-| Link Name | Link Settings |
-|---|---|
-| | |
+TODO - Add instructions for adding the Resources links to the home page.
 
 ## Summary
 
-At this point, you should have a fully functioning Credimus site, with the theme and fonts applied, and the ACES set up in the Dashboard Web Part on the home page. You can continue to customize the site as you see fit, adding additional content, pages, and web parts to make it your own.
+At this point, you should have a fully functioning Credimus site, with the theme and fonts applied. You can continue to customize the site as you see fit, adding additional content, pages, and web parts to make it your own.
 
-If you've had issues with setting up the site, please [create an  issue](https://github.com/pnp/SharePoint-Portal-Templates/issues) in the GitHub repo, and we will do our best to assist you.
+If you've had issues with setting up the site, please [create an issue](https://github.com/pnp/SharePoint-Portal-Templates/issues) in the GitHub repo, and we will do our best to assist you.
