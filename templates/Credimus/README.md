@@ -138,10 +138,6 @@ Review the settings to ensure you have created the Font Package correctly.
 
 ![](./media/credimus-review-font-package.jpg)
 
-## Viva Connections
-
-Viva Connections - soon to be renamed SharePoint Connections - enables us to create experiences for use in a site or sites. By enabling the experience in a site, you can use the Dashboard Web Part in pages to provide ACEs to your users. For detailed instructions, see [Viva Connections](https://learn.microsoft.com/sharepoint/viva-connections).
-
 ## Final site configuration
 
 These final steps apply the configurations you have set up above in the site itself.
@@ -161,12 +157,6 @@ Select Theme and choose the `Credimus.Theme` and Save.
 Enable the Font Package you created above under Fonts.
 
 ![Apply Credimus Font Package](./media/credimus-apply-font-package.jpg)
-
-### Edit home page
-
-#### Add Resources links
-
-TODO - Add instructions for adding the Resources links to the home page.
 
 ## Summary
 
