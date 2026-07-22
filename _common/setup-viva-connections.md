@@ -7,11 +7,9 @@ This process is the same, regardless of which template you want to set up. These
 
 ## Navigate to the Viva Connections admin center
 
-In the Microsoft 365 Admin Center, navigate to **Settings / Viva**.
+In the Microsoft 365 Admin Center, navigate to **Settings / Viva**. The first item in the list should be Viva Connections. Click on it to open the Viva Connections admin center.
 
 ![Viva admin center](media/vc-microsoft-viva.png)
-
-The first item in the list should be Viva Connections. Click on it to open the Viva Connections admin center.
 
 Next, you'll see several Viva Connections options. The first one is **Create and manage Viva Connections experiences**. Click it.
 
@@ -19,7 +17,7 @@ Next, you'll see several Viva Connections options. The first one is **Create and
 
 ## Create new Viva Connections experience
 
-Click on the **Create new** button. Enter a name for the experience, and select the site you created as the home site. Then click **Next**.
+Click on the **Create new** button. 
 
 ![Create new Viva Connections experience](media/vc-create-new-experience.png)
 
