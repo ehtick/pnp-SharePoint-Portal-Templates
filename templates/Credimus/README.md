@@ -34,6 +34,8 @@ You will need to create a Viva Connections experience for the site you've just c
 
 The provisioning script adds the ACES to the Dashboard Web Part on the home page of the site and sets up the links in the Resources Web Part. Prior to running the provisioning script, you will need to create the experience in order for them to be visible.
 
+If you'd like step by step instructions which focus only on the required steps here, see the article [Set up Viva Connections for the site](/_common/setup-viva-connections.md).
+
 ### Download ZIP file
 
 Download the [Credimus ZIP file](./Credimus.zip). This ZIP file contains all the necessary files to apply the PnP Provisioning template, as well as the images and fonts used in the site.
@@ -139,7 +141,6 @@ Review the settings to ensure you have created the Font Package correctly.
 ## Viva Connections
 
 Viva Connections - soon to be renamed SharePoint Connections - enables us to create experiences for use in a site or sites. By enabling the experience in a site, you can use the Dashboard Web Part in pages to provide ACEs to your users. For detailed instructions, see [Viva Connections](https://learn.microsoft.com/sharepoint/viva-connections).
-
 
 ## Final site configuration
 

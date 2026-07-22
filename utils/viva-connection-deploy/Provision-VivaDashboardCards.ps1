@@ -75,7 +75,7 @@ param(
     [Parameter(Mandatory = $true)]
     [string]$SitePath,
 
-    [Parameter(Mandatory = $false)]
+    [Parameter(Mandatory = $true)]
     [string]$JsonPath = ".\viva-dashboard-cards.json",
 
     [Parameter(Mandatory = $false)]
