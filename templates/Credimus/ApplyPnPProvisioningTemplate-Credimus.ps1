@@ -13,7 +13,7 @@ Import-Module PnP.PowerShell -Force
 # Set variables - CHANGE THESE TO MATCH YOUR ENVIRONMENT
 $tenant = "spex003" # Your tenant name, without the .onmicrosoft.com or .com suffix
 $clientId = "be3b2a30-ea14-4707-adeb-3adb1a77beea" # The App Id from your App Registration for PnP.PowerShell
-$siteUrl = "MARCTEST13" # The URL name for the site you want to create.
+$siteUrl = "MARCTEST14" # The URL name for the site you want to create.
 #endregion
 
 #region Connections
@@ -110,14 +110,16 @@ foreach ($page in $sitePages) {
 # Add the correct ACES to the Viva Connections Dashboard
 $aces = Import-Csv -Path "$PSScriptRoot/ACES/Credimus.ACES.csv"
 
-Add-PnPPage -Connection $newSiteConnection -Name "Dashboard" -LayoutType Home
-
 Write-Host -BackgroundColor Cyan "Setting up ACES on the Dashboard"
 
-$badACEs = Get-PnPVivaConnectionsDashboardACE -Connection $newSiteConnection
-foreach ($badACE in $badACEs) {
-    Remove-PnPVivaConnectionsDashboardACE -Connection $newSiteConnection -Identity $badACE
-}
+# There's a bug in the PnP.PowerShell module that causes failures if there are malformed ACEs in the dashboard.
+# Ideally we would remove them before adding, but we can't. Leaving this here in case the bug is fixed later, but skipping for now.
+# If you'd like to remove the malformed ACEs now, you'll need to do it manually.
+#
+# $badACEs = Get-PnPVivaConnectionsDashboardACE -Connection $newSiteConnection
+# foreach ($badACE in $badACEs) {
+#     Remove-PnPVivaConnectionsDashboardACE -Connection $newSiteConnection -Identity $badACE
+# }
 
 foreach ($ace in $aces) {
     Add-PnPVivaConnectionsDashboardACE `
@@ -142,3 +144,42 @@ Set-PnPListItem -Connection $newSiteConnection -List $vcList -Identity 1 -Values
 
 Write-Host -BackgroundColor Cyan "Provisioning complete for site at $destinationUrl"
 #endregion
+
+
+
+
+$dashboardPage = Get-PnPPage Dashboard.aspx -Connection $newSiteConnection
+
+$dashboardPage.Controls |
+    Select-Object `
+        InstanceId,
+        Title,
+        WebPartId,
+        ControlType
+
+        $dashboardPage.Controls | Format-List *
+
+        
+$dashboardPage.Controls |
+    Select-Object `
+        InstanceId,
+        Title,
+        WebPartId,
+        PropertiesJson
+
+
+
+
+
+        Update-Module PnP.PowerShell -AllowPrerelease
+
+        # Remove version 3.3.0 of PnP.PowerShell
+        Uninstall-Module PnP.PowerShell -RequiredVersion 3.3.0 -Force
+
+
+
+
+        $credimusSiteConnection = Connect-PnPOnline -ClientId $clientId -Url https://spex003.sharepoint.com/sites/Credimus -Interactive -ReturnConnection
+
+
+        Get-PnPVivaConnectionsDashboardACE -Connection $credimusSiteConnection
