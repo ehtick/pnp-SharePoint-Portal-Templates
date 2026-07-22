@@ -28,7 +28,7 @@ Be sure to make yourself the Site Owner of the Communication Site. You can add a
 
 Throughout the rest of these instructions, you will be either making changes to this site or setting up artifacts in other locations which will support this site, its branding, and its functionality.
 
-### Create Viva Connections experience for the site
+### Create the Viva Connections experience for the site
 
 You will need to create a Viva Connections experience for the site you've just created if you'd like to have the Dashboard and Resources displaying properly. For detailed instructions, see [Set up Viva Connections in the Microsoft 365 admin center](https://learn.microsoft.com/en-us/viva/connections/set-up-admin-center). This is a long article, but you don't need to follow all the steps. You'll want to choose the option to `Build from an existing portal to set a home site`. This will make the Credimus site a home site for your tenant.
 
