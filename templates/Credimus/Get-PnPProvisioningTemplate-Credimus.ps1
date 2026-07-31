@@ -11,3 +11,14 @@ Get-PnPSiteTemplate `
     -IncludeAllPages `
     -Out "./templates/Credimus/PnPProvisioning/PnP-Provisioning-CredimusSite.xml" `
     -Force
+
+# Remove the Dashboard.aspx page from the template's XML file, as it will be created by the Viva Connections experience setup
+[xml]$xml = Get-Content "./templates/Credimus/PnPProvisioning/PnP-Provisioning-CredimusSite.xml"
+
+$xml.Provisioning.Templates.ProvisioningTemplate.ClientSidePages.ClientSidePage | ForEach-Object {
+    if ($_.PageName -eq "Dashboard.aspx") {
+        $xml.Provisioning.Templates.ProvisioningTemplate.ClientSidePages.RemoveChild($_) | Out-Null
+        Write-Host -BackgroundColor Cyan "Removed Dashboard.aspx page from the template XML file."
+    }
+}
+$xml.Save("./templates/Credimus/PnPProvisioning/PnP-Provisioning-CredimusSite.xml")
