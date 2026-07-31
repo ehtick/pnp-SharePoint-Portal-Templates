@@ -82,10 +82,6 @@ $sitePages = Get-PnPListItem -Connection $newSiteConnection -List "Site Pages" -
 
 $pagesMetadata = Import-Csv -Path "./templates/Solbound/Pages Metadata/Solbound_PagesMetadata.csv"
 
-# $sitePages | Select-Object `
-# @{Name = "ID"; Expression = { $_.FieldValues["ID"] } },
-# @{Name = "Title"; Expression = { $_.FieldValues["Title"] } } # | Export-Csv -Path "$PSScriptRoot/PnPProvisioning/SitePagesLibrary.csv" -NoTypeInformation -Force
-
 foreach ($page in $sitePages) {
 
     Write-Host -BackgroundColor Green "Processing page '$($page.FieldValues['Title'])'"
