@@ -6,10 +6,10 @@ These installation instructions are streamlined as much as possible, with the go
 Installing the Solbound site requires several steps:
 
 - Create a new Communication Site in your tenant
-- Run the PowerShell script to apply the PnP Provisioning template
+- Create the Viva Connections experience for the site
+- Run the PowerShell script to apply the PnP Provisioning template and set additional configurations
 - Configure the Brand Center
-- Configure Viva Connections
-- Configure the Solbound site
+- Configure the Solbound site settings which can't be automated
 
 ![Solbound Home Page](./media/solbound-home-page.jpg)
 
@@ -29,6 +29,29 @@ Be sure to make yourself the Site Owner of the Communication Site. You can add a
 
 Throughout the rest of these instructions, you will be either making changes to this site or setting up artifacts in other locations which will support this site, its branding, and its functionality.
 
+### Create the Viva Connections experience for the site
+
+You will need to create a Viva Connections experience for the site you've just created if you'd like to have the Dashboard and Resources displaying properly. For detailed instructions, see [Set up Viva Connections in the Microsoft 365 admin center](https://learn.microsoft.com/viva/connections/set-up-admin-center). This is a long article, but you don't need to follow all the steps. You'll want to choose the option to `Build from an existing portal to set a home site`. This will make the Solbound site a home site for your tenant.
+
+The provisioning script adds the ACES to the Dashboard for the site and sets up the links in the Resources Web Part. Prior to running the provisioning script, you will need to create the experience in order for them to be visible.
+
+If you'd like step-by-step instructions which focus only on the required steps here, see the article [Set up Viva Connections for the site](/_common/setup-viva-connections.md).
+
+Before you continue, create the Dashboard for the site by navigating to the gear in the upper right corner of the site, and selecting **Manage home site** and then **Create dashboard**. (You won't see this option if you haven't enabled the Viva Connections experience.)
+
+![Manage home site](../../_common/media/vc-manage-home-site.png)
+
+![Create dashboard](../../_common/media/vc-create-dashboard.png)
+
+This will create the Dashboard.aspx page in the site and also set up some of the underlying plumbing, which is required for the provisioning script to run successfully.
+
+Finally, publish the *Dashboard.aspx* page. You don't need to add any cards to it; the provisioning script will take care of that.
+
+![Publish the Dashboard page](../../_common/media/vc-publish-dashboard.png)
+
+Ready to provision the Solbound artifacts!
+
+
 ### Download ZIP file
 
 Download the [Solbound ZIP file](./Solbound.zip). This ZIP file contains all the necessary files to apply the PnP Provisioning template, as well as the images and fonts used in the site.
@@ -41,7 +64,7 @@ We recommend you extract the ZIP file into a folder in the root of your machine,
 
 ## Apply PnP Provisioning template
 
-The base definition for the site is contained in the PnP Provisioning template file. This file can be found in the folder *PnP Provisioning*, and is named *PnP-Provisioning-SolboundSite.pnp*.
+The base definition for the site is contained in the PnP Provisioning template file. This file can be found in the folder *PnP Provisioning*, and is named *PnP-Provisioning-SolboundSite.xml*. The folder also contains the images and other files which are referenced in the template.
 
 The script *ApplyPnPProvisioningTemplate-Solbound.ps1* applies the PnP Provisioning template to the site you have created above. The script also performs some additional configuration which cannot be contained in the PnP Provisioning template for technical reasons.
 
@@ -50,6 +73,8 @@ The template contains information about the lists and libraries, pages, and imag
 To run the script, you will need to update the variables at the top of the script to reflect your tenant and site information. Then, you can run the script. For detailed instructions, see [Applying PnP Templates to SharePoint Sites](https://learn.microsoft.com/sharepoint/dev/solution-guidance/applying-pnp-templates).
 
 You will be asked to log in with your credentials twice, once to connect to the SharePoint Admin Center to ensure the site you specified exists, and a second time to connect to that site. Then the script will run through several steps, applying the template and making the additional configurations.
+
+If you see yellow information or warning messages, these are not errors, and the script should continue to run successfully. If you see red error messages, please [create an issue](https://github.com/pnp/SharePoint-Portal-Templates/issues).
 
 ## Configure Brand Center
 
@@ -130,14 +155,6 @@ Review the settings to ensure you have created the Font Package correctly.
 
 ![Review font package](./media/solbound-review-font-package.jpg)
 
-## Viva Connections
-
-Viva Connections - soon to be renamed SharePoint Connections - enables us to create experiences for use in a site or sites. By enabling the experience in a site, you can use the Dashboard Web Part in pages to provide ACES.
-
-### Create Viva Connections experience for site
-
-TBD
-
 ## Final site configuration
 
 These final steps apply the configurations you have set up above in the site itself.
@@ -148,7 +165,7 @@ Go to the gear, and select Change the look.
 
 #### Apply theme
 
-Select Theme and choose the Solbound.Theme and Save.
+Select Theme and choose the `Solbound.Theme` and Save.
 
 ![Apply Solbound Theme](./media/solbound-set-theme.jpg)
 
@@ -158,25 +175,11 @@ Enable the Font Package you created above under Fonts.
 
 ![Apply Solbound Font Package](./media/solbound-apply-font-package.jpg)
 
+## Summary
 
-#### Change Header settings
+At this point, you should have a fully functioning Solbound site, with the theme and fonts applied. You can continue to customize the site as you see fit, adding additional content, pages, and web parts to make it your own.
 
-For this site, the Header settings should be as follows:
-
-| Property Panel | Setting | Value |
-|---|---|---|
-| Design | Overlay opacity | 72 |
-| | | |
-
-### Edit home page
-
-#### Add dashboard actions
-
-In the home page of the site, find the Dashboard Web Part. If you'd like to match the ACES you'vve seen in the demo site, you can set them up following the instructions in the following table. If you'd like to customize it for your organization, you may choose to add ACES which reflect that thinking.
-
-| Link Name | Link Settings |
-|---|---|
-| | |
+If you've had problems setting up the site, please [create an issue](https://github.com/pnp/SharePoint-Portal-Templates/issues) in the GitHub repo, and we will do our best to assist you.
 
 
 

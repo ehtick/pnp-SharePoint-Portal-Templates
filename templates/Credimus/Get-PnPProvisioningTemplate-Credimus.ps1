@@ -7,7 +7,7 @@ $templateSiteConnection = Connect-PnPOnline -ClientId e6f6cea5-3653-448b-b4fc-5d
 
 Get-PnPSiteTemplate `
     -Connection $templateSiteConnection `
-    -Configuration "./templates/Credimus/_extractConfig/PnPCredimusSite.json" `
+    -Configuration "./templates/Credimus/_exportConfig/PnPCredimusSite.json" `
     -IncludeAllPages `
     -Out "./templates/Credimus/PnPProvisioning/PnP-Provisioning-CredimusSite.xml" `
     -Force
@@ -16,7 +16,7 @@ Get-PnPSiteTemplate `
 [xml]$xml = Get-Content "./templates/Credimus/PnPProvisioning/PnP-Provisioning-CredimusSite.xml"
 
 $xml.Provisioning.Templates.ProvisioningTemplate.ClientSidePages.ClientSidePage | ForEach-Object {
-    if ($_.PageName -eq "Dashboard.aspx") {
+    if ($_.PageName -like "dashboard*.aspx") {
         $xml.Provisioning.Templates.ProvisioningTemplate.ClientSidePages.RemoveChild($_) | Out-Null
         Write-Host -BackgroundColor Cyan "Removed Dashboard.aspx page from the template XML file."
     }
