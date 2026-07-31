@@ -13,7 +13,7 @@ Import-Module PnP.PowerShell -Force
 # Set variables - CHANGE THESE TO MATCH YOUR ENVIRONMENT
 $tenant = "spex003" # Your tenant name, without the .onmicrosoft.com or .com suffix
 $clientId = "be3b2a30-ea14-4707-adeb-3adb1a77beea" # The App Id from your App Registration for PnP.PowerShell
-$siteUrl = "MARCTEST10" # The URL name for the site you want to update.
+$siteUrl = "MARCTEST2_S" # The URL name for the site you want to update.
 #endregion
 
 #region Connections
@@ -39,11 +39,10 @@ $newSiteConnection = Connect-PnPOnline -ClientId $clientId -Url $destinationUrl 
 #region Apply PnP Template
 Write-Host -BackgroundColor Cyan "Applying PnP Provisioning Template to site at $destinationUrl..."
 
-
 # Apply PnP Template
-# Invoke-PnPSiteTemplate `
-#     -Connection $newSiteConnection `
-#     -Path "./templates/Solbound/PnPProvisioning/PnP-Provisioning-SolboundSite.pnp"
+Invoke-PnPSiteTemplate `
+    -Connection $newSiteConnection `
+    -Path "$PSScriptRoot/PnPProvisioning/PnP-Provisioning-SolboundSite.xml"
 
 #endregion
 
@@ -54,13 +53,15 @@ Write-Host -BackgroundColor Cyan "Performing additional configuration for site a
 # Set site header background image and other settings
 Set-PnPWebHeader -Connection $newSiteConnection `
     -HeaderLayout Standard `
-    -HeaderBackgroundImageUrl "/sites/$($siteUrl)/SiteAssets/__extendedHeaderBackgroundImage__DEFAULT_CHROME_BG_IMAGE_NAME.png" `
-    -SiteThumbnailUrl "/sites/$($siteUrl)/SiteAssets/__rectSitelogo__solbound-logo.png" `
-    -SiteLogoUrl "/sites/$($siteUrl)/SiteAssets/__sitelogo__solbound-logo.png"
+    -HeaderBackgroundImageUrl "SiteAssets/__extendedHeaderBackgroundImage__DEFAULT_CHROME_BG_IMAGE_NAME.png" `
+    -SiteThumbnailUrl "SiteAssets/__rectSitelogo__solbound-logo.png" `
+    -SiteLogoUrl "SiteAssets/__sitelogo__solbound-logo.png"
 Set-PnPWeb -Connection $newSiteConnection -HideTitleInHeader
 
+Get-PnPWebHeader -Connection $newSiteConnection
+
 # Add events to Events list
-$events = Import-Csv -Path "./templates/Solbound/PnPProvisioning/EventsListData.csv"
+$events = Import-Csv -Path "$PSScriptRoot/PnPProvisioning/EventsListData.csv"
 
 foreach ($event in $events) {
     Write-Host -BackgroundColor Green "Adding event '$($event.Title)' to Events list"
@@ -80,41 +81,41 @@ foreach ($event in $events) {
 # Update Site Pages library to add Department values and set thumbnails
 $sitePages = Get-PnPListItem -Connection $newSiteConnection -List "Site Pages" -Fields "Id", "Title"
 
-$pagesMetadata = Import-Csv -Path "./templates/Solbound/Pages Metadata/Solbound_PagesMetadata.csv"
+$pagesMetadata = Import-Csv -Path "$PSScriptRoot/Pages Metadata/Solbound_PagesMetadata.csv"
 
 foreach ($page in $sitePages) {
 
     Write-Host -BackgroundColor Green "Processing page '$($page.FieldValues['Title'])'"
 
     $pageMetadata = ($pagesMetadata | Where-Object { $_.PageName -eq $page.FieldValues['PageName'] })
-    $folder = ".\templates\Solbound\Pages Metadata\$($pageMetadata.Id)"
+    $folder = "$PSScriptRoot/Pages Metadata/$($pageMetadata.Id)"
 
     if ($pageMetadata -and (Test-Path $folder)) {
 
-        $thumbUrl = $pageMetadata.ThumbnailUrl
+        # $thumbUrl = $pageMetadata.ThumbnailUrl
 
-        $saSitePages = "/sites/$($siteUrl)/SiteAssets/SitePages"
-        $saFolderName = $pageMetadata.PageName.Replace('.aspx', '')
-        $saFolder = "$saSitePages/$($saFolderName)"
+        # $saSitePages = "/sites/$($siteUrl)/SiteAssets/SitePages"
+        # $saFolderName = $pageMetadata.PageName.Replace('.aspx', '')
+        # $saFolder = "$saSitePages/$($saFolderName)"
 
-        $pageFolder = Get-PnPFolder -Connection $newSiteConnection -Url $saFolder -ErrorAction SilentlyContinue
+        # $pageFolder = Get-PnPFolder -Connection $newSiteConnection -Url $saFolder -ErrorAction SilentlyContinue
 
-        if (!$pageFolder) {
-            Add-PnPFolder -Connection $newSiteConnection -Name $saFolderName -Folder $saSitePages | Out-Null
-            # New-Item -ItemType Directory -Path $saFolder | Out-Null
-        }
-        $fileName = [System.IO.Path]::GetFileName(([uri]$thumbUrl).AbsolutePath)
+        # if (!$pageFolder) {
+        #     Add-PnPFolder -Connection $newSiteConnection -Name $saFolderName -Folder $saSitePages | Out-Null
+        #     # New-Item -ItemType Directory -Path $saFolder | Out-Null
+        # }
+        # $fileName = [System.IO.Path]::GetFileName(([uri]$thumbUrl).AbsolutePath)
             
-        # Upload the file in $folder to the Site Assets library
-        Write-Host -BackgroundColor Cyan "  Uploading thumbnail $($fileName) to $saFolder"
+        # # Upload the file in $folder to the Site Assets library
+        # Write-Host -BackgroundColor Cyan "  Uploading thumbnail $($fileName) to $saFolder"
 
-        Add-PnPFile -Connection $newSiteConnection -Path "$($folder)\$($fileName)" -Folder $saFolder | Out-Null
+        # Add-PnPFile -Connection $newSiteConnection -Path "$($folder)\$($fileName)" -Folder $saFolder | Out-Null
 
-        Set-PnPPage `
-            -Connection $newSiteConnection `
-            -Identity $page.FieldValues["FileLeafRef"] `
-            -ThumbnailUrl "/sites/$($siteUrl)/SiteAssets/SitePages/$($pageMetadata.PageName.Replace('.aspx', ''))/$fileName" `
-        | Out-Null
+        # Set-PnPPage `
+        #     -Connection $newSiteConnection `
+        #     -Identity $page.FieldValues["FileLeafRef"] `
+        #     -ThumbnailUrl "/sites/$($siteUrl)/SiteAssets/SitePages/$($pageMetadata.PageName.Replace('.aspx', ''))/$fileName" `
+        # | Out-Null
 
         Write-Host -BackgroundColor Cyan "  Republishing page '$($page.FieldValues['Title'])' with new thumbnail and metadata"
 
@@ -124,7 +125,7 @@ foreach ($page in $sitePages) {
 }
 
 # Add the correct ACES to the Viva Connections Dashboard
-$aces = Import-Csv -Path "./templates/Solbound/ACES/Solbound.ACES.csv"
+$aces = Import-Csv -Path "$PSScriptRoot/ACES/Solbound.ACES.csv"
 
 Write-Host -BackgroundColor Cyan "Setting up ACES on the Dashboard"
 
@@ -147,7 +148,7 @@ foreach ($ace in $aces) {
 $vcList = "ConnectionsConfiguration-4ce1892f-76d2-4393-b9df-079a66a95c4a"
 
 # import the file Solbound.Resources.csv with the resources to add to the Resources list
-$resources = Import-Csv -Path "./templates/Solbound/Resources/Solbound.Resources.csv"
+$resources = Import-Csv -Path "$PSScriptRoot/Resources/Solbound.Resources.csv"
 
 Set-PnPListItem -Connection $newSiteConnection -List $vcList -Identity 1 -Values @{
     Spotlight_x0020_Configuration = $resources.Value

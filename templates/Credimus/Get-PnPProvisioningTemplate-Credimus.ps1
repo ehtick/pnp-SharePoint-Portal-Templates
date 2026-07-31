@@ -16,7 +16,7 @@ Get-PnPSiteTemplate `
 [xml]$xml = Get-Content "./templates/Credimus/PnPProvisioning/PnP-Provisioning-CredimusSite.xml"
 
 $xml.Provisioning.Templates.ProvisioningTemplate.ClientSidePages.ClientSidePage | ForEach-Object {
-    if ($_.PageName -eq "Dashboard.aspx") {
+    if ($_.PageName -like "dashboard*.aspx") {
         $xml.Provisioning.Templates.ProvisioningTemplate.ClientSidePages.RemoveChild($_) | Out-Null
         Write-Host -BackgroundColor Cyan "Removed Dashboard.aspx page from the template XML file."
     }

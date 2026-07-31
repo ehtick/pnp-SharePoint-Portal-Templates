@@ -74,6 +74,8 @@ To run the script, you will need to update the variables at the top of the scrip
 
 You will be asked to log in with your credentials twice, once to connect to the SharePoint Admin Center to ensure the site you specified exists, and a second time to connect to that site. Then the script will run through several steps, applying the template and making the additional configurations.
 
+If you see yellow information or warning messages, these are not errors, and the script should continue to run successfully. If you see red error messages, please [create an issue](https://github.com/pnp/SharePoint-Portal-Templates/issues).
+
 ## Configure Brand Center
 
 In order for the site to look like what you see in the screenshots, you'll need to make a set of configurations in the Brand Center. We've made sure to suggest naming conventions which allow you to easily identify where the configuration settings have come from and how they are used, specifically with prefixes which reflect the demo site's name.
