@@ -58,8 +58,6 @@ Set-PnPWebHeader -Connection $newSiteConnection `
     -SiteLogoUrl "SiteAssets/__sitelogo__solbound-logo.png"
 Set-PnPWeb -Connection $newSiteConnection -HideTitleInHeader
 
-Get-PnPWebHeader -Connection $newSiteConnection
-
 # Add events to Events list
 $events = Import-Csv -Path "$PSScriptRoot/PnPProvisioning/EventsListData.csv"
 
