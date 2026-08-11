@@ -13,7 +13,7 @@ Import-Module PnP.PowerShell -Force
 # Set variables - CHANGE THESE TO MATCH YOUR ENVIRONMENT
 $tenant = "spex003" # Your tenant name, without the .onmicrosoft.com or .com suffix
 $clientId = "be3b2a30-ea14-4707-adeb-3adb1a77beea" # The App Id from your App Registration for PnP.PowerShell
-$siteUrl = "MARCTEST2_S" # The URL name for the site you want to update.
+$siteUrl = "MARCTEST17" # The URL name for the site you want to update.
 #endregion
 
 #region Connections
@@ -57,24 +57,6 @@ Set-PnPWebHeader -Connection $newSiteConnection `
     -SiteThumbnailUrl "SiteAssets/__rectSitelogo__solbound-logo.png" `
     -SiteLogoUrl "SiteAssets/__sitelogo__solbound-logo.png"
 Set-PnPWeb -Connection $newSiteConnection -HideTitleInHeader
-
-# Add events to Events list
-$events = Import-Csv -Path "$PSScriptRoot/PnPProvisioning/EventsListData.csv"
-
-foreach ($event in $events) {
-    Write-Host -BackgroundColor Green "Adding event '$($event.Title)' to Events list"
-    $values = @{
-        "Title"        = $event.Title
-        "EventDate"    = $event.EventDate
-        "EndDate"      = $event.EndDate
-        "Location"     = $event.Location
-        "Description"  = $event.Description
-        "Category"     = $event.Category
-        "fAllDayEvent" = $event.AllDayEvent
-        "BannerUrl"    = $event.BannerUrl.Replace("/sites/Solbound/", "/sites/$siteUrl/")
-    }
-    $newItem = Add-PnPListItem -Connection $newSiteConnection -List "Events" -Values $values
-}
 
 # Update Site Pages library to add Department values and set thumbnails
 $sitePages = Get-PnPListItem -Connection $newSiteConnection -List "Site Pages" -Fields "Id", "Title"

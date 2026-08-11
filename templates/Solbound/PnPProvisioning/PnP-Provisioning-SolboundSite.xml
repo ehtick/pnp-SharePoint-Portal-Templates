@@ -1,8 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <pnp:Provisioning xmlns:pnp="http://schemas.dev.office.com/PnP/2022/09/ProvisioningSchema">
-  <pnp:Preferences Generator="PnP.Framework, Version=1.20.14.0, Culture=neutral, PublicKeyToken=0d501f89f11b748c" />
-  <pnp:Templates ID="CONTAINER-TEMPLATE-6A6039AF97C5498DA6E995862069CFF7">
-    <pnp:ProvisioningTemplate ID="TEMPLATE-6A6039AF97C5498DA6E995862069CFF7" Version="1" BaseSiteTemplate="SITEPAGEPUBLISHING#0" Scope="RootSite">
+  <pnp:Preferences Generator="PnP.Framework, Version=1.20.33.0, Culture=neutral, PublicKeyToken=0d501f89f11b748c" />
+  <pnp:Templates ID="CONTAINER-TEMPLATE-F70B8CE7506144049488BA92866646AC">
+    <pnp:ProvisioningTemplate ID="TEMPLATE-F70B8CE7506144049488BA92866646AC" Version="1" BaseSiteTemplate="SITEPAGEPUBLISHING#0" Scope="RootSite">
       <pnp:WebSettings RequestAccessEmail="" NoCrawl="false" WelcomePage="SitePages/Home.aspx" SiteLogo="{site}/SiteAssets/__sitelogo__solbound-logo.png" AlternateCSS="" MasterPageUrl="{masterpagecatalog}/seattle.master" CustomMasterPageUrl="{masterpagecatalog}/seattle.master" CommentsOnSitePagesDisabled="false" QuickLaunchEnabled="true" MembersCanShare="true" HorizontalQuickLaunch="true" SearchScope="DefaultScope" SearchBoxInNavBar="Inherit" />
       <pnp:SiteFields>
         <Field ID="{5c043a15-e7f0-4a46-8b83-1c5fe8652726}" Name="PrimeCorrectedByUser" DisplayName="Corrected" Type="Boolean" ShowInNewForm="FALSE" ShowInEditForm="FALSE" LinkToItem="TRUE" SourceID="{38a71296-dfe7-4f64-a6a1-c1691144d90e}" StaticName="PrimeCorrectedByUser" />
@@ -95,1127 +95,6 @@
         </pnp:ContentType>
       </pnp:ContentTypes>
       <pnp:Lists>
-        <pnp:ListInstance Title="Events" Description="" DocumentTemplate="" TemplateType="106" Url="Lists/Events" MinorVersionLimit="0" MaxVersionLimit="0" DraftVersionVisibility="0" TemplateFeatureID="00bfea71-ec85-4903-972d-ebe475780106" ContentTypesEnabled="true" EnableFolderCreation="false" DefaultDisplayFormUrl="{site}/Lists/Events/DispForm.aspx" DefaultEditFormUrl="{site}/Lists/Events/EditForm.aspx" DefaultNewFormUrl="{site}/Lists/Events/NewForm.aspx" ImageUrl="/_layouts/15/images/itevent.png?rev=50" IrmExpire="false" IrmReject="false" IsApplicationList="false" ValidationFormula="" ValidationMessage="">
-          <pnp:ContentTypeBindings>
-            <pnp:ContentTypeBinding ContentTypeID="0x0102" Default="true" />
-          </pnp:ContentTypeBindings>
-          <pnp:Views>
-            <View Name="{4E8E634A-8157-4684-8A21-1B54DD614FF0}" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" RecurrenceRowset="TRUE" Type="CALENDAR" DisplayName="Calendar" Url="{site}/Lists/Events/calendar.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/events.png?rev=50">
-              <Query>
-                <Where>
-                  <DateRangesOverlap>
-                    <FieldRef Name="EventDate" />
-                    <FieldRef Name="EndDate" />
-                    <FieldRef Name="RecurrenceID" />
-                    <Value Type="DateTime">
-                      <Month />
-                    </Value>
-                  </DateRangesOverlap>
-                </Where>
-              </Query>
-              <ViewFields>
-                <FieldRef Name="EventDate" />
-                <FieldRef Name="EndDate" />
-                <FieldRef Name="fRecurrence" />
-                <FieldRef Name="EventType" />
-                <FieldRef Name="WorkspaceLink" />
-                <FieldRef Name="Title" />
-                <FieldRef Name="Location" />
-                <FieldRef Name="Description" />
-                <FieldRef Name="Workspace" />
-                <FieldRef Name="MasterSeriesItemID" />
-                <FieldRef Name="fAllDayEvent" />
-              </ViewFields>
-              <RowLimit Paged="FALSE">2147483647</RowLimit>
-              <JSLink>clienttemplates.js</JSLink>
-              <CalendarViewStyles>2</CalendarViewStyles>
-              <ViewData>
-                <FieldRef Name="Title" Type="CalendarMonthTitle" />
-                <FieldRef Name="Title" Type="CalendarWeekTitle" />
-                <FieldRef Name="Location" Type="CalendarWeekLocation" />
-                <FieldRef Name="Title" Type="CalendarDayTitle" />
-                <FieldRef Name="Location" Type="CalendarDayLocation" />
-              </ViewData>
-            </View>
-            <View Name="{D8FE91FC-F00A-4398-B5AB-65A3B2A15F11}" MobileView="TRUE" Type="HTML" DisplayName="All Events" Url="{site}/Lists/Events/AllItems.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/events.png?rev=50">
-              <Query>
-                <OrderBy>
-                  <FieldRef Name="EventDate" />
-                </OrderBy>
-              </Query>
-              <ViewFields>
-                <FieldRef Name="fRecurrence" />
-                <FieldRef Name="WorkspaceLink" />
-                <FieldRef Name="LinkTitle" />
-                <FieldRef Name="Location" />
-                <FieldRef Name="EventDate" />
-                <FieldRef Name="EndDate" />
-                <FieldRef Name="fAllDayEvent" />
-                <FieldRef Name="Category" />
-              </ViewFields>
-              <RowLimit Paged="TRUE">30</RowLimit>
-              <Aggregations Value="Off" />
-              <JSLink>clienttemplates.js</JSLink>
-              <ViewData />
-            </View>
-            <View Name="{9EBDB064-460D-4DE9-BE0B-6ADC46710E76}" MobileView="TRUE" Type="HTML" DisplayName="Current Events" Url="{site}/Lists/Events/MyItems.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/events.png?rev=50">
-              <Query>
-                <Where>
-                  <DateRangesOverlap>
-                    <FieldRef Name="EventDate" />
-                    <FieldRef Name="EndDate" />
-                    <FieldRef Name="RecurrenceID" />
-                    <Value Type="DateTime">
-                      <Now />
-                    </Value>
-                  </DateRangesOverlap>
-                </Where>
-                <OrderBy>
-                  <FieldRef Name="EventDate" />
-                </OrderBy>
-              </Query>
-              <ViewFields>
-                <FieldRef Name="fRecurrence" />
-                <FieldRef Name="WorkspaceLink" />
-                <FieldRef Name="LinkTitle" />
-                <FieldRef Name="Location" />
-                <FieldRef Name="EventDate" />
-                <FieldRef Name="EndDate" />
-                <FieldRef Name="fAllDayEvent" />
-              </ViewFields>
-              <RowLimit Paged="FALSE">2147483647</RowLimit>
-              <JSLink>clienttemplates.js</JSLink>
-            </View>
-          </pnp:Views>
-          <pnp:Fields>
-            <Field Type="DateTime" ID="{64cd368d-2f95-4bfc-a1f9-8d4324ecb007}" Name="EventDate" DisplayName="Start Time" Format="DateTime" Sealed="TRUE" Required="TRUE" FromBaseType="TRUE" Filterable="FALSE" FilterableNoRecurrence="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="EventDate" ColName="datetime1" Description="" Hidden="FALSE" CanToggleHidden="FALSE">
-              <Default>[today]</Default>
-              <FieldRefs>
-                <FieldRef Name="fAllDayEvent" RefType="AllDayEvent" />
-              </FieldRefs>
-            </Field>
-            <Field Type="Note" ID="{9da97a8a-1da5-4a77-98d3-4bc10456e700}" Name="Description" RichText="TRUE" RichTextMode="FullHtml" DisplayName="Description" Sortable="FALSE" Sealed="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="Description" ColName="ntext2" Description="" Hidden="FALSE" CanToggleHidden="FALSE" />
-            <Field ID="{8137f7ad-9170-4c1d-a17b-4ca7f557bc88}" Name="ParticipantsPicker" DisplayName="Attendees" Type="UserMulti" List="UserInfo" Mult="TRUE" Required="FALSE" ShowField="ImnName" UserSelectionMode="PeopleAndGroups" UserSelectionScope="0" Sortable="FALSE" AllowDeletion="FALSE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="ParticipantsPicker" ColName="int5" RowOrdinal="0" Sealed="FALSE" Version="2" />
-            <Field ID="{8a4be162-151d-4a11-b9be-e7dc05196d73}" Name="BannerImageUrl" StaticName="BannerImageUrl" DisplayName="Banner Image URL" Type="Note" Sealed="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" Group="_Hidden" Description="" AllowDeletion="FALSE" ShowInNewForm="FALSE" ShowInEditForm="FALSE" ShowInDisplayForm="FALSE" ShowInViewForms="FALSE" ShowInListSettings="FALSE" ShowInVersionHistory="FALSE" ColName="ntext6" />
-          </pnp:Fields>
-          <pnp:FieldRefs>
-            <pnp:FieldRef ID="fa564e0f-0c70-4ab9-b863-0177e6ddd247" Name="Title" Required="true" DisplayName="Title" />
-            <pnp:FieldRef ID="288f5f32-8462-4175-8f09-dd7ba29359a9" Name="Location" DisplayName="Location" />
-            <pnp:FieldRef ID="2684f9f2-54be-429f-ba06-76754fc056bf" Name="EndDate" Required="true" DisplayName="End Time" />
-            <pnp:FieldRef ID="7d95d1f4-f5fd-4a70-90cd-b35abc9b5bc8" Name="fAllDayEvent" DisplayName="All Day Event" />
-            <pnp:FieldRef ID="f2e63656-135e-4f1c-8fc2-ccbe74071901" Name="fRecurrence" DisplayName="Recurrence" />
-            <pnp:FieldRef ID="6df9bd52-550e-4a30-bc31-a4366832a87d" Name="Category" DisplayName="Category" />
-          </pnp:FieldRefs>
-          <pnp:DataRows UpdateBehavior="Overwrite">
-            <pnp:DataRow>
-              <pnp:DataValue FieldName="ContentTypeId">0x010200D5E272556CF4EC4DB234129EF880F19C</pnp:DataValue>
-              <pnp:DataValue FieldName="Title">Q1 All-Hands Meeting</pnp:DataValue>
-              <pnp:DataValue FieldName="_ModerationComments">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="File_x0020_Type">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="_ColorHex">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="_ColorTag">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="_Emoji">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="ComplianceAssetId">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="Location">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="Geolocation">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="EventDate">2026-03-06T00:00:00Z</pnp:DataValue>
-              <pnp:DataValue FieldName="EndDate">2026-03-06T23:59:00Z</pnp:DataValue>
-              <pnp:DataValue FieldName="Description">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="fAllDayEvent">True</pnp:DataValue>
-              <pnp:DataValue FieldName="fRecurrence">False</pnp:DataValue>
-              <pnp:DataValue FieldName="WorkspaceLink">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="EventType">0</pnp:DataValue>
-              <pnp:DataValue FieldName="UID">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="RecurrenceID">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="EventCanceled">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="Duration">86340</pnp:DataValue>
-              <pnp:DataValue FieldName="RecurrenceData">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="TimeZone">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="XMLTZone">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="MasterSeriesItemID">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="Workspace">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="ParticipantsPicker">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="Category">Company</pnp:DataValue>
-              <pnp:DataValue FieldName="FreeBusy">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="Overbook">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="Participants">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="BannerUrl">https://cdn.hubblecontent.osi.office.net/gp-image/79ab39140d6c764081a6039b2df36637/thumbnails/xxlarge.jpg?X=49&amp;Y=100&amp;Id=null&amp;listId=undefined&amp;ar=1.5, https://cdn.hubblecontent.osi.office.net/gp-image/79ab39140d6c764081a6039b2df36637/thumbnails/xxlarge.jpg?X=49&amp;Y=100&amp;Id=null&amp;listId=undefined&amp;ar=1.5</pnp:DataValue>
-              <pnp:DataValue FieldName="BannerImageUrl">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="ID">1</pnp:DataValue>
-              <pnp:DataValue FieldName="Modified">2026-05-29T18:57:21Z</pnp:DataValue>
-              <pnp:DataValue FieldName="Created">2026-05-29T18:57:21Z</pnp:DataValue>
-              <pnp:DataValue FieldName="Author">marc@spex003.onmicrosoft.com</pnp:DataValue>
-              <pnp:DataValue FieldName="Editor">marc@spex003.onmicrosoft.com</pnp:DataValue>
-              <pnp:DataValue FieldName="_HasCopyDestinations">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="_CopySource">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="owshiddenversion">1</pnp:DataValue>
-              <pnp:DataValue FieldName="WorkflowVersion">1</pnp:DataValue>
-              <pnp:DataValue FieldName="_UIVersion">512</pnp:DataValue>
-              <pnp:DataValue FieldName="_UIVersionString">1.0</pnp:DataValue>
-              <pnp:DataValue FieldName="Attachments">False</pnp:DataValue>
-              <pnp:DataValue FieldName="_ModerationStatus">0</pnp:DataValue>
-              <pnp:DataValue FieldName="InstanceID">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="Order">100</pnp:DataValue>
-              <pnp:DataValue FieldName="GUID">ca0cc0c2-8e35-4389-bd93-e9ab120e1068</pnp:DataValue>
-              <pnp:DataValue FieldName="WorkflowInstanceID">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="FileRef">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="FileDirRef">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="Last_x0020_Modified">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="Created_x0020_Date">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="FSObjType">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="SortBehavior">1</pnp:DataValue>
-              <pnp:DataValue FieldName="FileLeafRef">1_.000</pnp:DataValue>
-              <pnp:DataValue FieldName="UniqueId">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="ParentUniqueId">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="SyncClientId">1</pnp:DataValue>
-              <pnp:DataValue FieldName="ProgId">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="ScopeId">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="MetaInfo">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="_Level">1</pnp:DataValue>
-              <pnp:DataValue FieldName="_IsCurrentVersion">True</pnp:DataValue>
-              <pnp:DataValue FieldName="ItemChildCount">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="FolderChildCount">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="Restricted">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="OriginatorId">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="NoExecute">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="ContentVersion">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="_ComplianceFlags">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="_ComplianceTag">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="_ComplianceTagWrittenTime">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="_ComplianceTagUserId">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="AccessPolicy">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="_VirusStatus">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="_VirusVendorID">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="_VirusInfo">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="_RansomwareAnomalyMetaInfo">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="_DraftOwnerId">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="AppAuthor">6</pnp:DataValue>
-              <pnp:DataValue FieldName="AppEditor">6</pnp:DataValue>
-              <pnp:DataValue FieldName="SMTotalSize">842</pnp:DataValue>
-              <pnp:DataValue FieldName="SMLastModifiedDate">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="SMTotalFileStreamSize">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="SMTotalFileCount">0</pnp:DataValue>
-            </pnp:DataRow>
-            <pnp:DataRow>
-              <pnp:DataValue FieldName="ContentTypeId">0x010200D5E272556CF4EC4DB234129EF880F19C</pnp:DataValue>
-              <pnp:DataValue FieldName="Title">NABCEP Certification Training</pnp:DataValue>
-              <pnp:DataValue FieldName="_ModerationComments">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="File_x0020_Type">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="_ColorHex">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="_ColorTag">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="_Emoji">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="ComplianceAssetId">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="Location">Inhouse</pnp:DataValue>
-              <pnp:DataValue FieldName="Geolocation">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="EventDate">2026-03-19T00:00:00Z</pnp:DataValue>
-              <pnp:DataValue FieldName="EndDate">2026-03-20T23:59:00Z</pnp:DataValue>
-              <pnp:DataValue FieldName="Description">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="fAllDayEvent">True</pnp:DataValue>
-              <pnp:DataValue FieldName="fRecurrence">False</pnp:DataValue>
-              <pnp:DataValue FieldName="WorkspaceLink">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="EventType">0</pnp:DataValue>
-              <pnp:DataValue FieldName="UID">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="RecurrenceID">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="EventCanceled">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="Duration">172740</pnp:DataValue>
-              <pnp:DataValue FieldName="RecurrenceData">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="TimeZone">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="XMLTZone">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="MasterSeriesItemID">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="Workspace">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="ParticipantsPicker">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="Category">Training</pnp:DataValue>
-              <pnp:DataValue FieldName="FreeBusy">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="Overbook">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="Participants">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="BannerUrl">https://cdn.hubblecontent.osi.office.net/m365content/publish/4d042c56-5f44-4c83-b39e-56495e3c43a5/1090234918.jpg?X=100&amp;Y=42&amp;Id=null&amp;listId=undefined&amp;ar=1.3, https://cdn.hubblecontent.osi.office.net/m365content/publish/4d042c56-5f44-4c83-b39e-56495e3c43a5/1090234918.jpg?X=100&amp;Y=42&amp;Id=null&amp;listId=undefined&amp;ar=1.3</pnp:DataValue>
-              <pnp:DataValue FieldName="BannerImageUrl">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="ID">2</pnp:DataValue>
-              <pnp:DataValue FieldName="Modified">2026-05-29T18:57:23Z</pnp:DataValue>
-              <pnp:DataValue FieldName="Created">2026-05-29T18:57:23Z</pnp:DataValue>
-              <pnp:DataValue FieldName="Author">marc@spex003.onmicrosoft.com</pnp:DataValue>
-              <pnp:DataValue FieldName="Editor">marc@spex003.onmicrosoft.com</pnp:DataValue>
-              <pnp:DataValue FieldName="_HasCopyDestinations">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="_CopySource">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="owshiddenversion">1</pnp:DataValue>
-              <pnp:DataValue FieldName="WorkflowVersion">1</pnp:DataValue>
-              <pnp:DataValue FieldName="_UIVersion">512</pnp:DataValue>
-              <pnp:DataValue FieldName="_UIVersionString">1.0</pnp:DataValue>
-              <pnp:DataValue FieldName="Attachments">False</pnp:DataValue>
-              <pnp:DataValue FieldName="_ModerationStatus">0</pnp:DataValue>
-              <pnp:DataValue FieldName="InstanceID">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="Order">200</pnp:DataValue>
-              <pnp:DataValue FieldName="GUID">6a0e44ea-579b-4e83-b114-e742554efba2</pnp:DataValue>
-              <pnp:DataValue FieldName="WorkflowInstanceID">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="FileRef">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="FileDirRef">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="Last_x0020_Modified">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="Created_x0020_Date">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="FSObjType">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="SortBehavior">2</pnp:DataValue>
-              <pnp:DataValue FieldName="FileLeafRef">2_.000</pnp:DataValue>
-              <pnp:DataValue FieldName="UniqueId">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="ParentUniqueId">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="SyncClientId">2</pnp:DataValue>
-              <pnp:DataValue FieldName="ProgId">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="ScopeId">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="MetaInfo">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="_Level">1</pnp:DataValue>
-              <pnp:DataValue FieldName="_IsCurrentVersion">True</pnp:DataValue>
-              <pnp:DataValue FieldName="ItemChildCount">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="FolderChildCount">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="Restricted">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="OriginatorId">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="NoExecute">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="ContentVersion">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="_ComplianceFlags">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="_ComplianceTag">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="_ComplianceTagWrittenTime">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="_ComplianceTagUserId">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="AccessPolicy">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="_VirusStatus">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="_VirusVendorID">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="_VirusInfo">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="_RansomwareAnomalyMetaInfo">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="_DraftOwnerId">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="AppAuthor">6</pnp:DataValue>
-              <pnp:DataValue FieldName="AppEditor">6</pnp:DataValue>
-              <pnp:DataValue FieldName="SMTotalSize">904</pnp:DataValue>
-              <pnp:DataValue FieldName="SMLastModifiedDate">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="SMTotalFileStreamSize">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="SMTotalFileCount">0</pnp:DataValue>
-            </pnp:DataRow>
-            <pnp:DataRow>
-              <pnp:DataValue FieldName="ContentTypeId">0x010200D5E272556CF4EC4DB234129EF880F19C</pnp:DataValue>
-              <pnp:DataValue FieldName="Title">Safety &amp; OSHA Refresher Workshop</pnp:DataValue>
-              <pnp:DataValue FieldName="_ModerationComments">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="File_x0020_Type">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="_ColorHex">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="_ColorTag">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="_Emoji">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="ComplianceAssetId">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="Location">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="Geolocation">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="EventDate">2026-04-02T11:00:00Z</pnp:DataValue>
-              <pnp:DataValue FieldName="EndDate">2026-04-02T12:00:00Z</pnp:DataValue>
-              <pnp:DataValue FieldName="Description">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="fAllDayEvent">False</pnp:DataValue>
-              <pnp:DataValue FieldName="fRecurrence">False</pnp:DataValue>
-              <pnp:DataValue FieldName="WorkspaceLink">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="EventType">0</pnp:DataValue>
-              <pnp:DataValue FieldName="UID">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="RecurrenceID">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="EventCanceled">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="Duration">3600</pnp:DataValue>
-              <pnp:DataValue FieldName="RecurrenceData">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="TimeZone">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="XMLTZone">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="MasterSeriesItemID">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="Workspace">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="ParticipantsPicker">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="Category">Safety</pnp:DataValue>
-              <pnp:DataValue FieldName="FreeBusy">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="Overbook">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="Participants">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="BannerUrl">https://cdn.hubblecontent.osi.office.net/gp-image/7f71204d976c3b8ef111c9767ee7474f/thumbnails/xxlarge.jpg?X=NaN&amp;Y=NaN&amp;Id=null&amp;listId=undefined&amp;ar=1.5, https://cdn.hubblecontent.osi.office.net/gp-image/7f71204d976c3b8ef111c9767ee7474f/thumbnails/xxlarge.jpg?X=NaN&amp;Y=NaN&amp;Id=null&amp;listId=undefined&amp;ar=1.5</pnp:DataValue>
-              <pnp:DataValue FieldName="BannerImageUrl">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="ID">3</pnp:DataValue>
-              <pnp:DataValue FieldName="Modified">2026-05-29T18:57:23Z</pnp:DataValue>
-              <pnp:DataValue FieldName="Created">2026-05-29T18:57:23Z</pnp:DataValue>
-              <pnp:DataValue FieldName="Author">marc@spex003.onmicrosoft.com</pnp:DataValue>
-              <pnp:DataValue FieldName="Editor">marc@spex003.onmicrosoft.com</pnp:DataValue>
-              <pnp:DataValue FieldName="_HasCopyDestinations">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="_CopySource">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="owshiddenversion">1</pnp:DataValue>
-              <pnp:DataValue FieldName="WorkflowVersion">1</pnp:DataValue>
-              <pnp:DataValue FieldName="_UIVersion">512</pnp:DataValue>
-              <pnp:DataValue FieldName="_UIVersionString">1.0</pnp:DataValue>
-              <pnp:DataValue FieldName="Attachments">False</pnp:DataValue>
-              <pnp:DataValue FieldName="_ModerationStatus">0</pnp:DataValue>
-              <pnp:DataValue FieldName="InstanceID">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="Order">300</pnp:DataValue>
-              <pnp:DataValue FieldName="GUID">9c41d713-96b2-483d-b199-799aaac92c6c</pnp:DataValue>
-              <pnp:DataValue FieldName="WorkflowInstanceID">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="FileRef">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="FileDirRef">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="Last_x0020_Modified">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="Created_x0020_Date">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="FSObjType">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="SortBehavior">3</pnp:DataValue>
-              <pnp:DataValue FieldName="FileLeafRef">3_.000</pnp:DataValue>
-              <pnp:DataValue FieldName="UniqueId">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="ParentUniqueId">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="SyncClientId">3</pnp:DataValue>
-              <pnp:DataValue FieldName="ProgId">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="ScopeId">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="MetaInfo">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="_Level">1</pnp:DataValue>
-              <pnp:DataValue FieldName="_IsCurrentVersion">True</pnp:DataValue>
-              <pnp:DataValue FieldName="ItemChildCount">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="FolderChildCount">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="Restricted">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="OriginatorId">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="NoExecute">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="ContentVersion">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="_ComplianceFlags">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="_ComplianceTag">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="_ComplianceTagWrittenTime">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="_ComplianceTagUserId">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="AccessPolicy">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="_VirusStatus">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="_VirusVendorID">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="_VirusInfo">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="_RansomwareAnomalyMetaInfo">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="_DraftOwnerId">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="AppAuthor">6</pnp:DataValue>
-              <pnp:DataValue FieldName="AppEditor">6</pnp:DataValue>
-              <pnp:DataValue FieldName="SMTotalSize">868</pnp:DataValue>
-              <pnp:DataValue FieldName="SMLastModifiedDate">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="SMTotalFileStreamSize">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="SMTotalFileCount">0</pnp:DataValue>
-            </pnp:DataRow>
-            <pnp:DataRow>
-              <pnp:DataValue FieldName="ContentTypeId">0x010200D5E272556CF4EC4DB234129EF880F19C</pnp:DataValue>
-              <pnp:DataValue FieldName="Title">Intersolar North America</pnp:DataValue>
-              <pnp:DataValue FieldName="_ModerationComments">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="File_x0020_Type">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="_ColorHex">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="_ColorTag">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="_Emoji">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="ComplianceAssetId">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="Location">San Diego Convention Center, San Diego, California, United States</pnp:DataValue>
-              <pnp:DataValue FieldName="Geolocation">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="EventDate">2026-04-22T00:00:00Z</pnp:DataValue>
-              <pnp:DataValue FieldName="EndDate">2026-04-24T23:59:00Z</pnp:DataValue>
-              <pnp:DataValue FieldName="Description">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="fAllDayEvent">True</pnp:DataValue>
-              <pnp:DataValue FieldName="fRecurrence">False</pnp:DataValue>
-              <pnp:DataValue FieldName="WorkspaceLink">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="EventType">0</pnp:DataValue>
-              <pnp:DataValue FieldName="UID">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="RecurrenceID">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="EventCanceled">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="Duration">259140</pnp:DataValue>
-              <pnp:DataValue FieldName="RecurrenceData">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="TimeZone">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="XMLTZone">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="MasterSeriesItemID">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="Workspace">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="ParticipantsPicker">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="Category">External</pnp:DataValue>
-              <pnp:DataValue FieldName="FreeBusy">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="Overbook">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="Participants">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="BannerUrl">https://spex003.sharepoint.com{site}/SiteAssets/SitePages/Event(1)/28089-isna_esna_logo_lockup_rgb.png?X=NaN&amp;Y=NaN&amp;Id=7d9673d4-60be-48a8-bd6b-1fb0ee35f18a&amp;listId=907c478a-cf6b-4de9-90b0-b4f22bd27814&amp;ar=5.1, {site}/SiteAssets/SitePages/Event(1)/28089-isna_esna_logo_lockup_rgb.png?X=NaN&amp;Y=NaN&amp;Id=7d9673d4-60be-48a8-bd6b-1fb0ee35f18a&amp;listId=907c478a-cf6b-4de9-90b0-b4f22bd27814&amp;ar=5.1</pnp:DataValue>
-              <pnp:DataValue FieldName="BannerImageUrl">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="ID">4</pnp:DataValue>
-              <pnp:DataValue FieldName="Modified">2026-05-29T18:57:24Z</pnp:DataValue>
-              <pnp:DataValue FieldName="Created">2026-05-29T18:57:24Z</pnp:DataValue>
-              <pnp:DataValue FieldName="Author">marc@spex003.onmicrosoft.com</pnp:DataValue>
-              <pnp:DataValue FieldName="Editor">marc@spex003.onmicrosoft.com</pnp:DataValue>
-              <pnp:DataValue FieldName="_HasCopyDestinations">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="_CopySource">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="owshiddenversion">1</pnp:DataValue>
-              <pnp:DataValue FieldName="WorkflowVersion">1</pnp:DataValue>
-              <pnp:DataValue FieldName="_UIVersion">512</pnp:DataValue>
-              <pnp:DataValue FieldName="_UIVersionString">1.0</pnp:DataValue>
-              <pnp:DataValue FieldName="Attachments">False</pnp:DataValue>
-              <pnp:DataValue FieldName="_ModerationStatus">0</pnp:DataValue>
-              <pnp:DataValue FieldName="InstanceID">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="Order">400</pnp:DataValue>
-              <pnp:DataValue FieldName="GUID">028b1a1b-a52f-4be6-a0e0-df6a793fb113</pnp:DataValue>
-              <pnp:DataValue FieldName="WorkflowInstanceID">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="FileRef">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="FileDirRef">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="Last_x0020_Modified">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="Created_x0020_Date">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="FSObjType">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="SortBehavior">4</pnp:DataValue>
-              <pnp:DataValue FieldName="FileLeafRef">4_.000</pnp:DataValue>
-              <pnp:DataValue FieldName="UniqueId">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="ParentUniqueId">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="SyncClientId">4</pnp:DataValue>
-              <pnp:DataValue FieldName="ProgId">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="ScopeId">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="MetaInfo">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="_Level">1</pnp:DataValue>
-              <pnp:DataValue FieldName="_IsCurrentVersion">True</pnp:DataValue>
-              <pnp:DataValue FieldName="ItemChildCount">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="FolderChildCount">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="Restricted">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="OriginatorId">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="NoExecute">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="ContentVersion">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="_ComplianceFlags">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="_ComplianceTag">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="_ComplianceTagWrittenTime">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="_ComplianceTagUserId">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="AccessPolicy">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="_VirusStatus">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="_VirusVendorID">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="_VirusInfo">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="_RansomwareAnomalyMetaInfo">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="_DraftOwnerId">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="AppAuthor">6</pnp:DataValue>
-              <pnp:DataValue FieldName="AppEditor">6</pnp:DataValue>
-              <pnp:DataValue FieldName="SMTotalSize">1126</pnp:DataValue>
-              <pnp:DataValue FieldName="SMLastModifiedDate">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="SMTotalFileStreamSize">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="SMTotalFileCount">0</pnp:DataValue>
-            </pnp:DataRow>
-            <pnp:DataRow>
-              <pnp:DataValue FieldName="ContentTypeId">0x010200D5E272556CF4EC4DB234129EF880F19C</pnp:DataValue>
-              <pnp:DataValue FieldName="Title">SEIA Policy &amp; Finance Summit</pnp:DataValue>
-              <pnp:DataValue FieldName="_ModerationComments">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="File_x0020_Type">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="_ColorHex">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="_ColorTag">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="_Emoji">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="ComplianceAssetId">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="Location">Washington, District of Columbia, United States</pnp:DataValue>
-              <pnp:DataValue FieldName="Geolocation">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="EventDate">2026-05-06T00:00:00Z</pnp:DataValue>
-              <pnp:DataValue FieldName="EndDate">2026-05-08T23:59:00Z</pnp:DataValue>
-              <pnp:DataValue FieldName="Description">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="fAllDayEvent">True</pnp:DataValue>
-              <pnp:DataValue FieldName="fRecurrence">False</pnp:DataValue>
-              <pnp:DataValue FieldName="WorkspaceLink">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="EventType">0</pnp:DataValue>
-              <pnp:DataValue FieldName="UID">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="RecurrenceID">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="EventCanceled">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="Duration">259140</pnp:DataValue>
-              <pnp:DataValue FieldName="RecurrenceData">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="TimeZone">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="XMLTZone">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="MasterSeriesItemID">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="Workspace">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="ParticipantsPicker">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="Category">External</pnp:DataValue>
-              <pnp:DataValue FieldName="FreeBusy">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="Overbook">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="Participants">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="BannerUrl">https://spex003.sharepoint.com{site}/SiteAssets/SitePages/Event(2)/33197-seia-solar-energy-industries-logo.png?X=50&amp;Y=50&amp;Id=3ca69ac8-56a0-4f7d-ae7e-6955b835a03f&amp;listId=907c478a-cf6b-4de9-90b0-b4f22bd27814, {site}/SiteAssets/SitePages/Event(2)/33197-seia-solar-energy-industries-logo.png?X=50&amp;Y=50&amp;Id=3ca69ac8-56a0-4f7d-ae7e-6955b835a03f&amp;listId=907c478a-cf6b-4de9-90b0-b4f22bd27814</pnp:DataValue>
-              <pnp:DataValue FieldName="BannerImageUrl">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="ID">5</pnp:DataValue>
-              <pnp:DataValue FieldName="Modified">2026-05-29T18:57:24Z</pnp:DataValue>
-              <pnp:DataValue FieldName="Created">2026-05-29T18:57:24Z</pnp:DataValue>
-              <pnp:DataValue FieldName="Author">marc@spex003.onmicrosoft.com</pnp:DataValue>
-              <pnp:DataValue FieldName="Editor">marc@spex003.onmicrosoft.com</pnp:DataValue>
-              <pnp:DataValue FieldName="_HasCopyDestinations">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="_CopySource">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="owshiddenversion">1</pnp:DataValue>
-              <pnp:DataValue FieldName="WorkflowVersion">1</pnp:DataValue>
-              <pnp:DataValue FieldName="_UIVersion">512</pnp:DataValue>
-              <pnp:DataValue FieldName="_UIVersionString">1.0</pnp:DataValue>
-              <pnp:DataValue FieldName="Attachments">False</pnp:DataValue>
-              <pnp:DataValue FieldName="_ModerationStatus">0</pnp:DataValue>
-              <pnp:DataValue FieldName="InstanceID">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="Order">500</pnp:DataValue>
-              <pnp:DataValue FieldName="GUID">9a4a5129-1887-4cab-9db3-046d1450520c</pnp:DataValue>
-              <pnp:DataValue FieldName="WorkflowInstanceID">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="FileRef">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="FileDirRef">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="Last_x0020_Modified">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="Created_x0020_Date">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="FSObjType">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="SortBehavior">5</pnp:DataValue>
-              <pnp:DataValue FieldName="FileLeafRef">5_.000</pnp:DataValue>
-              <pnp:DataValue FieldName="UniqueId">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="ParentUniqueId">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="SyncClientId">5</pnp:DataValue>
-              <pnp:DataValue FieldName="ProgId">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="ScopeId">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="MetaInfo">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="_Level">1</pnp:DataValue>
-              <pnp:DataValue FieldName="_IsCurrentVersion">True</pnp:DataValue>
-              <pnp:DataValue FieldName="ItemChildCount">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="FolderChildCount">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="Restricted">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="OriginatorId">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="NoExecute">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="ContentVersion">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="_ComplianceFlags">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="_ComplianceTag">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="_ComplianceTagWrittenTime">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="_ComplianceTagUserId">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="AccessPolicy">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="_VirusStatus">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="_VirusVendorID">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="_VirusInfo">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="_RansomwareAnomalyMetaInfo">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="_DraftOwnerId">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="AppAuthor">6</pnp:DataValue>
-              <pnp:DataValue FieldName="AppEditor">6</pnp:DataValue>
-              <pnp:DataValue FieldName="SMTotalSize">1094</pnp:DataValue>
-              <pnp:DataValue FieldName="SMLastModifiedDate">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="SMTotalFileStreamSize">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="SMTotalFileCount">0</pnp:DataValue>
-            </pnp:DataRow>
-            <pnp:DataRow>
-              <pnp:DataValue FieldName="ContentTypeId">0x010200D5E272556CF4EC4DB234129EF880F19C</pnp:DataValue>
-              <pnp:DataValue FieldName="Title">NEC Code Update Webinar</pnp:DataValue>
-              <pnp:DataValue FieldName="_ModerationComments">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="File_x0020_Type">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="_ColorHex">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="_ColorTag">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="_Emoji">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="ComplianceAssetId">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="Location">Online</pnp:DataValue>
-              <pnp:DataValue FieldName="Geolocation">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="EventDate">2026-06-12T00:00:00Z</pnp:DataValue>
-              <pnp:DataValue FieldName="EndDate">2026-06-12T23:59:00Z</pnp:DataValue>
-              <pnp:DataValue FieldName="Description">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="fAllDayEvent">True</pnp:DataValue>
-              <pnp:DataValue FieldName="fRecurrence">False</pnp:DataValue>
-              <pnp:DataValue FieldName="WorkspaceLink">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="EventType">0</pnp:DataValue>
-              <pnp:DataValue FieldName="UID">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="RecurrenceID">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="EventCanceled">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="Duration">86340</pnp:DataValue>
-              <pnp:DataValue FieldName="RecurrenceData">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="TimeZone">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="XMLTZone">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="MasterSeriesItemID">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="Workspace">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="ParticipantsPicker">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="Category">External</pnp:DataValue>
-              <pnp:DataValue FieldName="FreeBusy">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="Overbook">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="Participants">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="BannerUrl">https://cdn.hubblecontent.osi.office.net/gp-image/85845cc8fdd98c69479e39c3c9b0c616/thumbnails/xxlarge.jpg?X=86&amp;Y=85&amp;Id=null&amp;listId=undefined, https://cdn.hubblecontent.osi.office.net/gp-image/85845cc8fdd98c69479e39c3c9b0c616/thumbnails/xxlarge.jpg?X=86&amp;Y=85&amp;Id=null&amp;listId=undefined</pnp:DataValue>
-              <pnp:DataValue FieldName="BannerImageUrl">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="ID">11</pnp:DataValue>
-              <pnp:DataValue FieldName="Modified">2026-05-29T19:13:30Z</pnp:DataValue>
-              <pnp:DataValue FieldName="Created">2026-05-29T19:13:30Z</pnp:DataValue>
-              <pnp:DataValue FieldName="Author">marc@spex003.onmicrosoft.com</pnp:DataValue>
-              <pnp:DataValue FieldName="Editor">marc@spex003.onmicrosoft.com</pnp:DataValue>
-              <pnp:DataValue FieldName="_HasCopyDestinations">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="_CopySource">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="owshiddenversion">1</pnp:DataValue>
-              <pnp:DataValue FieldName="WorkflowVersion">1</pnp:DataValue>
-              <pnp:DataValue FieldName="_UIVersion">512</pnp:DataValue>
-              <pnp:DataValue FieldName="_UIVersionString">1.0</pnp:DataValue>
-              <pnp:DataValue FieldName="Attachments">False</pnp:DataValue>
-              <pnp:DataValue FieldName="_ModerationStatus">0</pnp:DataValue>
-              <pnp:DataValue FieldName="InstanceID">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="Order">1100</pnp:DataValue>
-              <pnp:DataValue FieldName="GUID">c3be13fa-8335-4080-aa3e-f4f65843aa06</pnp:DataValue>
-              <pnp:DataValue FieldName="WorkflowInstanceID">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="FileRef">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="FileDirRef">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="Last_x0020_Modified">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="Created_x0020_Date">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="FSObjType">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="SortBehavior">11</pnp:DataValue>
-              <pnp:DataValue FieldName="FileLeafRef">11_.000</pnp:DataValue>
-              <pnp:DataValue FieldName="UniqueId">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="ParentUniqueId">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="SyncClientId">11</pnp:DataValue>
-              <pnp:DataValue FieldName="ProgId">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="ScopeId">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="MetaInfo">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="_Level">1</pnp:DataValue>
-              <pnp:DataValue FieldName="_IsCurrentVersion">True</pnp:DataValue>
-              <pnp:DataValue FieldName="ItemChildCount">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="FolderChildCount">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="Restricted">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="OriginatorId">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="NoExecute">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="ContentVersion">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="_ComplianceFlags">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="_ComplianceTag">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="_ComplianceTagWrittenTime">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="_ComplianceTagUserId">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="AccessPolicy">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="_VirusStatus">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="_VirusVendorID">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="_VirusInfo">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="_RansomwareAnomalyMetaInfo">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="_DraftOwnerId">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="AppAuthor">6</pnp:DataValue>
-              <pnp:DataValue FieldName="AppEditor">6</pnp:DataValue>
-              <pnp:DataValue FieldName="SMTotalSize">830</pnp:DataValue>
-              <pnp:DataValue FieldName="SMLastModifiedDate">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="SMTotalFileStreamSize">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="SMTotalFileCount">0</pnp:DataValue>
-            </pnp:DataRow>
-            <pnp:DataRow>
-              <pnp:DataValue FieldName="ContentTypeId">0x010200D5E272556CF4EC4DB234129EF880F19C</pnp:DataValue>
-              <pnp:DataValue FieldName="Title">RE+ 2026</pnp:DataValue>
-              <pnp:DataValue FieldName="_ModerationComments">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="File_x0020_Type">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="_ColorHex">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="_ColorTag">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="_Emoji">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="ComplianceAssetId">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="Location">Anaheim Convention Center, California, United States</pnp:DataValue>
-              <pnp:DataValue FieldName="Geolocation">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="EventDate">2026-09-09T00:00:00Z</pnp:DataValue>
-              <pnp:DataValue FieldName="EndDate">2026-09-11T23:59:00Z</pnp:DataValue>
-              <pnp:DataValue FieldName="Description">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="fAllDayEvent">True</pnp:DataValue>
-              <pnp:DataValue FieldName="fRecurrence">False</pnp:DataValue>
-              <pnp:DataValue FieldName="WorkspaceLink">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="EventType">0</pnp:DataValue>
-              <pnp:DataValue FieldName="UID">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="RecurrenceID">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="EventCanceled">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="Duration">259140</pnp:DataValue>
-              <pnp:DataValue FieldName="RecurrenceData">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="TimeZone">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="XMLTZone">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="MasterSeriesItemID">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="Workspace">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="ParticipantsPicker">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="Category">External</pnp:DataValue>
-              <pnp:DataValue FieldName="FreeBusy">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="Overbook">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="Participants">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="BannerUrl">https://spex003.sharepoint.com{site}/SiteAssets/SitePages/Event(3)/84993-RE-Plus-blue-header-logo.svg?X=NaN&amp;Y=NaN&amp;Id=01d687a4-406a-4b96-93e0-f373a027b587&amp;listId=907c478a-cf6b-4de9-90b0-b4f22bd27814&amp;ar=1.9, {site}/SiteAssets/SitePages/Event(3)/84993-RE-Plus-blue-header-logo.svg?X=NaN&amp;Y=NaN&amp;Id=01d687a4-406a-4b96-93e0-f373a027b587&amp;listId=907c478a-cf6b-4de9-90b0-b4f22bd27814&amp;ar=1.9</pnp:DataValue>
-              <pnp:DataValue FieldName="BannerImageUrl">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="ID">12</pnp:DataValue>
-              <pnp:DataValue FieldName="Modified">2026-05-29T19:13:31Z</pnp:DataValue>
-              <pnp:DataValue FieldName="Created">2026-05-29T19:13:31Z</pnp:DataValue>
-              <pnp:DataValue FieldName="Author">marc@spex003.onmicrosoft.com</pnp:DataValue>
-              <pnp:DataValue FieldName="Editor">marc@spex003.onmicrosoft.com</pnp:DataValue>
-              <pnp:DataValue FieldName="_HasCopyDestinations">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="_CopySource">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="owshiddenversion">1</pnp:DataValue>
-              <pnp:DataValue FieldName="WorkflowVersion">1</pnp:DataValue>
-              <pnp:DataValue FieldName="_UIVersion">512</pnp:DataValue>
-              <pnp:DataValue FieldName="_UIVersionString">1.0</pnp:DataValue>
-              <pnp:DataValue FieldName="Attachments">False</pnp:DataValue>
-              <pnp:DataValue FieldName="_ModerationStatus">0</pnp:DataValue>
-              <pnp:DataValue FieldName="InstanceID">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="Order">1200</pnp:DataValue>
-              <pnp:DataValue FieldName="GUID">8ff84160-201c-4c11-9142-1fc4f1f6c577</pnp:DataValue>
-              <pnp:DataValue FieldName="WorkflowInstanceID">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="FileRef">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="FileDirRef">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="Last_x0020_Modified">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="Created_x0020_Date">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="FSObjType">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="SortBehavior">12</pnp:DataValue>
-              <pnp:DataValue FieldName="FileLeafRef">12_.000</pnp:DataValue>
-              <pnp:DataValue FieldName="UniqueId">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="ParentUniqueId">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="SyncClientId">12</pnp:DataValue>
-              <pnp:DataValue FieldName="ProgId">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="ScopeId">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="MetaInfo">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="_Level">1</pnp:DataValue>
-              <pnp:DataValue FieldName="_IsCurrentVersion">True</pnp:DataValue>
-              <pnp:DataValue FieldName="ItemChildCount">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="FolderChildCount">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="Restricted">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="OriginatorId">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="NoExecute">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="ContentVersion">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="_ComplianceFlags">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="_ComplianceTag">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="_ComplianceTagWrittenTime">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="_ComplianceTagUserId">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="AccessPolicy">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="_VirusStatus">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="_VirusVendorID">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="_VirusInfo">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="_RansomwareAnomalyMetaInfo">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="_DraftOwnerId">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="AppAuthor">6</pnp:DataValue>
-              <pnp:DataValue FieldName="AppEditor">6</pnp:DataValue>
-              <pnp:DataValue FieldName="SMTotalSize">1064</pnp:DataValue>
-              <pnp:DataValue FieldName="SMLastModifiedDate">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="SMTotalFileStreamSize">
-              </pnp:DataValue>
-              <pnp:DataValue FieldName="SMTotalFileCount">0</pnp:DataValue>
-            </pnp:DataRow>
-          </pnp:DataRows>
-          <pnp:FieldDefaults>
-            <pnp:FieldDefault FieldName="Category">
-            </pnp:FieldDefault>
-          </pnp:FieldDefaults>
-        </pnp:ListInstance>
         <pnp:ListInstance Title="Site Assets" Description="Use this library to store files which are included on pages within this site, such as images on Wiki pages." DocumentTemplate="{site}/SiteAssets/Forms/template.doc" TemplateType="101" Url="SiteAssets" EnableVersioning="true" MinorVersionLimit="0" MaxVersionLimit="500" DraftVersionVisibility="0" TemplateFeatureID="00bfea71-e717-4e80-aa17-d0c71b360101" EnableAttachments="false" DefaultDisplayFormUrl="{site}/SiteAssets/Forms/DispForm.aspx" DefaultEditFormUrl="{site}/SiteAssets/Forms/EditForm.aspx" DefaultNewFormUrl="{site}/SiteAssets/Forms/Upload.aspx" ImageUrl="/_layouts/15/images/itdl.png?rev=50" IrmExpire="false" IrmReject="false" IsApplicationList="true" ValidationFormula="" ValidationMessage="">
           <pnp:PropertyBagEntries>
             <pnp:PropertyBagEntry Key="IsAttachmentLibrary" Value="1" Overwrite="false" />
@@ -1364,310 +243,6 @@
             <pnp:FieldRef ID="d307dff3-340f-44a2-9f4b-fbfe1ba07459" Name="_CommentCount" DisplayName="Comment count" />
             <pnp:FieldRef ID="db8d9d6d-dc9a-4fbd-85f3-4a753bfdc58c" Name="_LikeCount" DisplayName="Like count" />
           </pnp:FieldRefs>
-          <pnp:Folders>
-            <pnp:Folder Name="SitePages" ContentTypeID="0x0120">
-              <pnp:Folder Name="Home" ContentTypeID="0x0120">
-                <pnp:PropertyBagEntries>
-                  <pnp:PropertyBagEntry Key="xd_ProgID" Value="" Overwrite="false" />
-                  <pnp:PropertyBagEntry Key="MediaServiceImageTags" Value="" Overwrite="false" />
-                  <pnp:PropertyBagEntry Key="ContentTypeId" Value="0x0120009BF38EE9EB1EBD4380ED4607FA311C5C" Overwrite="false" />
-                  <pnp:PropertyBagEntry Key="_ExtendedDescription" Value="" Overwrite="false" />
-                  <pnp:PropertyBagEntry Key="display_urn:schemas-microsoft-com:office:office#Author" Value="Marc Anderson" Overwrite="false" />
-                  <pnp:PropertyBagEntry Key="display_urn:schemas-microsoft-com:office:office#Editor" Value="Marc Anderson" Overwrite="false" />
-                  <pnp:PropertyBagEntry Key="lcf76f155ced4ddcb4097134ff3c332f" Value="" Overwrite="false" />
-                  <pnp:PropertyBagEntry Key="Order" Value="200.000000000000" Overwrite="false" />
-                  <pnp:PropertyBagEntry Key="TaxCatchAll" Value="" Overwrite="false" />
-                </pnp:PropertyBagEntries>
-                <pnp:Properties>
-                  <pnp:Property Key="FileLeafRef" Value="Home" />
-                  <pnp:Property Key="Title" Value="Home" />
-                  <pnp:Property Key="_ModerationStatus" Value="0" />
-                  <pnp:Property Key="Order" Value="200" />
-                </pnp:Properties>
-              </pnp:Folder>
-              <pnp:Folder Name="Dashboard" ContentTypeID="0x0120">
-                <pnp:PropertyBagEntries>
-                  <pnp:PropertyBagEntry Key="xd_ProgID" Value="" Overwrite="false" />
-                  <pnp:PropertyBagEntry Key="MediaServiceImageTags" Value="" Overwrite="false" />
-                  <pnp:PropertyBagEntry Key="ContentTypeId" Value="0x0120009BF38EE9EB1EBD4380ED4607FA311C5C" Overwrite="false" />
-                  <pnp:PropertyBagEntry Key="_ExtendedDescription" Value="" Overwrite="false" />
-                  <pnp:PropertyBagEntry Key="display_urn:schemas-microsoft-com:office:office#Author" Value="Marc Anderson" Overwrite="false" />
-                  <pnp:PropertyBagEntry Key="display_urn:schemas-microsoft-com:office:office#Editor" Value="Marc Anderson" Overwrite="false" />
-                  <pnp:PropertyBagEntry Key="lcf76f155ced4ddcb4097134ff3c332f" Value="" Overwrite="false" />
-                  <pnp:PropertyBagEntry Key="Order" Value="6900.00000000000" Overwrite="false" />
-                  <pnp:PropertyBagEntry Key="TaxCatchAll" Value="" Overwrite="false" />
-                </pnp:PropertyBagEntries>
-                <pnp:Properties>
-                  <pnp:Property Key="FileLeafRef" Value="Dashboard" />
-                  <pnp:Property Key="Title" Value="Dashboard" />
-                  <pnp:Property Key="_ModerationStatus" Value="0" />
-                  <pnp:Property Key="Order" Value="6900" />
-                </pnp:Properties>
-              </pnp:Folder>
-              <pnp:Folder Name="New-EU-Net-Metering-Rules--What-Changes-on-April-1st-and-What-It-Means-for-Us" ContentTypeID="0x0120">
-                <pnp:PropertyBagEntries>
-                  <pnp:PropertyBagEntry Key="xd_ProgID" Value="" Overwrite="false" />
-                  <pnp:PropertyBagEntry Key="MediaServiceImageTags" Value="" Overwrite="false" />
-                  <pnp:PropertyBagEntry Key="ContentTypeId" Value="0x0120009BF38EE9EB1EBD4380ED4607FA311C5C" Overwrite="false" />
-                  <pnp:PropertyBagEntry Key="_ExtendedDescription" Value="" Overwrite="false" />
-                  <pnp:PropertyBagEntry Key="display_urn:schemas-microsoft-com:office:office#Author" Value="Marc Anderson" Overwrite="false" />
-                  <pnp:PropertyBagEntry Key="display_urn:schemas-microsoft-com:office:office#Editor" Value="Marc Anderson" Overwrite="false" />
-                  <pnp:PropertyBagEntry Key="lcf76f155ced4ddcb4097134ff3c332f" Value="" Overwrite="false" />
-                  <pnp:PropertyBagEntry Key="Order" Value="2600.00000000000" Overwrite="false" />
-                  <pnp:PropertyBagEntry Key="TaxCatchAll" Value="" Overwrite="false" />
-                </pnp:PropertyBagEntries>
-                <pnp:Properties>
-                  <pnp:Property Key="FileLeafRef" Value="New-EU-Net-Metering-Rules--What-Changes-on-April-1st-and-What-It-Means-for-Us" />
-                  <pnp:Property Key="Title" Value="New-EU-Net-Metering-Rules--What-Changes-on-April-1st-and-What-It-Means-for-Us" />
-                  <pnp:Property Key="_ModerationStatus" Value="0" />
-                  <pnp:Property Key="Order" Value="2600" />
-                </pnp:Properties>
-              </pnp:Folder>
-              <pnp:Folder Name="Event" ContentTypeID="0x0120">
-                <pnp:PropertyBagEntries>
-                  <pnp:PropertyBagEntry Key="xd_ProgID" Value="" Overwrite="false" />
-                  <pnp:PropertyBagEntry Key="MediaServiceImageTags" Value="" Overwrite="false" />
-                  <pnp:PropertyBagEntry Key="ContentTypeId" Value="0x0120009BF38EE9EB1EBD4380ED4607FA311C5C" Overwrite="false" />
-                  <pnp:PropertyBagEntry Key="_ExtendedDescription" Value="" Overwrite="false" />
-                  <pnp:PropertyBagEntry Key="display_urn:schemas-microsoft-com:office:office#Author" Value="Marc Anderson" Overwrite="false" />
-                  <pnp:PropertyBagEntry Key="display_urn:schemas-microsoft-com:office:office#Editor" Value="Marc Anderson" Overwrite="false" />
-                  <pnp:PropertyBagEntry Key="lcf76f155ced4ddcb4097134ff3c332f" Value="" Overwrite="false" />
-                  <pnp:PropertyBagEntry Key="Order" Value="4000.00000000000" Overwrite="false" />
-                  <pnp:PropertyBagEntry Key="TaxCatchAll" Value="" Overwrite="false" />
-                </pnp:PropertyBagEntries>
-                <pnp:Properties>
-                  <pnp:Property Key="FileLeafRef" Value="Event" />
-                  <pnp:Property Key="Title" Value="Event" />
-                  <pnp:Property Key="_ModerationStatus" Value="0" />
-                  <pnp:Property Key="Order" Value="4000" />
-                </pnp:Properties>
-              </pnp:Folder>
-              <pnp:Folder Name="Event(1)" ContentTypeID="0x0120">
-                <pnp:PropertyBagEntries>
-                  <pnp:PropertyBagEntry Key="xd_ProgID" Value="" Overwrite="false" />
-                  <pnp:PropertyBagEntry Key="MediaServiceImageTags" Value="" Overwrite="false" />
-                  <pnp:PropertyBagEntry Key="ContentTypeId" Value="0x0120009BF38EE9EB1EBD4380ED4607FA311C5C" Overwrite="false" />
-                  <pnp:PropertyBagEntry Key="_ExtendedDescription" Value="" Overwrite="false" />
-                  <pnp:PropertyBagEntry Key="display_urn:schemas-microsoft-com:office:office#Author" Value="Marc Anderson" Overwrite="false" />
-                  <pnp:PropertyBagEntry Key="display_urn:schemas-microsoft-com:office:office#Editor" Value="Marc Anderson" Overwrite="false" />
-                  <pnp:PropertyBagEntry Key="lcf76f155ced4ddcb4097134ff3c332f" Value="" Overwrite="false" />
-                  <pnp:PropertyBagEntry Key="Order" Value="4200.00000000000" Overwrite="false" />
-                  <pnp:PropertyBagEntry Key="TaxCatchAll" Value="" Overwrite="false" />
-                </pnp:PropertyBagEntries>
-                <pnp:Properties>
-                  <pnp:Property Key="FileLeafRef" Value="Event(1)" />
-                  <pnp:Property Key="Title" Value="Event(1)" />
-                  <pnp:Property Key="_ModerationStatus" Value="0" />
-                  <pnp:Property Key="Order" Value="4200" />
-                </pnp:Properties>
-              </pnp:Folder>
-              <pnp:Folder Name="Event(2)" ContentTypeID="0x0120">
-                <pnp:PropertyBagEntries>
-                  <pnp:PropertyBagEntry Key="xd_ProgID" Value="" Overwrite="false" />
-                  <pnp:PropertyBagEntry Key="MediaServiceImageTags" Value="" Overwrite="false" />
-                  <pnp:PropertyBagEntry Key="ContentTypeId" Value="0x0120009BF38EE9EB1EBD4380ED4607FA311C5C" Overwrite="false" />
-                  <pnp:PropertyBagEntry Key="_ExtendedDescription" Value="" Overwrite="false" />
-                  <pnp:PropertyBagEntry Key="display_urn:schemas-microsoft-com:office:office#Author" Value="Marc Anderson" Overwrite="false" />
-                  <pnp:PropertyBagEntry Key="display_urn:schemas-microsoft-com:office:office#Editor" Value="Marc Anderson" Overwrite="false" />
-                  <pnp:PropertyBagEntry Key="lcf76f155ced4ddcb4097134ff3c332f" Value="" Overwrite="false" />
-                  <pnp:PropertyBagEntry Key="Order" Value="4400.00000000000" Overwrite="false" />
-                  <pnp:PropertyBagEntry Key="TaxCatchAll" Value="" Overwrite="false" />
-                </pnp:PropertyBagEntries>
-                <pnp:Properties>
-                  <pnp:Property Key="FileLeafRef" Value="Event(2)" />
-                  <pnp:Property Key="Title" Value="Event(2)" />
-                  <pnp:Property Key="_ModerationStatus" Value="0" />
-                  <pnp:Property Key="Order" Value="4400" />
-                </pnp:Properties>
-              </pnp:Folder>
-              <pnp:Folder Name="Event(3)" ContentTypeID="0x0120">
-                <pnp:PropertyBagEntries>
-                  <pnp:PropertyBagEntry Key="xd_ProgID" Value="" Overwrite="false" />
-                  <pnp:PropertyBagEntry Key="MediaServiceImageTags" Value="" Overwrite="false" />
-                  <pnp:PropertyBagEntry Key="ContentTypeId" Value="0x0120009BF38EE9EB1EBD4380ED4607FA311C5C" Overwrite="false" />
-                  <pnp:PropertyBagEntry Key="_ExtendedDescription" Value="" Overwrite="false" />
-                  <pnp:PropertyBagEntry Key="display_urn:schemas-microsoft-com:office:office#Author" Value="Marc Anderson" Overwrite="false" />
-                  <pnp:PropertyBagEntry Key="display_urn:schemas-microsoft-com:office:office#Editor" Value="Marc Anderson" Overwrite="false" />
-                  <pnp:PropertyBagEntry Key="lcf76f155ced4ddcb4097134ff3c332f" Value="" Overwrite="false" />
-                  <pnp:PropertyBagEntry Key="Order" Value="4600.00000000000" Overwrite="false" />
-                  <pnp:PropertyBagEntry Key="TaxCatchAll" Value="" Overwrite="false" />
-                </pnp:PropertyBagEntries>
-                <pnp:Properties>
-                  <pnp:Property Key="FileLeafRef" Value="Event(3)" />
-                  <pnp:Property Key="Title" Value="Event(3)" />
-                  <pnp:Property Key="_ModerationStatus" Value="0" />
-                  <pnp:Property Key="Order" Value="4600" />
-                </pnp:Properties>
-              </pnp:Folder>
-              <pnp:Folder Name="Q1-Target-Beaten-by-18--as-Installation-Teams-Set-New-Output-Record(1)" ContentTypeID="0x0120">
-                <pnp:PropertyBagEntries>
-                  <pnp:PropertyBagEntry Key="xd_ProgID" Value="" Overwrite="false" />
-                  <pnp:PropertyBagEntry Key="MediaServiceImageTags" Value="" Overwrite="false" />
-                  <pnp:PropertyBagEntry Key="ContentTypeId" Value="0x0120009BF38EE9EB1EBD4380ED4607FA311C5C" Overwrite="false" />
-                  <pnp:PropertyBagEntry Key="_ExtendedDescription" Value="" Overwrite="false" />
-                  <pnp:PropertyBagEntry Key="display_urn:schemas-microsoft-com:office:office#Author" Value="Marc Anderson" Overwrite="false" />
-                  <pnp:PropertyBagEntry Key="display_urn:schemas-microsoft-com:office:office#Editor" Value="Marc Anderson" Overwrite="false" />
-                  <pnp:PropertyBagEntry Key="lcf76f155ced4ddcb4097134ff3c332f" Value="" Overwrite="false" />
-                  <pnp:PropertyBagEntry Key="Order" Value="2800.00000000000" Overwrite="false" />
-                  <pnp:PropertyBagEntry Key="TaxCatchAll" Value="" Overwrite="false" />
-                </pnp:PropertyBagEntries>
-                <pnp:Properties>
-                  <pnp:Property Key="FileLeafRef" Value="Q1-Target-Beaten-by-18--as-Installation-Teams-Set-New-Output-Record(1)" />
-                  <pnp:Property Key="Title" Value="Q1-Target-Beaten-by-18--as-Installation-Teams-Set-New-Output-Record(1)" />
-                  <pnp:Property Key="_ModerationStatus" Value="0" />
-                  <pnp:Property Key="Order" Value="2800" />
-                </pnp:Properties>
-              </pnp:Folder>
-              <pnp:Folder Name="Solbound-Expands-Into-APAC-With-320-MW-Rajasthan-Contract(1)" ContentTypeID="0x0120">
-                <pnp:PropertyBagEntries>
-                  <pnp:PropertyBagEntry Key="xd_ProgID" Value="" Overwrite="false" />
-                  <pnp:PropertyBagEntry Key="MediaServiceImageTags" Value="" Overwrite="false" />
-                  <pnp:PropertyBagEntry Key="ContentTypeId" Value="0x0120009BF38EE9EB1EBD4380ED4607FA311C5C" Overwrite="false" />
-                  <pnp:PropertyBagEntry Key="_ExtendedDescription" Value="" Overwrite="false" />
-                  <pnp:PropertyBagEntry Key="display_urn:schemas-microsoft-com:office:office#Author" Value="Marc Anderson" Overwrite="false" />
-                  <pnp:PropertyBagEntry Key="display_urn:schemas-microsoft-com:office:office#Editor" Value="Marc Anderson" Overwrite="false" />
-                  <pnp:PropertyBagEntry Key="lcf76f155ced4ddcb4097134ff3c332f" Value="" Overwrite="false" />
-                  <pnp:PropertyBagEntry Key="Order" Value="2900.00000000000" Overwrite="false" />
-                  <pnp:PropertyBagEntry Key="TaxCatchAll" Value="" Overwrite="false" />
-                </pnp:PropertyBagEntries>
-                <pnp:Properties>
-                  <pnp:Property Key="FileLeafRef" Value="Solbound-Expands-Into-APAC-With-320-MW-Rajasthan-Contract(1)" />
-                  <pnp:Property Key="Title" Value="Solbound-Expands-Into-APAC-With-320-MW-Rajasthan-Contract(1)" />
-                  <pnp:Property Key="_ModerationStatus" Value="0" />
-                  <pnp:Property Key="Order" Value="2900" />
-                </pnp:Properties>
-              </pnp:Folder>
-              <pnp:Folder Name="SB-X9-Panel-Achieves-Highest-Efficiency-Rating-in-Company-History(1)" ContentTypeID="0x0120">
-                <pnp:PropertyBagEntries>
-                  <pnp:PropertyBagEntry Key="xd_ProgID" Value="" Overwrite="false" />
-                  <pnp:PropertyBagEntry Key="MediaServiceImageTags" Value="" Overwrite="false" />
-                  <pnp:PropertyBagEntry Key="ContentTypeId" Value="0x0120009BF38EE9EB1EBD4380ED4607FA311C5C" Overwrite="false" />
-                  <pnp:PropertyBagEntry Key="_ExtendedDescription" Value="" Overwrite="false" />
-                  <pnp:PropertyBagEntry Key="display_urn:schemas-microsoft-com:office:office#Author" Value="Marc Anderson" Overwrite="false" />
-                  <pnp:PropertyBagEntry Key="display_urn:schemas-microsoft-com:office:office#Editor" Value="Marc Anderson" Overwrite="false" />
-                  <pnp:PropertyBagEntry Key="lcf76f155ced4ddcb4097134ff3c332f" Value="" Overwrite="false" />
-                  <pnp:PropertyBagEntry Key="Order" Value="3000.00000000000" Overwrite="false" />
-                  <pnp:PropertyBagEntry Key="TaxCatchAll" Value="" Overwrite="false" />
-                </pnp:PropertyBagEntries>
-                <pnp:Properties>
-                  <pnp:Property Key="FileLeafRef" Value="SB-X9-Panel-Achieves-Highest-Efficiency-Rating-in-Company-History(1)" />
-                  <pnp:Property Key="Title" Value="SB-X9-Panel-Achieves-Highest-Efficiency-Rating-in-Company-History(1)" />
-                  <pnp:Property Key="_ModerationStatus" Value="0" />
-                  <pnp:Property Key="Order" Value="3000" />
-                </pnp:Properties>
-              </pnp:Folder>
-              <pnp:Folder Name="Q1-Target-Beaten-by-18--as-Installation-Teams-Set-New-Output-Record" ContentTypeID="0x0120">
-                <pnp:PropertyBagEntries>
-                  <pnp:PropertyBagEntry Key="xd_ProgID" Value="" Overwrite="false" />
-                  <pnp:PropertyBagEntry Key="MediaServiceImageTags" Value="" Overwrite="false" />
-                  <pnp:PropertyBagEntry Key="ContentTypeId" Value="0x0120009BF38EE9EB1EBD4380ED4607FA311C5C" Overwrite="false" />
-                  <pnp:PropertyBagEntry Key="_ExtendedDescription" Value="" Overwrite="false" />
-                  <pnp:PropertyBagEntry Key="display_urn:schemas-microsoft-com:office:office#Author" Value="Marc Anderson" Overwrite="false" />
-                  <pnp:PropertyBagEntry Key="display_urn:schemas-microsoft-com:office:office#Editor" Value="Marc Anderson" Overwrite="false" />
-                  <pnp:PropertyBagEntry Key="lcf76f155ced4ddcb4097134ff3c332f" Value="" Overwrite="false" />
-                  <pnp:PropertyBagEntry Key="Order" Value="10300.0000000000" Overwrite="false" />
-                  <pnp:PropertyBagEntry Key="TaxCatchAll" Value="" Overwrite="false" />
-                </pnp:PropertyBagEntries>
-                <pnp:Properties>
-                  <pnp:Property Key="FileLeafRef" Value="Q1-Target-Beaten-by-18--as-Installation-Teams-Set-New-Output-Record" />
-                  <pnp:Property Key="Title" Value="Q1-Target-Beaten-by-18--as-Installation-Teams-Set-New-Output-Record" />
-                  <pnp:Property Key="_ModerationStatus" Value="0" />
-                  <pnp:Property Key="Order" Value="10300" />
-                </pnp:Properties>
-              </pnp:Folder>
-              <pnp:Folder Name="A-Series-Solar-Panel-Product-Guide" ContentTypeID="0x0120">
-                <pnp:PropertyBagEntries>
-                  <pnp:PropertyBagEntry Key="xd_ProgID" Value="" Overwrite="false" />
-                  <pnp:PropertyBagEntry Key="MediaServiceImageTags" Value="" Overwrite="false" />
-                  <pnp:PropertyBagEntry Key="ContentTypeId" Value="0x0120009BF38EE9EB1EBD4380ED4607FA311C5C" Overwrite="false" />
-                  <pnp:PropertyBagEntry Key="_ExtendedDescription" Value="" Overwrite="false" />
-                  <pnp:PropertyBagEntry Key="display_urn:schemas-microsoft-com:office:office#Author" Value="Marc Anderson" Overwrite="false" />
-                  <pnp:PropertyBagEntry Key="display_urn:schemas-microsoft-com:office:office#Editor" Value="Marc Anderson" Overwrite="false" />
-                  <pnp:PropertyBagEntry Key="lcf76f155ced4ddcb4097134ff3c332f" Value="" Overwrite="false" />
-                  <pnp:PropertyBagEntry Key="Order" Value="11400.0000000000" Overwrite="false" />
-                  <pnp:PropertyBagEntry Key="TaxCatchAll" Value="" Overwrite="false" />
-                </pnp:PropertyBagEntries>
-                <pnp:Properties>
-                  <pnp:Property Key="FileLeafRef" Value="A-Series-Solar-Panel-Product-Guide" />
-                  <pnp:Property Key="Title" Value="A-Series-Solar-Panel-Product-Guide" />
-                  <pnp:Property Key="_ModerationStatus" Value="0" />
-                  <pnp:Property Key="Order" Value="11400" />
-                </pnp:Properties>
-              </pnp:Folder>
-              <pnp:Folder Name="Product-Series---A100,-A200,-A300-&amp;-A400" ContentTypeID="0x0120">
-                <pnp:PropertyBagEntries>
-                  <pnp:PropertyBagEntry Key="xd_ProgID" Value="" Overwrite="false" />
-                  <pnp:PropertyBagEntry Key="MediaServiceImageTags" Value="" Overwrite="false" />
-                  <pnp:PropertyBagEntry Key="ContentTypeId" Value="0x0120009BF38EE9EB1EBD4380ED4607FA311C5C" Overwrite="false" />
-                  <pnp:PropertyBagEntry Key="_ExtendedDescription" Value="" Overwrite="false" />
-                  <pnp:PropertyBagEntry Key="display_urn:schemas-microsoft-com:office:office#Author" Value="Marc Anderson" Overwrite="false" />
-                  <pnp:PropertyBagEntry Key="display_urn:schemas-microsoft-com:office:office#Editor" Value="Marc Anderson" Overwrite="false" />
-                  <pnp:PropertyBagEntry Key="lcf76f155ced4ddcb4097134ff3c332f" Value="" Overwrite="false" />
-                  <pnp:PropertyBagEntry Key="Order" Value="11500.0000000000" Overwrite="false" />
-                  <pnp:PropertyBagEntry Key="TaxCatchAll" Value="" Overwrite="false" />
-                </pnp:PropertyBagEntries>
-                <pnp:Properties>
-                  <pnp:Property Key="FileLeafRef" Value="Product-Series---A100,-A200,-A300-&amp;-A400" />
-                  <pnp:Property Key="Title" Value="Product-Series---A100,-A200,-A300-&amp;-A400" />
-                  <pnp:Property Key="_ModerationStatus" Value="0" />
-                  <pnp:Property Key="Order" Value="11500" />
-                </pnp:Properties>
-              </pnp:Folder>
-              <pnp:Folder Name="A‑Series-Solar-Offerings-and-Market-Differentiation" ContentTypeID="0x0120">
-                <pnp:PropertyBagEntries>
-                  <pnp:PropertyBagEntry Key="xd_ProgID" Value="" Overwrite="false" />
-                  <pnp:PropertyBagEntry Key="MediaServiceImageTags" Value="" Overwrite="false" />
-                  <pnp:PropertyBagEntry Key="ContentTypeId" Value="0x0120009BF38EE9EB1EBD4380ED4607FA311C5C" Overwrite="false" />
-                  <pnp:PropertyBagEntry Key="_ExtendedDescription" Value="" Overwrite="false" />
-                  <pnp:PropertyBagEntry Key="display_urn:schemas-microsoft-com:office:office#Author" Value="Marc Anderson" Overwrite="false" />
-                  <pnp:PropertyBagEntry Key="display_urn:schemas-microsoft-com:office:office#Editor" Value="Marc Anderson" Overwrite="false" />
-                  <pnp:PropertyBagEntry Key="lcf76f155ced4ddcb4097134ff3c332f" Value="" Overwrite="false" />
-                  <pnp:PropertyBagEntry Key="Order" Value="11600.0000000000" Overwrite="false" />
-                  <pnp:PropertyBagEntry Key="TaxCatchAll" Value="" Overwrite="false" />
-                </pnp:PropertyBagEntries>
-                <pnp:Properties>
-                  <pnp:Property Key="FileLeafRef" Value="A‑Series-Solar-Offerings-and-Market-Differentiation" />
-                  <pnp:Property Key="Title" Value="A‑Series-Solar-Offerings-and-Market-Differentiation" />
-                  <pnp:Property Key="_ModerationStatus" Value="0" />
-                  <pnp:Property Key="Order" Value="11600" />
-                </pnp:Properties>
-              </pnp:Folder>
-              <pnp:Folder Name="Dashboard(1)" ContentTypeID="0x0120">
-                <pnp:PropertyBagEntries>
-                  <pnp:PropertyBagEntry Key="xd_ProgID" Value="" Overwrite="false" />
-                  <pnp:PropertyBagEntry Key="MediaServiceImageTags" Value="" Overwrite="false" />
-                  <pnp:PropertyBagEntry Key="ContentTypeId" Value="0x0120009BF38EE9EB1EBD4380ED4607FA311C5C" Overwrite="false" />
-                  <pnp:PropertyBagEntry Key="_ExtendedDescription" Value="" Overwrite="false" />
-                  <pnp:PropertyBagEntry Key="display_urn:schemas-microsoft-com:office:office#Author" Value="Stefan Bauer" Overwrite="false" />
-                  <pnp:PropertyBagEntry Key="display_urn:schemas-microsoft-com:office:office#Editor" Value="Stefan Bauer" Overwrite="false" />
-                  <pnp:PropertyBagEntry Key="lcf76f155ced4ddcb4097134ff3c332f" Value="" Overwrite="false" />
-                  <pnp:PropertyBagEntry Key="TaxCatchAll" Value="" Overwrite="false" />
-                </pnp:PropertyBagEntries>
-                <pnp:Properties>
-                  <pnp:Property Key="FileLeafRef" Value="Dashboard(1)" />
-                  <pnp:Property Key="_ModerationStatus" Value="0" />
-                  <pnp:Property Key="Order" Value="21900" />
-                </pnp:Properties>
-              </pnp:Folder>
-              <pnp:PropertyBagEntries>
-                <pnp:PropertyBagEntry Key="xd_ProgID" Value="" Overwrite="false" />
-                <pnp:PropertyBagEntry Key="MediaServiceImageTags" Value="" Overwrite="false" />
-                <pnp:PropertyBagEntry Key="ContentTypeId" Value="0x0120009BF38EE9EB1EBD4380ED4607FA311C5C" Overwrite="false" />
-                <pnp:PropertyBagEntry Key="_ExtendedDescription" Value="" Overwrite="false" />
-                <pnp:PropertyBagEntry Key="display_urn:schemas-microsoft-com:office:office#Author" Value="Marc Anderson" Overwrite="false" />
-                <pnp:PropertyBagEntry Key="display_urn:schemas-microsoft-com:office:office#Editor" Value="Marc Anderson" Overwrite="false" />
-                <pnp:PropertyBagEntry Key="lcf76f155ced4ddcb4097134ff3c332f" Value="" Overwrite="false" />
-                <pnp:PropertyBagEntry Key="Order" Value="100.000000000000" Overwrite="false" />
-                <pnp:PropertyBagEntry Key="TaxCatchAll" Value="" Overwrite="false" />
-              </pnp:PropertyBagEntries>
-              <pnp:Properties>
-                <pnp:Property Key="FileLeafRef" Value="SitePages" />
-                <pnp:Property Key="Title" Value="SitePages" />
-                <pnp:Property Key="_ModerationStatus" Value="0" />
-                <pnp:Property Key="Order" Value="100" />
-              </pnp:Properties>
-            </pnp:Folder>
-          </pnp:Folders>
         </pnp:ListInstance>
         <pnp:ListInstance Title="Site Pages" Description="" DocumentTemplate="" TemplateType="119" Url="SitePages" EnableVersioning="true" EnableMinorVersions="true" MinorVersionLimit="500" MaxVersionLimit="50000" DraftVersionVisibility="1" TemplateFeatureID="00bfea71-c796-4402-9f2f-0eb9a6e71b18" ContentTypesEnabled="true" EnableAttachments="false" EnableFolderCreation="false" DefaultDisplayFormUrl="{site}/SitePages/Forms/DispForm.aspx" DefaultEditFormUrl="{site}/SitePages/Forms/EditForm.aspx" DefaultNewFormUrl="{site}/SitePages/Forms/Upload.aspx" ImageUrl="/_layouts/15/images/itdl.png?rev=50" IrmExpire="false" IrmReject="false" IsApplicationList="true" ValidationFormula="" ValidationMessage="">
           <pnp:ContentTypeBindings>
@@ -1800,655 +375,203 @@
             <pnp:FieldRef ID="f5b09578-d1d4-416a-ae57-97d0ddd52faf" Name="_AmplifyCampaignMetadata" DisplayName="Metadata of Amplify Campaign Authoring" />
           </pnp:FieldRefs>
           <pnp:Webhooks>
-            <pnp:Webhook ServerNotificationUrl="https://centralus1-1.pushnp.svc.ms/notifications?token=ns_30c5869f-8344-4438-b1f4-ef4842d47474" ExpiresInDays="1" />
+            <pnp:Webhook ServerNotificationUrl="https://centralus1-2.pushnp.svc.ms/notifications?token=ns_1eb55e4f-556d-4900-bece-a1a8821f183e" ExpiresInDays="1" />
           </pnp:Webhooks>
+        </pnp:ListInstance>
+        <pnp:ListInstance Title="Events" Description="" DocumentTemplate="" TemplateType="106" Url="Lists/Events" MinorVersionLimit="0" MaxVersionLimit="0" DraftVersionVisibility="0" TemplateFeatureID="00bfea71-ec85-4903-972d-ebe475780106" ContentTypesEnabled="true" EnableFolderCreation="false" DefaultDisplayFormUrl="{site}/Lists/Events/DispForm.aspx" DefaultEditFormUrl="{site}/Lists/Events/EditForm.aspx" DefaultNewFormUrl="{site}/Lists/Events/NewForm.aspx" ImageUrl="/_layouts/15/images/itevent.png?rev=50" IrmExpire="false" IrmReject="false" IsApplicationList="false" ValidationFormula="" ValidationMessage="">
+          <pnp:ContentTypeBindings>
+            <pnp:ContentTypeBinding ContentTypeID="0x0102" Default="true" />
+          </pnp:ContentTypeBindings>
+          <pnp:Views>
+            <View Name="{4E8E634A-8157-4684-8A21-1B54DD614FF0}" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" RecurrenceRowset="TRUE" Type="CALENDAR" DisplayName="Calendar" Url="{site}/Lists/Events/calendar.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/events.png?rev=50">
+              <Query>
+                <Where>
+                  <DateRangesOverlap>
+                    <FieldRef Name="EventDate" />
+                    <FieldRef Name="EndDate" />
+                    <FieldRef Name="RecurrenceID" />
+                    <Value Type="DateTime">
+                      <Month />
+                    </Value>
+                  </DateRangesOverlap>
+                </Where>
+              </Query>
+              <ViewFields>
+                <FieldRef Name="EventDate" />
+                <FieldRef Name="EndDate" />
+                <FieldRef Name="fRecurrence" />
+                <FieldRef Name="EventType" />
+                <FieldRef Name="WorkspaceLink" />
+                <FieldRef Name="Title" />
+                <FieldRef Name="Location" />
+                <FieldRef Name="Description" />
+                <FieldRef Name="Workspace" />
+                <FieldRef Name="MasterSeriesItemID" />
+                <FieldRef Name="fAllDayEvent" />
+              </ViewFields>
+              <RowLimit Paged="FALSE">2147483647</RowLimit>
+              <JSLink>clienttemplates.js</JSLink>
+              <CalendarViewStyles>2</CalendarViewStyles>
+              <ViewData>
+                <FieldRef Name="Title" Type="CalendarMonthTitle" />
+                <FieldRef Name="Title" Type="CalendarWeekTitle" />
+                <FieldRef Name="Location" Type="CalendarWeekLocation" />
+                <FieldRef Name="Title" Type="CalendarDayTitle" />
+                <FieldRef Name="Location" Type="CalendarDayLocation" />
+              </ViewData>
+            </View>
+            <View Name="{D8FE91FC-F00A-4398-B5AB-65A3B2A15F11}" MobileView="TRUE" Type="HTML" DisplayName="All Events" Url="{site}/Lists/Events/AllItems.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/events.png?rev=50">
+              <Query>
+                <OrderBy>
+                  <FieldRef Name="EventDate" />
+                </OrderBy>
+              </Query>
+              <ViewFields>
+                <FieldRef Name="fRecurrence" />
+                <FieldRef Name="WorkspaceLink" />
+                <FieldRef Name="LinkTitle" />
+                <FieldRef Name="Location" />
+                <FieldRef Name="EventDate" />
+                <FieldRef Name="EndDate" />
+                <FieldRef Name="fAllDayEvent" />
+                <FieldRef Name="Category" />
+              </ViewFields>
+              <RowLimit Paged="TRUE">30</RowLimit>
+              <Aggregations Value="Off" />
+              <JSLink>clienttemplates.js</JSLink>
+              <ViewData />
+            </View>
+            <View Name="{9EBDB064-460D-4DE9-BE0B-6ADC46710E76}" MobileView="TRUE" Type="HTML" DisplayName="Current Events" Url="{site}/Lists/Events/MyItems.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/events.png?rev=50">
+              <Query>
+                <Where>
+                  <DateRangesOverlap>
+                    <FieldRef Name="EventDate" />
+                    <FieldRef Name="EndDate" />
+                    <FieldRef Name="RecurrenceID" />
+                    <Value Type="DateTime">
+                      <Now />
+                    </Value>
+                  </DateRangesOverlap>
+                </Where>
+                <OrderBy>
+                  <FieldRef Name="EventDate" />
+                </OrderBy>
+              </Query>
+              <ViewFields>
+                <FieldRef Name="fRecurrence" />
+                <FieldRef Name="WorkspaceLink" />
+                <FieldRef Name="LinkTitle" />
+                <FieldRef Name="Location" />
+                <FieldRef Name="EventDate" />
+                <FieldRef Name="EndDate" />
+                <FieldRef Name="fAllDayEvent" />
+              </ViewFields>
+              <RowLimit Paged="FALSE">2147483647</RowLimit>
+              <JSLink>clienttemplates.js</JSLink>
+            </View>
+          </pnp:Views>
+          <pnp:Fields>
+            <Field Type="DateTime" ID="{64cd368d-2f95-4bfc-a1f9-8d4324ecb007}" Name="EventDate" DisplayName="Start Time" Format="DateTime" Sealed="TRUE" Required="TRUE" FromBaseType="TRUE" Filterable="FALSE" FilterableNoRecurrence="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="EventDate" ColName="datetime1" Description="" Hidden="FALSE" CanToggleHidden="FALSE">
+              <Default>[today]</Default>
+              <FieldRefs>
+                <FieldRef Name="fAllDayEvent" RefType="AllDayEvent" />
+              </FieldRefs>
+            </Field>
+            <Field Type="Note" ID="{9da97a8a-1da5-4a77-98d3-4bc10456e700}" Name="Description" RichText="TRUE" RichTextMode="FullHtml" DisplayName="Description" Sortable="FALSE" Sealed="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="Description" ColName="ntext2" Description="" Hidden="FALSE" CanToggleHidden="FALSE" />
+            <Field ID="{8137f7ad-9170-4c1d-a17b-4ca7f557bc88}" Name="ParticipantsPicker" DisplayName="Attendees" Type="UserMulti" List="UserInfo" Mult="TRUE" Required="FALSE" ShowField="ImnName" UserSelectionMode="PeopleAndGroups" UserSelectionScope="0" Sortable="FALSE" AllowDeletion="FALSE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="ParticipantsPicker" ColName="int5" RowOrdinal="0" Sealed="FALSE" Version="2" />
+            <Field ID="{8a4be162-151d-4a11-b9be-e7dc05196d73}" Name="BannerImageUrl" StaticName="BannerImageUrl" DisplayName="Banner Image URL" Type="Note" Sealed="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" Group="_Hidden" Description="" AllowDeletion="FALSE" ShowInNewForm="FALSE" ShowInEditForm="FALSE" ShowInDisplayForm="FALSE" ShowInViewForms="FALSE" ShowInListSettings="FALSE" ShowInVersionHistory="FALSE" ColName="ntext6" />
+          </pnp:Fields>
+          <pnp:FieldRefs>
+            <pnp:FieldRef ID="fa564e0f-0c70-4ab9-b863-0177e6ddd247" Name="Title" Required="true" DisplayName="Title" />
+            <pnp:FieldRef ID="288f5f32-8462-4175-8f09-dd7ba29359a9" Name="Location" DisplayName="Location" />
+            <pnp:FieldRef ID="2684f9f2-54be-429f-ba06-76754fc056bf" Name="EndDate" Required="true" DisplayName="End Time" />
+            <pnp:FieldRef ID="7d95d1f4-f5fd-4a70-90cd-b35abc9b5bc8" Name="fAllDayEvent" DisplayName="All Day Event" />
+            <pnp:FieldRef ID="f2e63656-135e-4f1c-8fc2-ccbe74071901" Name="fRecurrence" DisplayName="Recurrence" />
+            <pnp:FieldRef ID="6df9bd52-550e-4a30-bc31-a4366832a87d" Name="Category" DisplayName="Category" />
+          </pnp:FieldRefs>
+          <pnp:DataRows KeyColumn="Title" UpdateBehavior="Overwrite">
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Q1 All-Hands Meeting</pnp:DataValue>
+              <pnp:DataValue FieldName="EventDate">2026-03-06T00:00:00.0000000Z</pnp:DataValue>
+              <pnp:DataValue FieldName="EndDate">2026-03-06T23:59:00.0000000Z</pnp:DataValue>
+              <pnp:DataValue FieldName="fAllDayEvent">True</pnp:DataValue>
+              <pnp:DataValue FieldName="fRecurrence">False</pnp:DataValue>
+              <pnp:DataValue FieldName="EventType">0</pnp:DataValue>
+              <pnp:DataValue FieldName="Category">Company</pnp:DataValue>
+              <pnp:DataValue FieldName="BannerUrl">https://cdn.hubblecontent.osi.office.net/gp-image/79ab39140d6c764081a6039b2df36637/thumbnails/xxlarge.jpg?X=49&amp;Y=100&amp;Id=null&amp;listId=undefined&amp;ar=1.5,https://cdn.hubblecontent.osi.office.net/gp-image/79ab39140d6c764081a6039b2df36637/thumbnails/xxlarge.jpg?X=49&amp;Y=100&amp;Id=null&amp;listId=undefined&amp;ar=1.5</pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">NABCEP Certification Training</pnp:DataValue>
+              <pnp:DataValue FieldName="EventDate">2026-03-19T00:00:00.0000000Z</pnp:DataValue>
+              <pnp:DataValue FieldName="EndDate">2026-03-20T23:59:00.0000000Z</pnp:DataValue>
+              <pnp:DataValue FieldName="Location">Inhouse</pnp:DataValue>
+              <pnp:DataValue FieldName="fAllDayEvent">True</pnp:DataValue>
+              <pnp:DataValue FieldName="fRecurrence">False</pnp:DataValue>
+              <pnp:DataValue FieldName="EventType">0</pnp:DataValue>
+              <pnp:DataValue FieldName="Category">Training</pnp:DataValue>
+              <pnp:DataValue FieldName="BannerUrl">https://cdn.hubblecontent.osi.office.net/m365content/publish/4d042c56-5f44-4c83-b39e-56495e3c43a5/1090234918.jpg?X=100&amp;Y=42&amp;Id=null&amp;listId=undefined&amp;ar=1.3,https://cdn.hubblecontent.osi.office.net/m365content/publish/4d042c56-5f44-4c83-b39e-56495e3c43a5/1090234918.jpg?X=100&amp;Y=42&amp;Id=null&amp;listId=undefined&amp;ar=1.3</pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Safety &amp; OSHA Refresher Workshop</pnp:DataValue>
+              <pnp:DataValue FieldName="EventDate">2026-04-02T11:00:00.0000000Z</pnp:DataValue>
+              <pnp:DataValue FieldName="EndDate">2026-04-02T12:00:00.0000000Z</pnp:DataValue>
+              <pnp:DataValue FieldName="fAllDayEvent">False</pnp:DataValue>
+              <pnp:DataValue FieldName="fRecurrence">False</pnp:DataValue>
+              <pnp:DataValue FieldName="EventType">0</pnp:DataValue>
+              <pnp:DataValue FieldName="Category">Safety</pnp:DataValue>
+              <pnp:DataValue FieldName="BannerUrl">https://cdn.hubblecontent.osi.office.net/gp-image/7f71204d976c3b8ef111c9767ee7474f/thumbnails/xxlarge.jpg?X=NaN&amp;Y=NaN&amp;Id=null&amp;listId=undefined&amp;ar=1.5,https://cdn.hubblecontent.osi.office.net/gp-image/7f71204d976c3b8ef111c9767ee7474f/thumbnails/xxlarge.jpg?X=NaN&amp;Y=NaN&amp;Id=null&amp;listId=undefined&amp;ar=1.5</pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">Intersolar North America</pnp:DataValue>
+              <pnp:DataValue FieldName="EventDate">2026-04-22T00:00:00.0000000Z</pnp:DataValue>
+              <pnp:DataValue FieldName="EndDate">2026-04-24T23:59:00.0000000Z</pnp:DataValue>
+              <pnp:DataValue FieldName="Location">San Diego Convention Center, San Diego, California, United States</pnp:DataValue>
+              <pnp:DataValue FieldName="fAllDayEvent">True</pnp:DataValue>
+              <pnp:DataValue FieldName="fRecurrence">False</pnp:DataValue>
+              <pnp:DataValue FieldName="EventType">0</pnp:DataValue>
+              <pnp:DataValue FieldName="Category">External</pnp:DataValue>
+              <pnp:DataValue FieldName="BannerUrl">{site}/SiteAssets/SitePages/Event(1)/28089-isna_esna_logo_lockup_rgb.png?X=NaN&amp;Y=NaN&amp;Id=7d9673d4-60be-48a8-bd6b-1fb0ee35f18a&amp;listId=907c478a-cf6b-4de9-90b0-b4f22bd27814&amp;ar=5.1,{site}/SiteAssets/SitePages/Event(1)/28089-isna_esna_logo_lockup_rgb.png?X=NaN&amp;Y=NaN&amp;Id=7d9673d4-60be-48a8-bd6b-1fb0ee35f18a&amp;listId=907c478a-cf6b-4de9-90b0-b4f22bd27814&amp;ar=5.1</pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">SEIA Policy &amp; Finance Summit</pnp:DataValue>
+              <pnp:DataValue FieldName="EventDate">2026-05-06T00:00:00.0000000Z</pnp:DataValue>
+              <pnp:DataValue FieldName="EndDate">2026-05-08T23:59:00.0000000Z</pnp:DataValue>
+              <pnp:DataValue FieldName="Location">Washington, District of Columbia, United States</pnp:DataValue>
+              <pnp:DataValue FieldName="fAllDayEvent">True</pnp:DataValue>
+              <pnp:DataValue FieldName="fRecurrence">False</pnp:DataValue>
+              <pnp:DataValue FieldName="EventType">0</pnp:DataValue>
+              <pnp:DataValue FieldName="Category">External</pnp:DataValue>
+              <pnp:DataValue FieldName="BannerUrl">{site}/SiteAssets/SitePages/Event(2)/33197-seia-solar-energy-industries-logo.png?X=50&amp;Y=50&amp;Id=3ca69ac8-56a0-4f7d-ae7e-6955b835a03f&amp;listId=907c478a-cf6b-4de9-90b0-b4f22bd27814,{site}/SiteAssets/SitePages/Event(2)/33197-seia-solar-energy-industries-logo.png?X=50&amp;Y=50&amp;Id=3ca69ac8-56a0-4f7d-ae7e-6955b835a03f&amp;listId=907c478a-cf6b-4de9-90b0-b4f22bd27814</pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">NEC Code Update Webinar</pnp:DataValue>
+              <pnp:DataValue FieldName="EventDate">2026-06-12T00:00:00.0000000Z</pnp:DataValue>
+              <pnp:DataValue FieldName="EndDate">2026-06-12T23:59:00.0000000Z</pnp:DataValue>
+              <pnp:DataValue FieldName="Location">Online</pnp:DataValue>
+              <pnp:DataValue FieldName="fAllDayEvent">True</pnp:DataValue>
+              <pnp:DataValue FieldName="fRecurrence">False</pnp:DataValue>
+              <pnp:DataValue FieldName="EventType">0</pnp:DataValue>
+              <pnp:DataValue FieldName="Category">External</pnp:DataValue>
+              <pnp:DataValue FieldName="BannerUrl">https://cdn.hubblecontent.osi.office.net/gp-image/85845cc8fdd98c69479e39c3c9b0c616/thumbnails/xxlarge.jpg?X=86&amp;Y=85&amp;Id=null&amp;listId=undefined,https://cdn.hubblecontent.osi.office.net/gp-image/85845cc8fdd98c69479e39c3c9b0c616/thumbnails/xxlarge.jpg?X=86&amp;Y=85&amp;Id=null&amp;listId=undefined</pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title">RE+ 2026</pnp:DataValue>
+              <pnp:DataValue FieldName="EventDate">2026-09-09T00:00:00.0000000Z</pnp:DataValue>
+              <pnp:DataValue FieldName="EndDate">2026-09-11T23:59:00.0000000Z</pnp:DataValue>
+              <pnp:DataValue FieldName="Location">Anaheim Convention Center, California, United States</pnp:DataValue>
+              <pnp:DataValue FieldName="fAllDayEvent">True</pnp:DataValue>
+              <pnp:DataValue FieldName="fRecurrence">False</pnp:DataValue>
+              <pnp:DataValue FieldName="EventType">0</pnp:DataValue>
+              <pnp:DataValue FieldName="Category">External</pnp:DataValue>
+              <pnp:DataValue FieldName="BannerUrl">{site}/SiteAssets/SitePages/Event(3)/84993-RE-Plus-blue-header-logo.svg?X=NaN&amp;Y=NaN&amp;Id=01d687a4-406a-4b96-93e0-f373a027b587&amp;listId=907c478a-cf6b-4de9-90b0-b4f22bd27814&amp;ar=1.9,{site}/SiteAssets/SitePages/Event(3)/84993-RE-Plus-blue-header-logo.svg?X=NaN&amp;Y=NaN&amp;Id=01d687a4-406a-4b96-93e0-f373a027b587&amp;listId=907c478a-cf6b-4de9-90b0-b4f22bd27814&amp;ar=1.9</pnp:DataValue>
+            </pnp:DataRow>
+          </pnp:DataRows>
+          <pnp:FieldDefaults>
+            <pnp:FieldDefault FieldName="Category" />
+          </pnp:FieldDefaults>
         </pnp:ListInstance>
       </pnp:Lists>
       <pnp:Files>
-        <pnp:File Src="SiteAssets/__sitelogo__solbound-logo.png" Folder="SiteAssets" Overwrite="true" Level="Published">
-          <pnp:Properties>
-            <pnp:Property Key="ContentTypeId" Value="0x01010062C9B4A4CC29DF4785CCFA2F8F5E1878" />
-            <pnp:Property Key="FileLeafRef" Value="__sitelogo__solbound-logo.png" />
-            <pnp:Property Key="Order" Value="700" />
-          </pnp:Properties>
-        </pnp:File>
-        <pnp:File Src="SiteAssets/__rectSitelogo__solbound-logo.png" Folder="SiteAssets" Overwrite="true" Level="Published">
-          <pnp:Properties>
-            <pnp:Property Key="ContentTypeId" Value="0x01010062C9B4A4CC29DF4785CCFA2F8F5E1878" />
-            <pnp:Property Key="FileLeafRef" Value="__rectSitelogo__solbound-logo.png" />
-            <pnp:Property Key="Order" Value="900" />
-          </pnp:Properties>
-        </pnp:File>
-        <pnp:File Src="SiteAssets/__extendedHeaderBackgroundImage__DEFAULT_CHROME_BG_IMAGE_NAME.png" Folder="SiteAssets" Overwrite="true" Level="Published">
-          <pnp:Properties>
-            <pnp:Property Key="ContentTypeId" Value="0x01010062C9B4A4CC29DF4785CCFA2F8F5E1878" />
-            <pnp:Property Key="FileLeafRef" Value="__extendedHeaderBackgroundImage__DEFAULT_CHROME_BG_IMAGE_NAME.png" />
-            <pnp:Property Key="Order" Value="800" />
-          </pnp:Properties>
-        </pnp:File>
-        <pnp:File Src="SiteAssets/__extendedHeaderBackgroundImage____extendedHeaderBackgroundImage__DEFAULT_CHROME_BG_IMAGE_NAME.png" Folder="SiteAssets" Overwrite="true" Level="Published">
-          <pnp:Properties>
-            <pnp:Property Key="ContentTypeId" Value="0x01010062C9B4A4CC29DF4785CCFA2F8F5E1878" />
-            <pnp:Property Key="FileLeafRef" Value="__extendedHeaderBackgroundImage____extendedHeaderBackgroundImage__DEFAULT_CHROME_BG_IMAGE_NAME.png" />
-            <pnp:Property Key="Order" Value="15100" />
-          </pnp:Properties>
-        </pnp:File>
-        <pnp:File Src="SiteAssets/SitePages/Home/1802407455-the-future-is-solar-outline.svg" Folder="SiteAssets/SitePages/Home" Overwrite="true" Level="Published">
-          <pnp:Properties>
-            <pnp:Property Key="ContentTypeId" Value="0x01010062C9B4A4CC29DF4785CCFA2F8F5E1878" />
-            <pnp:Property Key="FileLeafRef" Value="1802407455-the-future-is-solar-outline.svg" />
-            <pnp:Property Key="Order" Value="3300" />
-          </pnp:Properties>
-        </pnp:File>
-        <pnp:File Src="SiteAssets/SitePages/Home/2217331093-solar-panel-1308944675.jpg" Folder="SiteAssets/SitePages/Home" Overwrite="true" Level="Published">
-          <pnp:Properties>
-            <pnp:Property Key="ContentTypeId" Value="0x01010062C9B4A4CC29DF4785CCFA2F8F5E1878" />
-            <pnp:Property Key="FileLeafRef" Value="2217331093-solar-panel-1308944675.jpg" />
-            <pnp:Property Key="Order" Value="300" />
-          </pnp:Properties>
-        </pnp:File>
-        <pnp:File Src="SiteAssets/SitePages/Home/3718650941-bg-top.png" Folder="SiteAssets/SitePages/Home" Overwrite="true" Level="Published">
-          <pnp:Properties>
-            <pnp:Property Key="ContentTypeId" Value="0x01010062C9B4A4CC29DF4785CCFA2F8F5E1878" />
-            <pnp:Property Key="FileLeafRef" Value="3718650941-bg-top.png" />
-            <pnp:Property Key="Order" Value="6500" />
-          </pnp:Properties>
-        </pnp:File>
-        <pnp:File Src="SiteAssets/SitePages/Home/3915280274-bg-bottom.png" Folder="SiteAssets/SitePages/Home" Overwrite="true" Level="Published">
-          <pnp:Properties>
-            <pnp:Property Key="ContentTypeId" Value="0x01010062C9B4A4CC29DF4785CCFA2F8F5E1878" />
-            <pnp:Property Key="FileLeafRef" Value="3915280274-bg-bottom.png" />
-            <pnp:Property Key="Order" Value="6600" />
-          </pnp:Properties>
-        </pnp:File>
-        <pnp:File Src="SiteAssets/SitePages/Home/2066642434-bg-top.png" Folder="SiteAssets/SitePages/Home" Overwrite="true" Level="Published">
-          <pnp:Properties>
-            <pnp:Property Key="ContentTypeId" Value="0x01010062C9B4A4CC29DF4785CCFA2F8F5E1878" />
-            <pnp:Property Key="FileLeafRef" Value="2066642434-bg-top.png" />
-            <pnp:Property Key="Order" Value="6700" />
-          </pnp:Properties>
-        </pnp:File>
-        <pnp:File Src="SiteAssets/SitePages/Home/1148676821-bg-bottom.png" Folder="SiteAssets/SitePages/Home" Overwrite="true" Level="Published">
-          <pnp:Properties>
-            <pnp:Property Key="ContentTypeId" Value="0x01010062C9B4A4CC29DF4785CCFA2F8F5E1878" />
-            <pnp:Property Key="FileLeafRef" Value="1148676821-bg-bottom.png" />
-            <pnp:Property Key="Order" Value="6200" />
-          </pnp:Properties>
-        </pnp:File>
-        <pnp:File Src="SiteAssets/SitePages/Home/1069572805-woman-w-solar-panel-condensed.png" Folder="SiteAssets/SitePages/Home" Overwrite="true" Level="Published">
-          <pnp:Properties>
-            <pnp:Property Key="ContentTypeId" Value="0x01010062C9B4A4CC29DF4785CCFA2F8F5E1878" />
-            <pnp:Property Key="FileLeafRef" Value="1069572805-woman-w-solar-panel-condensed.png" />
-            <pnp:Property Key="Order" Value="3100" />
-          </pnp:Properties>
-        </pnp:File>
-        <pnp:File Src="SiteAssets/SitePages/Home/1880863995-toolbox.png" Folder="SiteAssets/SitePages/Home" Overwrite="true" Level="Published">
-          <pnp:Properties>
-            <pnp:Property Key="ContentTypeId" Value="0x01010062C9B4A4CC29DF4785CCFA2F8F5E1878" />
-            <pnp:Property Key="FileLeafRef" Value="1880863995-toolbox.png" />
-            <pnp:Property Key="Order" Value="3600" />
-          </pnp:Properties>
-        </pnp:File>
-        <pnp:File Src="SiteAssets/SitePages/Home/1880863995-toolbox_1772018340633.png" Folder="SiteAssets/SitePages/Home" Overwrite="true" Level="Published">
-          <pnp:Properties>
-            <pnp:Property Key="ContentTypeId" Value="0x01010062C9B4A4CC29DF4785CCFA2F8F5E1878" />
-            <pnp:Property Key="FileLeafRef" Value="1880863995-toolbox_1772018340633.png" />
-            <pnp:Property Key="Order" Value="3900" />
-          </pnp:Properties>
-        </pnp:File>
-        <pnp:File Src="SiteAssets/SitePages/Home/sustainability-report.png" Folder="SiteAssets/SitePages/Home" Overwrite="true" Level="Published">
-          <pnp:Properties>
-            <pnp:Property Key="ContentTypeId" Value="0x01010062C9B4A4CC29DF4785CCFA2F8F5E1878" />
-            <pnp:Property Key="FileLeafRef" Value="sustainability-report.png" />
-            <pnp:Property Key="Order" Value="8900" />
-          </pnp:Properties>
-        </pnp:File>
-        <pnp:File Src="SiteAssets/SitePages/Home/shape-1335339194-pattie-fernandez-1772131246889.png" Folder="SiteAssets/SitePages/Home" Overwrite="true" Level="Published">
-          <pnp:Properties>
-            <pnp:Property Key="ContentTypeId" Value="0x01010062C9B4A4CC29DF4785CCFA2F8F5E1878" />
-            <pnp:Property Key="FileLeafRef" Value="shape-1335339194-pattie-fernandez-1772131246889.png" />
-            <pnp:Property Key="Order" Value="1300" />
-          </pnp:Properties>
-        </pnp:File>
-        <pnp:File Src="SiteAssets/SitePages/Home/1335339194-pattie-fernandez.jpeg" Folder="SiteAssets/SitePages/Home" Overwrite="true" Level="Published">
-          <pnp:Properties>
-            <pnp:Property Key="ContentTypeId" Value="0x01010062C9B4A4CC29DF4785CCFA2F8F5E1878" />
-            <pnp:Property Key="FileLeafRef" Value="1335339194-pattie-fernandez.jpeg" />
-            <pnp:Property Key="Order" Value="9000" />
-          </pnp:Properties>
-        </pnp:File>
-        <pnp:File Src="SiteAssets/SitePages/Home/shape-2534133050-nestor-wilken-1772132499389.png" Folder="SiteAssets/SitePages/Home" Overwrite="true" Level="Published">
-          <pnp:Properties>
-            <pnp:Property Key="ContentTypeId" Value="0x01010062C9B4A4CC29DF4785CCFA2F8F5E1878" />
-            <pnp:Property Key="FileLeafRef" Value="shape-2534133050-nestor-wilken-1772132499389.png" />
-            <pnp:Property Key="Order" Value="1500" />
-          </pnp:Properties>
-        </pnp:File>
-        <pnp:File Src="SiteAssets/SitePages/Home/2534133050-nestor-wilken.jpeg" Folder="SiteAssets/SitePages/Home" Overwrite="true" Level="Published">
-          <pnp:Properties>
-            <pnp:Property Key="ContentTypeId" Value="0x01010062C9B4A4CC29DF4785CCFA2F8F5E1878" />
-            <pnp:Property Key="FileLeafRef" Value="2534133050-nestor-wilken.jpeg" />
-            <pnp:Property Key="Order" Value="9700" />
-          </pnp:Properties>
-        </pnp:File>
-        <pnp:File Src="SiteAssets/SitePages/Home/shape-314114618-Miram-Graham-1772133060467.png" Folder="SiteAssets/SitePages/Home" Overwrite="true" Level="Published">
-          <pnp:Properties>
-            <pnp:Property Key="ContentTypeId" Value="0x01010062C9B4A4CC29DF4785CCFA2F8F5E1878" />
-            <pnp:Property Key="FileLeafRef" Value="shape-314114618-Miram-Graham-1772133060467.png" />
-            <pnp:Property Key="Order" Value="10200" />
-          </pnp:Properties>
-        </pnp:File>
-        <pnp:File Src="SiteAssets/SitePages/Home/314114618-Miram-Graham.jpeg" Folder="SiteAssets/SitePages/Home" Overwrite="true" Level="Published">
-          <pnp:Properties>
-            <pnp:Property Key="ContentTypeId" Value="0x01010062C9B4A4CC29DF4785CCFA2F8F5E1878" />
-            <pnp:Property Key="FileLeafRef" Value="314114618-Miram-Graham.jpeg" />
-            <pnp:Property Key="Order" Value="10100" />
-          </pnp:Properties>
-        </pnp:File>
-        <pnp:File Src="SiteAssets/SitePages/Dashboard/Copilot.png" Folder="SiteAssets/SitePages/Dashboard" Overwrite="true" Level="Published">
-          <pnp:Properties>
-            <pnp:Property Key="ContentTypeId" Value="0x01010062C9B4A4CC29DF4785CCFA2F8F5E1878" />
-            <pnp:Property Key="FileLeafRef" Value="Copilot.png" />
-            <pnp:Property Key="Order" Value="7000" />
-          </pnp:Properties>
-        </pnp:File>
-        <pnp:File Src="SiteAssets/SitePages/Home/shape-2208562633-woman-w-solar-panel.png" Folder="SiteAssets/SitePages/Home" Overwrite="true" Level="Published">
-          <pnp:Properties>
-            <pnp:Property Key="ContentTypeId" Value="0x01010062C9B4A4CC29DF4785CCFA2F8F5E1878" />
-            <pnp:Property Key="FileLeafRef" Value="shape-2208562633-woman-w-solar-panel.png" />
-            <pnp:Property Key="Order" Value="2200" />
-          </pnp:Properties>
-        </pnp:File>
-        <pnp:File Src="SiteAssets/SitePages/Home/4151797873-woman-w-solar-panel.png" Folder="SiteAssets/SitePages/Home" Overwrite="true" Level="Published">
-          <pnp:Properties>
-            <pnp:Property Key="ContentTypeId" Value="0x01010062C9B4A4CC29DF4785CCFA2F8F5E1878" />
-            <pnp:Property Key="FileLeafRef" Value="4151797873-woman-w-solar-panel.png" />
-            <pnp:Property Key="Order" Value="2300" />
-          </pnp:Properties>
-        </pnp:File>
-        <pnp:File Src="SiteAssets/SitePages/Home/shape-4151797873-woman-w-solar-panel.png" Folder="SiteAssets/SitePages/Home" Overwrite="true" Level="Published">
-          <pnp:Properties>
-            <pnp:Property Key="ContentTypeId" Value="0x01010062C9B4A4CC29DF4785CCFA2F8F5E1878" />
-            <pnp:Property Key="FileLeafRef" Value="shape-4151797873-woman-w-solar-panel.png" />
-            <pnp:Property Key="Order" Value="2400" />
-          </pnp:Properties>
-        </pnp:File>
-        <pnp:File Src="SiteAssets/SitePages/Home/2184123430-woman-w-solar-panel-wide.png" Folder="SiteAssets/SitePages/Home" Overwrite="true" Level="Published">
-          <pnp:Properties>
-            <pnp:Property Key="ContentTypeId" Value="0x01010062C9B4A4CC29DF4785CCFA2F8F5E1878" />
-            <pnp:Property Key="FileLeafRef" Value="2184123430-woman-w-solar-panel-wide.png" />
-            <pnp:Property Key="Order" Value="2500" />
-          </pnp:Properties>
-        </pnp:File>
-        <pnp:File Src="SiteAssets/SitePages/New-EU-Net-Metering-Rules--What-Changes-on-April-1st-and-What-It-Means-for-Us/Flag_of_Europe.svg" Folder="SiteAssets/SitePages/New-EU-Net-Metering-Rules--What-Changes-on-April-1st-and-What-It-Means-for-Us" Overwrite="true" Level="Published">
-          <pnp:Properties>
-            <pnp:Property Key="ContentTypeId" Value="0x01010062C9B4A4CC29DF4785CCFA2F8F5E1878" />
-            <pnp:Property Key="FileLeafRef" Value="Flag_of_Europe.svg" />
-            <pnp:Property Key="Order" Value="2700" />
-          </pnp:Properties>
-        </pnp:File>
-        <pnp:File Src="SiteAssets/SitePages/Home/shape-1069572805-woman-w-solar-panel-condensed.png" Folder="SiteAssets/SitePages/Home" Overwrite="true" Level="Published">
-          <pnp:Properties>
-            <pnp:Property Key="ContentTypeId" Value="0x01010062C9B4A4CC29DF4785CCFA2F8F5E1878" />
-            <pnp:Property Key="FileLeafRef" Value="shape-1069572805-woman-w-solar-panel-condensed.png" />
-            <pnp:Property Key="Order" Value="3200" />
-          </pnp:Properties>
-        </pnp:File>
-        <pnp:File Src="SiteAssets/SitePages/Home/575320127-Toolbox.png" Folder="SiteAssets/SitePages/Home" Overwrite="true" Level="Published">
-          <pnp:Properties>
-            <pnp:Property Key="ContentTypeId" Value="0x01010062C9B4A4CC29DF4785CCFA2F8F5E1878" />
-            <pnp:Property Key="FileLeafRef" Value="575320127-Toolbox.png" />
-            <pnp:Property Key="Order" Value="3400" />
-          </pnp:Properties>
-        </pnp:File>
-        <pnp:File Src="SiteAssets/SitePages/Home/shape-575320127-Toolbox.png" Folder="SiteAssets/SitePages/Home" Overwrite="true" Level="Published">
-          <pnp:Properties>
-            <pnp:Property Key="ContentTypeId" Value="0x01010062C9B4A4CC29DF4785CCFA2F8F5E1878" />
-            <pnp:Property Key="FileLeafRef" Value="shape-575320127-Toolbox.png" />
-            <pnp:Property Key="Order" Value="3500" />
-          </pnp:Properties>
-        </pnp:File>
-        <pnp:File Src="SiteAssets/SitePages/Home/shape-1880863995-toolbox.png" Folder="SiteAssets/SitePages/Home" Overwrite="true" Level="Published">
-          <pnp:Properties>
-            <pnp:Property Key="ContentTypeId" Value="0x01010062C9B4A4CC29DF4785CCFA2F8F5E1878" />
-            <pnp:Property Key="FileLeafRef" Value="shape-1880863995-toolbox.png" />
-            <pnp:Property Key="Order" Value="3700" />
-          </pnp:Properties>
-        </pnp:File>
-        <pnp:File Src="SiteAssets/SitePages/Home/1880863995-toolbox_1772018305977.png" Folder="SiteAssets/SitePages/Home" Overwrite="true" Level="Published">
-          <pnp:Properties>
-            <pnp:Property Key="ContentTypeId" Value="0x01010062C9B4A4CC29DF4785CCFA2F8F5E1878" />
-            <pnp:Property Key="FileLeafRef" Value="1880863995-toolbox_1772018305977.png" />
-            <pnp:Property Key="Order" Value="3800" />
-          </pnp:Properties>
-        </pnp:File>
-        <pnp:File Src="SiteAssets/SitePages/Event/87669-29ec1c92-fa72-4f97-86ae-626f2aa0fbf5.jpg" Folder="SiteAssets/SitePages/Event" Overwrite="true" Level="Published">
-          <pnp:Properties>
-            <pnp:Property Key="ContentTypeId" Value="0x01010062C9B4A4CC29DF4785CCFA2F8F5E1878" />
-            <pnp:Property Key="FileLeafRef" Value="87669-29ec1c92-fa72-4f97-86ae-626f2aa0fbf5.jpg" />
-            <pnp:Property Key="Order" Value="4100" />
-          </pnp:Properties>
-        </pnp:File>
-        <pnp:File Src="SiteAssets/SitePages/Event(1)/28089-isna_esna_logo_lockup_rgb.png" Folder="SiteAssets/SitePages/Event(1)" Overwrite="true" Level="Published">
-          <pnp:Properties>
-            <pnp:Property Key="ContentTypeId" Value="0x01010062C9B4A4CC29DF4785CCFA2F8F5E1878" />
-            <pnp:Property Key="FileLeafRef" Value="28089-isna_esna_logo_lockup_rgb.png" />
-            <pnp:Property Key="Order" Value="4300" />
-          </pnp:Properties>
-        </pnp:File>
-        <pnp:File Src="SiteAssets/SitePages/Event(2)/33197-seia-solar-energy-industries-logo.png" Folder="SiteAssets/SitePages/Event(2)" Overwrite="true" Level="Published">
-          <pnp:Properties>
-            <pnp:Property Key="ContentTypeId" Value="0x01010062C9B4A4CC29DF4785CCFA2F8F5E1878" />
-            <pnp:Property Key="FileLeafRef" Value="33197-seia-solar-energy-industries-logo.png" />
-            <pnp:Property Key="Order" Value="4500" />
-          </pnp:Properties>
-        </pnp:File>
-        <pnp:File Src="SiteAssets/SitePages/Event(3)/84993-RE-Plus-blue-header-logo.svg" Folder="SiteAssets/SitePages/Event(3)" Overwrite="true" Level="Published">
-          <pnp:Properties>
-            <pnp:Property Key="ContentTypeId" Value="0x01010062C9B4A4CC29DF4785CCFA2F8F5E1878" />
-            <pnp:Property Key="FileLeafRef" Value="84993-RE-Plus-blue-header-logo.svg" />
-            <pnp:Property Key="Order" Value="4700" />
-          </pnp:Properties>
-        </pnp:File>
-        <pnp:File Src="SiteAssets/SitePages/Home/3346357340-grad-background.png" Folder="SiteAssets/SitePages/Home" Overwrite="true" Level="Published">
-          <pnp:Properties>
-            <pnp:Property Key="ContentTypeId" Value="0x01010062C9B4A4CC29DF4785CCFA2F8F5E1878" />
-            <pnp:Property Key="FileLeafRef" Value="3346357340-grad-background.png" />
-            <pnp:Property Key="Order" Value="4800" />
-          </pnp:Properties>
-        </pnp:File>
-        <pnp:File Src="SiteAssets/SitePages/Home/3388519302-grad-background.png" Folder="SiteAssets/SitePages/Home" Overwrite="true" Level="Published">
-          <pnp:Properties>
-            <pnp:Property Key="ContentTypeId" Value="0x01010062C9B4A4CC29DF4785CCFA2F8F5E1878" />
-            <pnp:Property Key="FileLeafRef" Value="3388519302-grad-background.png" />
-            <pnp:Property Key="Order" Value="4900" />
-          </pnp:Properties>
-        </pnp:File>
-        <pnp:File Src="SiteAssets/SitePages/Home/2914594503-grad-background.png" Folder="SiteAssets/SitePages/Home" Overwrite="true" Level="Published">
-          <pnp:Properties>
-            <pnp:Property Key="ContentTypeId" Value="0x01010062C9B4A4CC29DF4785CCFA2F8F5E1878" />
-            <pnp:Property Key="FileLeafRef" Value="2914594503-grad-background.png" />
-            <pnp:Property Key="Order" Value="5000" />
-          </pnp:Properties>
-        </pnp:File>
-        <pnp:File Src="SiteAssets/SitePages/Home/3600029400-grad-background.png" Folder="SiteAssets/SitePages/Home" Overwrite="true" Level="Published">
-          <pnp:Properties>
-            <pnp:Property Key="ContentTypeId" Value="0x01010062C9B4A4CC29DF4785CCFA2F8F5E1878" />
-            <pnp:Property Key="FileLeafRef" Value="3600029400-grad-background.png" />
-            <pnp:Property Key="Order" Value="5100" />
-          </pnp:Properties>
-        </pnp:File>
-        <pnp:File Src="SiteAssets/SitePages/Home/2880319663-grad-background.png" Folder="SiteAssets/SitePages/Home" Overwrite="true" Level="Published">
-          <pnp:Properties>
-            <pnp:Property Key="ContentTypeId" Value="0x01010062C9B4A4CC29DF4785CCFA2F8F5E1878" />
-            <pnp:Property Key="FileLeafRef" Value="2880319663-grad-background.png" />
-            <pnp:Property Key="Order" Value="5200" />
-          </pnp:Properties>
-        </pnp:File>
-        <pnp:File Src="SiteAssets/SitePages/Home/3180978121-grad-background.png" Folder="SiteAssets/SitePages/Home" Overwrite="true" Level="Published">
-          <pnp:Properties>
-            <pnp:Property Key="ContentTypeId" Value="0x01010062C9B4A4CC29DF4785CCFA2F8F5E1878" />
-            <pnp:Property Key="FileLeafRef" Value="3180978121-grad-background.png" />
-            <pnp:Property Key="Order" Value="5300" />
-          </pnp:Properties>
-        </pnp:File>
-        <pnp:File Src="SiteAssets/SitePages/Home/4146956946-grad-background.png" Folder="SiteAssets/SitePages/Home" Overwrite="true" Level="Published">
-          <pnp:Properties>
-            <pnp:Property Key="ContentTypeId" Value="0x01010062C9B4A4CC29DF4785CCFA2F8F5E1878" />
-            <pnp:Property Key="FileLeafRef" Value="4146956946-grad-background.png" />
-            <pnp:Property Key="Order" Value="5400" />
-          </pnp:Properties>
-        </pnp:File>
-        <pnp:File Src="SiteAssets/SitePages/Home/3660726509-Artboard-1.png" Folder="SiteAssets/SitePages/Home" Overwrite="true" Level="Published">
-          <pnp:Properties>
-            <pnp:Property Key="ContentTypeId" Value="0x01010062C9B4A4CC29DF4785CCFA2F8F5E1878" />
-            <pnp:Property Key="FileLeafRef" Value="3660726509-Artboard-1.png" />
-            <pnp:Property Key="Order" Value="5500" />
-          </pnp:Properties>
-        </pnp:File>
-        <pnp:File Src="SiteAssets/SitePages/Home/3097951448-Artboard-1.png" Folder="SiteAssets/SitePages/Home" Overwrite="true" Level="Published">
-          <pnp:Properties>
-            <pnp:Property Key="ContentTypeId" Value="0x01010062C9B4A4CC29DF4785CCFA2F8F5E1878" />
-            <pnp:Property Key="FileLeafRef" Value="3097951448-Artboard-1.png" />
-            <pnp:Property Key="Order" Value="5600" />
-          </pnp:Properties>
-        </pnp:File>
-        <pnp:File Src="SiteAssets/SitePages/Home/2493943488-g-trans.png" Folder="SiteAssets/SitePages/Home" Overwrite="true" Level="Published">
-          <pnp:Properties>
-            <pnp:Property Key="ContentTypeId" Value="0x01010062C9B4A4CC29DF4785CCFA2F8F5E1878" />
-            <pnp:Property Key="FileLeafRef" Value="2493943488-g-trans.png" />
-            <pnp:Property Key="Order" Value="5700" />
-          </pnp:Properties>
-        </pnp:File>
-        <pnp:File Src="SiteAssets/SitePages/Home/2493943488-g-trans_1772029323945.png" Folder="SiteAssets/SitePages/Home" Overwrite="true" Level="Published">
-          <pnp:Properties>
-            <pnp:Property Key="ContentTypeId" Value="0x01010062C9B4A4CC29DF4785CCFA2F8F5E1878" />
-            <pnp:Property Key="FileLeafRef" Value="2493943488-g-trans_1772029323945.png" />
-            <pnp:Property Key="Order" Value="5800" />
-          </pnp:Properties>
-        </pnp:File>
-        <pnp:File Src="SiteAssets/SitePages/Home/943445846-bg-top.png" Folder="SiteAssets/SitePages/Home" Overwrite="true" Level="Published">
-          <pnp:Properties>
-            <pnp:Property Key="ContentTypeId" Value="0x01010062C9B4A4CC29DF4785CCFA2F8F5E1878" />
-            <pnp:Property Key="FileLeafRef" Value="943445846-bg-top.png" />
-            <pnp:Property Key="Order" Value="5900" />
-          </pnp:Properties>
-        </pnp:File>
-        <pnp:File Src="SiteAssets/SitePages/Home/829681730-bg-bottom.png" Folder="SiteAssets/SitePages/Home" Overwrite="true" Level="Published">
-          <pnp:Properties>
-            <pnp:Property Key="ContentTypeId" Value="0x01010062C9B4A4CC29DF4785CCFA2F8F5E1878" />
-            <pnp:Property Key="FileLeafRef" Value="829681730-bg-bottom.png" />
-            <pnp:Property Key="Order" Value="6000" />
-          </pnp:Properties>
-        </pnp:File>
-        <pnp:File Src="SiteAssets/SitePages/Home/1294795948-bg-top.png" Folder="SiteAssets/SitePages/Home" Overwrite="true" Level="Published">
-          <pnp:Properties>
-            <pnp:Property Key="ContentTypeId" Value="0x01010062C9B4A4CC29DF4785CCFA2F8F5E1878" />
-            <pnp:Property Key="FileLeafRef" Value="1294795948-bg-top.png" />
-            <pnp:Property Key="Order" Value="6100" />
-          </pnp:Properties>
-        </pnp:File>
-        <pnp:File Src="SiteAssets/SitePages/Home/3217840649-bg-top.png" Folder="SiteAssets/SitePages/Home" Overwrite="true" Level="Published">
-          <pnp:Properties>
-            <pnp:Property Key="ContentTypeId" Value="0x01010062C9B4A4CC29DF4785CCFA2F8F5E1878" />
-            <pnp:Property Key="FileLeafRef" Value="3217840649-bg-top.png" />
-            <pnp:Property Key="Order" Value="6300" />
-          </pnp:Properties>
-        </pnp:File>
-        <pnp:File Src="SiteAssets/SitePages/Home/863472624-bg-bottom.png" Folder="SiteAssets/SitePages/Home" Overwrite="true" Level="Published">
-          <pnp:Properties>
-            <pnp:Property Key="ContentTypeId" Value="0x01010062C9B4A4CC29DF4785CCFA2F8F5E1878" />
-            <pnp:Property Key="FileLeafRef" Value="863472624-bg-bottom.png" />
-            <pnp:Property Key="Order" Value="6400" />
-          </pnp:Properties>
-        </pnp:File>
-        <pnp:File Src="SiteAssets/SitePages/Home/c8f59ade-06a4-466a-98d1-dd51719d7c7c" Folder="SiteAssets/SitePages/Home" Overwrite="true" Level="Published">
-          <pnp:Properties>
-            <pnp:Property Key="ContentTypeId" Value="0x01010062C9B4A4CC29DF4785CCFA2F8F5E1878" />
-            <pnp:Property Key="FileLeafRef" Value="c8f59ade-06a4-466a-98d1-dd51719d7c7c" />
-            <pnp:Property Key="Order" Value="6800" />
-          </pnp:Properties>
-        </pnp:File>
-        <pnp:File Src="SiteAssets/SitePages/Home/eployee-handbook.png" Folder="SiteAssets/SitePages/Home" Overwrite="true" Level="Published">
-          <pnp:Properties>
-            <pnp:Property Key="ContentTypeId" Value="0x01010062C9B4A4CC29DF4785CCFA2F8F5E1878" />
-            <pnp:Property Key="FileLeafRef" Value="eployee-handbook.png" />
-            <pnp:Property Key="Order" Value="7100" />
-          </pnp:Properties>
-        </pnp:File>
-        <pnp:File Src="SiteAssets/SitePages/Home/eployee-handbook@2x.png" Folder="SiteAssets/SitePages/Home" Overwrite="true" Level="Published">
-          <pnp:Properties>
-            <pnp:Property Key="ContentTypeId" Value="0x01010062C9B4A4CC29DF4785CCFA2F8F5E1878" />
-            <pnp:Property Key="FileLeafRef" Value="eployee-handbook@2x.png" />
-            <pnp:Property Key="Order" Value="7200" />
-          </pnp:Properties>
-        </pnp:File>
-        <pnp:File Src="SiteAssets/SitePages/Home/eployee-handbook.svg" Folder="SiteAssets/SitePages/Home" Overwrite="true" Level="Published">
-          <pnp:Properties>
-            <pnp:Property Key="ContentTypeId" Value="0x01010062C9B4A4CC29DF4785CCFA2F8F5E1878" />
-            <pnp:Property Key="FileLeafRef" Value="eployee-handbook.svg" />
-            <pnp:Property Key="Order" Value="7300" />
-          </pnp:Properties>
-        </pnp:File>
-        <pnp:File Src="SiteAssets/SitePages/Home/employee-handbook@2x.png" Folder="SiteAssets/SitePages/Home" Overwrite="true" Level="Published">
-          <pnp:Properties>
-            <pnp:Property Key="ContentTypeId" Value="0x01010062C9B4A4CC29DF4785CCFA2F8F5E1878" />
-            <pnp:Property Key="FileLeafRef" Value="employee-handbook@2x.png" />
-            <pnp:Property Key="Order" Value="7400" />
-          </pnp:Properties>
-        </pnp:File>
-        <pnp:File Src="SiteAssets/SitePages/Home/org-chart@2x.png" Folder="SiteAssets/SitePages/Home" Overwrite="true" Level="Published">
-          <pnp:Properties>
-            <pnp:Property Key="ContentTypeId" Value="0x01010062C9B4A4CC29DF4785CCFA2F8F5E1878" />
-            <pnp:Property Key="FileLeafRef" Value="org-chart@2x.png" />
-            <pnp:Property Key="Order" Value="7500" />
-          </pnp:Properties>
-        </pnp:File>
-        <pnp:File Src="SiteAssets/SitePages/Home/pay-stubs@2x.png" Folder="SiteAssets/SitePages/Home" Overwrite="true" Level="Published">
-          <pnp:Properties>
-            <pnp:Property Key="ContentTypeId" Value="0x01010062C9B4A4CC29DF4785CCFA2F8F5E1878" />
-            <pnp:Property Key="FileLeafRef" Value="pay-stubs@2x.png" />
-            <pnp:Property Key="Order" Value="7600" />
-          </pnp:Properties>
-        </pnp:File>
-        <pnp:File Src="SiteAssets/SitePages/Home/benefits-insurance@2x.png" Folder="SiteAssets/SitePages/Home" Overwrite="true" Level="Published">
-          <pnp:Properties>
-            <pnp:Property Key="ContentTypeId" Value="0x01010062C9B4A4CC29DF4785CCFA2F8F5E1878" />
-            <pnp:Property Key="FileLeafRef" Value="benefits-insurance@2x.png" />
-            <pnp:Property Key="Order" Value="7700" />
-          </pnp:Properties>
-        </pnp:File>
-        <pnp:File Src="SiteAssets/SitePages/Home/brand-assets@2x.png" Folder="SiteAssets/SitePages/Home" Overwrite="true" Level="Published">
-          <pnp:Properties>
-            <pnp:Property Key="ContentTypeId" Value="0x01010062C9B4A4CC29DF4785CCFA2F8F5E1878" />
-            <pnp:Property Key="FileLeafRef" Value="brand-assets@2x.png" />
-            <pnp:Property Key="Order" Value="7800" />
-          </pnp:Properties>
-        </pnp:File>
-        <pnp:File Src="SiteAssets/SitePages/Home/Internal-job-board@2x.png" Folder="SiteAssets/SitePages/Home" Overwrite="true" Level="Published">
-          <pnp:Properties>
-            <pnp:Property Key="ContentTypeId" Value="0x01010062C9B4A4CC29DF4785CCFA2F8F5E1878" />
-            <pnp:Property Key="FileLeafRef" Value="Internal-job-board@2x.png" />
-            <pnp:Property Key="Order" Value="7900" />
-          </pnp:Properties>
-        </pnp:File>
-        <pnp:File Src="SiteAssets/SitePages/Home/sustainability-report@2x.png" Folder="SiteAssets/SitePages/Home" Overwrite="true" Level="Published">
-          <pnp:Properties>
-            <pnp:Property Key="ContentTypeId" Value="0x01010062C9B4A4CC29DF4785CCFA2F8F5E1878" />
-            <pnp:Property Key="FileLeafRef" Value="sustainability-report@2x.png" />
-            <pnp:Property Key="Order" Value="8000" />
-          </pnp:Properties>
-        </pnp:File>
-        <pnp:File Src="SiteAssets/SitePages/Home/training-library@2x.png" Folder="SiteAssets/SitePages/Home" Overwrite="true" Level="Published">
-          <pnp:Properties>
-            <pnp:Property Key="ContentTypeId" Value="0x01010062C9B4A4CC29DF4785CCFA2F8F5E1878" />
-            <pnp:Property Key="FileLeafRef" Value="training-library@2x.png" />
-            <pnp:Property Key="Order" Value="8100" />
-          </pnp:Properties>
-        </pnp:File>
-        <pnp:File Src="SiteAssets/SitePages/Home/employee-handbook.png" Folder="SiteAssets/SitePages/Home" Overwrite="true" Level="Published">
-          <pnp:Properties>
-            <pnp:Property Key="ContentTypeId" Value="0x01010062C9B4A4CC29DF4785CCFA2F8F5E1878" />
-            <pnp:Property Key="FileLeafRef" Value="employee-handbook.png" />
-            <pnp:Property Key="Order" Value="8200" />
-          </pnp:Properties>
-        </pnp:File>
-        <pnp:File Src="SiteAssets/SitePages/Home/org-chart.png" Folder="SiteAssets/SitePages/Home" Overwrite="true" Level="Published">
-          <pnp:Properties>
-            <pnp:Property Key="ContentTypeId" Value="0x01010062C9B4A4CC29DF4785CCFA2F8F5E1878" />
-            <pnp:Property Key="FileLeafRef" Value="org-chart.png" />
-            <pnp:Property Key="Order" Value="8300" />
-          </pnp:Properties>
-        </pnp:File>
-        <pnp:File Src="SiteAssets/SitePages/Home/pay-stubs.png" Folder="SiteAssets/SitePages/Home" Overwrite="true" Level="Published">
-          <pnp:Properties>
-            <pnp:Property Key="ContentTypeId" Value="0x01010062C9B4A4CC29DF4785CCFA2F8F5E1878" />
-            <pnp:Property Key="FileLeafRef" Value="pay-stubs.png" />
-            <pnp:Property Key="Order" Value="8400" />
-          </pnp:Properties>
-        </pnp:File>
-        <pnp:File Src="SiteAssets/SitePages/Home/benefits-insurance.png" Folder="SiteAssets/SitePages/Home" Overwrite="true" Level="Published">
-          <pnp:Properties>
-            <pnp:Property Key="ContentTypeId" Value="0x01010062C9B4A4CC29DF4785CCFA2F8F5E1878" />
-            <pnp:Property Key="FileLeafRef" Value="benefits-insurance.png" />
-            <pnp:Property Key="Order" Value="8500" />
-          </pnp:Properties>
-        </pnp:File>
-        <pnp:File Src="SiteAssets/SitePages/Home/brand-assets.png" Folder="SiteAssets/SitePages/Home" Overwrite="true" Level="Published">
-          <pnp:Properties>
-            <pnp:Property Key="ContentTypeId" Value="0x01010062C9B4A4CC29DF4785CCFA2F8F5E1878" />
-            <pnp:Property Key="FileLeafRef" Value="brand-assets.png" />
-            <pnp:Property Key="Order" Value="8600" />
-          </pnp:Properties>
-        </pnp:File>
-        <pnp:File Src="SiteAssets/SitePages/Home/Internal-job-board.png" Folder="SiteAssets/SitePages/Home" Overwrite="true" Level="Published">
-          <pnp:Properties>
-            <pnp:Property Key="ContentTypeId" Value="0x01010062C9B4A4CC29DF4785CCFA2F8F5E1878" />
-            <pnp:Property Key="FileLeafRef" Value="Internal-job-board.png" />
-            <pnp:Property Key="Order" Value="8700" />
-          </pnp:Properties>
-        </pnp:File>
-        <pnp:File Src="SiteAssets/SitePages/Home/training-library.png" Folder="SiteAssets/SitePages/Home" Overwrite="true" Level="Published">
-          <pnp:Properties>
-            <pnp:Property Key="ContentTypeId" Value="0x01010062C9B4A4CC29DF4785CCFA2F8F5E1878" />
-            <pnp:Property Key="FileLeafRef" Value="training-library.png" />
-            <pnp:Property Key="Order" Value="8800" />
-          </pnp:Properties>
-        </pnp:File>
-        <pnp:File Src="SiteAssets/SitePages/Home/3243399918-nestor-wilken.jpeg" Folder="SiteAssets/SitePages/Home" Overwrite="true" Level="Published">
-          <pnp:Properties>
-            <pnp:Property Key="ContentTypeId" Value="0x01010062C9B4A4CC29DF4785CCFA2F8F5E1878" />
-            <pnp:Property Key="FileLeafRef" Value="3243399918-nestor-wilken.jpeg" />
-            <pnp:Property Key="Order" Value="9200" />
-          </pnp:Properties>
-        </pnp:File>
-        <pnp:File Src="SiteAssets/SitePages/Home/shape-3243399918-nestor-wilken-1772132200001.png" Folder="SiteAssets/SitePages/Home" Overwrite="true" Level="Published">
-          <pnp:Properties>
-            <pnp:Property Key="ContentTypeId" Value="0x01010062C9B4A4CC29DF4785CCFA2F8F5E1878" />
-            <pnp:Property Key="FileLeafRef" Value="shape-3243399918-nestor-wilken-1772132200001.png" />
-            <pnp:Property Key="Order" Value="9300" />
-          </pnp:Properties>
-        </pnp:File>
-        <pnp:File Src="SiteAssets/SitePages/Home/shape-3243399918-nestor-wilken-1772132239457.png" Folder="SiteAssets/SitePages/Home" Overwrite="true" Level="Published">
-          <pnp:Properties>
-            <pnp:Property Key="ContentTypeId" Value="0x01010062C9B4A4CC29DF4785CCFA2F8F5E1878" />
-            <pnp:Property Key="FileLeafRef" Value="shape-3243399918-nestor-wilken-1772132239457.png" />
-            <pnp:Property Key="Order" Value="9400" />
-          </pnp:Properties>
-        </pnp:File>
-        <pnp:File Src="SiteAssets/SitePages/Home/1103686574-nestor-wilken.jpeg" Folder="SiteAssets/SitePages/Home" Overwrite="true" Level="Published">
-          <pnp:Properties>
-            <pnp:Property Key="ContentTypeId" Value="0x01010062C9B4A4CC29DF4785CCFA2F8F5E1878" />
-            <pnp:Property Key="FileLeafRef" Value="1103686574-nestor-wilken.jpeg" />
-            <pnp:Property Key="Order" Value="9500" />
-          </pnp:Properties>
-        </pnp:File>
-        <pnp:File Src="SiteAssets/SitePages/Home/shape-1103686574-nestor-wilken-1772132442843.png" Folder="SiteAssets/SitePages/Home" Overwrite="true" Level="Published">
-          <pnp:Properties>
-            <pnp:Property Key="ContentTypeId" Value="0x01010062C9B4A4CC29DF4785CCFA2F8F5E1878" />
-            <pnp:Property Key="FileLeafRef" Value="shape-1103686574-nestor-wilken-1772132442843.png" />
-            <pnp:Property Key="Order" Value="9600" />
-          </pnp:Properties>
-        </pnp:File>
-        <pnp:File Src="SiteAssets/SitePages/Home/1557238947-Miram-Graham.jpeg" Folder="SiteAssets/SitePages/Home" Overwrite="true" Level="Published">
-          <pnp:Properties>
-            <pnp:Property Key="ContentTypeId" Value="0x01010062C9B4A4CC29DF4785CCFA2F8F5E1878" />
-            <pnp:Property Key="FileLeafRef" Value="1557238947-Miram-Graham.jpeg" />
-            <pnp:Property Key="Order" Value="9900" />
-          </pnp:Properties>
-        </pnp:File>
-        <pnp:File Src="SiteAssets/SitePages/Home/shape-1557238947-Miram-Graham-1772132981264.png" Folder="SiteAssets/SitePages/Home" Overwrite="true" Level="Published">
-          <pnp:Properties>
-            <pnp:Property Key="ContentTypeId" Value="0x01010062C9B4A4CC29DF4785CCFA2F8F5E1878" />
-            <pnp:Property Key="FileLeafRef" Value="shape-1557238947-Miram-Graham-1772132981264.png" />
-            <pnp:Property Key="Order" Value="10000" />
-          </pnp:Properties>
-        </pnp:File>
-        <pnp:File Src="SiteAssets/SitePages/Home/1122411761-woman-w-solar-panel.png" Folder="SiteAssets/SitePages/Home" Overwrite="true" Level="Published">
-          <pnp:Properties>
-            <pnp:Property Key="ContentTypeId" Value="0x01010062C9B4A4CC29DF4785CCFA2F8F5E1878" />
-            <pnp:Property Key="FileLeafRef" Value="1122411761-woman-w-solar-panel.png" />
-            <pnp:Property Key="Order" Value="1800" />
-          </pnp:Properties>
-        </pnp:File>
-        <pnp:File Src="SiteAssets/SitePages/Home/1594350956-Firefly_Gemini-Flash_make-the-background-exactly--fae300-241456.png" Folder="SiteAssets/SitePages/Home" Overwrite="true" Level="Published">
-          <pnp:Properties>
-            <pnp:Property Key="ContentTypeId" Value="0x01010062C9B4A4CC29DF4785CCFA2F8F5E1878" />
-            <pnp:Property Key="FileLeafRef" Value="1594350956-Firefly_Gemini-Flash_make-the-background-exactly--fae300-241456.png" />
-            <pnp:Property Key="Order" Value="1500" />
-          </pnp:Properties>
-        </pnp:File>
-        <pnp:File Src="SiteAssets/SitePages/Home/2241207486-Firefly_Gemini-Flash_make-background-transparent-750123.png" Folder="SiteAssets/SitePages/Home" Overwrite="true" Level="Published">
-          <pnp:Properties>
-            <pnp:Property Key="ContentTypeId" Value="0x01010062C9B4A4CC29DF4785CCFA2F8F5E1878" />
-            <pnp:Property Key="FileLeafRef" Value="2241207486-Firefly_Gemini-Flash_make-background-transparent-750123.png" />
-            <pnp:Property Key="Order" Value="1100" />
-          </pnp:Properties>
-        </pnp:File>
-        <pnp:File Src="SiteAssets/SitePages/Home/2288630619-woman-w-solar-panel.png" Folder="SiteAssets/SitePages/Home" Overwrite="true" Level="Published">
-          <pnp:Properties>
-            <pnp:Property Key="ContentTypeId" Value="0x01010062C9B4A4CC29DF4785CCFA2F8F5E1878" />
-            <pnp:Property Key="FileLeafRef" Value="2288630619-woman-w-solar-panel.png" />
-            <pnp:Property Key="Order" Value="1600" />
-          </pnp:Properties>
-        </pnp:File>
-        <pnp:File Src="SiteAssets/SitePages/Home/2208562633-woman-w-solar-panel.png" Folder="SiteAssets/SitePages/Home" Overwrite="true" Level="Published">
-          <pnp:Properties>
-            <pnp:Property Key="ContentTypeId" Value="0x01010062C9B4A4CC29DF4785CCFA2F8F5E1878" />
-            <pnp:Property Key="FileLeafRef" Value="2208562633-woman-w-solar-panel.png" />
-            <pnp:Property Key="Order" Value="2100" />
-          </pnp:Properties>
-        </pnp:File>
-        <pnp:File Src="SiteAssets/SitePages/Home/2397539460-Firefly_Gemini-Flash_Generate-an-clean--young-hipster--isolated-femaie--multi-reacial-construction-worker--89866.png" Folder="SiteAssets/SitePages/Home" Overwrite="true" Level="Published">
-          <pnp:Properties>
-            <pnp:Property Key="ContentTypeId" Value="0x01010062C9B4A4CC29DF4785CCFA2F8F5E1878" />
-            <pnp:Property Key="FileLeafRef" Value="2397539460-Firefly_Gemini-Flash_Generate-an-clean--young-hipster--isolated-femaie--multi-reacial-construction-worker--89866.png" />
-            <pnp:Property Key="Order" Value="1000" />
-          </pnp:Properties>
-        </pnp:File>
-        <pnp:File Src="SiteAssets/SitePages/Home/2288630619-woman-w-solar-panel_1771924362838.png" Folder="SiteAssets/SitePages/Home" Overwrite="true" Level="Published">
-          <pnp:Properties>
-            <pnp:Property Key="ContentTypeId" Value="0x01010062C9B4A4CC29DF4785CCFA2F8F5E1878" />
-            <pnp:Property Key="FileLeafRef" Value="2288630619-woman-w-solar-panel_1771924362838.png" />
-            <pnp:Property Key="Order" Value="1700" />
-          </pnp:Properties>
-        </pnp:File>
-        <pnp:File Src="SiteAssets/SitePages/Home/3583759614-woman-w-solar-panel_1771923885501.png" Folder="SiteAssets/SitePages/Home" Overwrite="true" Level="Published">
-          <pnp:Properties>
-            <pnp:Property Key="ContentTypeId" Value="0x01010062C9B4A4CC29DF4785CCFA2F8F5E1878" />
-            <pnp:Property Key="FileLeafRef" Value="3583759614-woman-w-solar-panel_1771923885501.png" />
-            <pnp:Property Key="Order" Value="1400" />
-          </pnp:Properties>
-        </pnp:File>
-        <pnp:File Src="SiteAssets/SitePages/Home/903450006-woman-solar-panle-yellow.jpg" Folder="SiteAssets/SitePages/Home" Overwrite="true" Level="Published">
-          <pnp:Properties>
-            <pnp:Property Key="ContentTypeId" Value="0x01010062C9B4A4CC29DF4785CCFA2F8F5E1878" />
-            <pnp:Property Key="FileLeafRef" Value="903450006-woman-solar-panle-yellow.jpg" />
-            <pnp:Property Key="Order" Value="1900" />
-          </pnp:Properties>
-        </pnp:File>
-        <pnp:File Src="SiteAssets/SitePages/Home/4144475787-Firefly_Gemini-Flash_make-background-transparent-750123.png" Folder="SiteAssets/SitePages/Home" Overwrite="true" Level="Published">
-          <pnp:Properties>
-            <pnp:Property Key="ContentTypeId" Value="0x01010062C9B4A4CC29DF4785CCFA2F8F5E1878" />
-            <pnp:Property Key="FileLeafRef" Value="4144475787-Firefly_Gemini-Flash_make-background-transparent-750123.png" />
-            <pnp:Property Key="Order" Value="1200" />
-          </pnp:Properties>
-        </pnp:File>
-        <pnp:File Src="SiteAssets/SitePages/Home/3583759614-woman-w-solar-panel.png" Folder="SiteAssets/SitePages/Home" Overwrite="true" Level="Published">
-          <pnp:Properties>
-            <pnp:Property Key="ContentTypeId" Value="0x01010062C9B4A4CC29DF4785CCFA2F8F5E1878" />
-            <pnp:Property Key="FileLeafRef" Value="3583759614-woman-w-solar-panel.png" />
-            <pnp:Property Key="Order" Value="1300" />
-          </pnp:Properties>
-        </pnp:File>
-        <pnp:File Src="SiteAssets/SitePages/Home/shape-1122411761-woman-w-solar-panel.png" Folder="SiteAssets/SitePages/Home" Overwrite="true" Level="Published">
-          <pnp:Properties>
-            <pnp:Property Key="ContentTypeId" Value="0x01010062C9B4A4CC29DF4785CCFA2F8F5E1878" />
-            <pnp:Property Key="FileLeafRef" Value="shape-1122411761-woman-w-solar-panel.png" />
-            <pnp:Property Key="Order" Value="14100" />
-          </pnp:Properties>
-        </pnp:File>
-        <pnp:File Src="SiteAssets/SitePages/Home/shape-585085250-1771834526782.png" Folder="SiteAssets/SitePages/Home" Overwrite="true" Level="Published">
-          <pnp:Properties>
-            <pnp:Property Key="ContentTypeId" Value="0x01010062C9B4A4CC29DF4785CCFA2F8F5E1878" />
-            <pnp:Property Key="FileLeafRef" Value="shape-585085250-1771834526782.png" />
-            <pnp:Property Key="Order" Value="600" />
-          </pnp:Properties>
-        </pnp:File>
-        <pnp:File Src="SiteAssets/SitePages/Home/shape-485992886-1771834104361.png" Folder="SiteAssets/SitePages/Home" Overwrite="true" Level="Published">
-          <pnp:Properties>
-            <pnp:Property Key="ContentTypeId" Value="0x01010062C9B4A4CC29DF4785CCFA2F8F5E1878" />
-            <pnp:Property Key="FileLeafRef" Value="shape-485992886-1771834104361.png" />
-            <pnp:Property Key="Order" Value="14700" />
-          </pnp:Properties>
-        </pnp:File>
-        <pnp:File Src="SiteAssets/SitePages/Home/3130362260-the-future-is-solar.svg" Folder="SiteAssets/SitePages/Home" Overwrite="true" Level="Published">
-          <pnp:Properties>
-            <pnp:Property Key="ContentTypeId" Value="0x01010062C9B4A4CC29DF4785CCFA2F8F5E1878" />
-            <pnp:Property Key="FileLeafRef" Value="3130362260-the-future-is-solar.svg" />
-            <pnp:Property Key="Order" Value="400" />
-          </pnp:Properties>
-        </pnp:File>
         <pnp:File Src="SiteAssets/SitePages/Home/1802407455-the-future-is-solar-outline.svg" Folder="SiteAssets/SitePages/Home" Overwrite="true" Level="Published" />
         <pnp:File Src="SiteAssets/SitePages/Home/2217331093-solar-panel-1308944675.jpg" Folder="SiteAssets/SitePages/Home" Overwrite="true" Level="Published" />
         <pnp:File Src="SiteAssets/SitePages/Home/3718650941-bg-top.png" Folder="SiteAssets/SitePages/Home" Overwrite="true" Level="Published" />
@@ -2810,7 +933,7 @@
                     <pnp:CanvasControlProperty Key="Text" Value="&lt;p class=&quot;noSpacingAbove spacingBelow&quot; data-text-type=&quot;withSpacing&quot;&gt;&lt;strong&gt;Skip ahead:&lt;/strong&gt;&lt;/p&gt;&lt;p class=&quot;noSpacingAbove spacingBelow&quot; data-text-type=&quot;withSpacing&quot;&gt;&lt;a href=&quot;#news&quot;&gt;News&lt;/a&gt; - &lt;a href=&quot;#toolbox&quot;&gt;Toolbox&lt;/a&gt; - &lt;a href=&quot;#events&quot;&gt;Events&lt;/a&gt; - &lt;a href=&quot;#people-culture&quot;&gt;People &amp;amp; Culture&lt;/a&gt; - &lt;a href=&quot;#leadership-messages&quot;&gt;Our Mission&lt;/a&gt;&lt;/p&gt;" />
                   </pnp:CanvasControlProperties>
                 </pnp:CanvasControl>
-                <pnp:CanvasControl WebPartType="Custom" JsonControlData="{&quot;webPartId&quot;:null,&quot;rteInstanceId&quot;:null,&quot;addedFromPersistedData&quot;:false,&quot;reservedHeight&quot;:0,&quot;reservedWidth&quot;:0,&quot;controlType&quot;:14,&quot;id&quot;:&quot;1a5dad52-fc2e-4cda-9103-d53522d6b525&quot;,&quot;position&quot;:{&quot;controlIndex&quot;:4,&quot;zoneIndex&quot;:1,&quot;sectionIndex&quot;:1,&quot;sectionFactor&quot;:100,&quot;layoutIndex&quot;:1,&quot;zoneId&quot;:&quot;2407fcbc-c1f2-419f-9b81-53a869f1609b&quot;},&quot;emphasis&quot;:{&quot;zoneEmphasis&quot;:0},&quot;properties&quot;:{&quot;zoneBackground&quot;:{&quot;2407fcbc-c1f2-419f-9b81-53a869f1609b&quot;:{&quot;type&quot;:&quot;image&quot;,&quot;imageData&quot;:{&quot;fileName&quot;:&quot;2217331093-solar-panel-1308944675.jpg&quot;,&quot;width&quot;:3015,&quot;height&quot;:2010,&quot;source&quot;:0,&quot;siteId&quot;:&quot;29b6b8d5-fe00-4e67-a42d-84456788df55&quot;,&quot;webId&quot;:&quot;38a71296-dfe7-4f64-a6a1-c1691144d90e&quot;,&quot;listId&quot;:&quot;907c478a-cf6b-4de9-90b0-b4f22bd27814&quot;,&quot;uniqueId&quot;:&quot;c0e486ce-681b-4bbf-b1df-67786baa01bd&quot;},&quot;overlay&quot;:{&quot;color&quot;:{&quot;type&quot;:&quot;linear&quot;,&quot;key&quot;:&quot;dark&quot;,&quot;angle&quot;:0,&quot;stops&quot;:[{&quot;color&quot;:&quot;#000000&quot;,&quot;transparency&quot;:1},{&quot;color&quot;:&quot;#000000&quot;,&quot;transparency&quot;:0}]},&quot;opacity&quot;:85},&quot;useLightText&quot;:true},&quot;22ed21d0-941e-40a2-a886-f3a629b456c4&quot;:{&quot;type&quot;:&quot;image&quot;,&quot;imageData&quot;:{&quot;fileName&quot;:&quot;3718650941-bg-top.png&quot;,&quot;width&quot;:3500,&quot;height&quot;:100,&quot;source&quot;:0,&quot;siteId&quot;:&quot;29b6b8d5-fe00-4e67-a42d-84456788df55&quot;,&quot;webId&quot;:&quot;38a71296-dfe7-4f64-a6a1-c1691144d90e&quot;,&quot;listId&quot;:&quot;907c478a-cf6b-4de9-90b0-b4f22bd27814&quot;,&quot;uniqueId&quot;:&quot;fcfbd0a9-5f38-4e74-8eba-4be5d7432e9c&quot;},&quot;overlay&quot;:{&quot;color&quot;:&quot;#000000&quot;,&quot;opacity&quot;:0},&quot;useLightText&quot;:true},&quot;ab4e10c0-6327-4129-99b3-823e0436dd33&quot;:{&quot;type&quot;:&quot;image&quot;,&quot;imageData&quot;:{&quot;fileName&quot;:&quot;3915280274-bg-bottom.png&quot;,&quot;width&quot;:3500,&quot;height&quot;:100,&quot;source&quot;:0,&quot;siteId&quot;:&quot;29b6b8d5-fe00-4e67-a42d-84456788df55&quot;,&quot;webId&quot;:&quot;38a71296-dfe7-4f64-a6a1-c1691144d90e&quot;,&quot;listId&quot;:&quot;907c478a-cf6b-4de9-90b0-b4f22bd27814&quot;,&quot;uniqueId&quot;:&quot;441bb3bd-f921-44e5-88e7-fd0fc9969fd8&quot;},&quot;overlay&quot;:{&quot;color&quot;:&quot;#000000&quot;,&quot;opacity&quot;:0},&quot;useLightText&quot;:true},&quot;e59e302c-b30d-439a-a82f-d1c851f67a60&quot;:{&quot;type&quot;:&quot;image&quot;,&quot;imageData&quot;:{&quot;fileName&quot;:&quot;2066642434-bg-top.png&quot;,&quot;width&quot;:3500,&quot;height&quot;:100,&quot;source&quot;:0,&quot;siteId&quot;:&quot;29b6b8d5-fe00-4e67-a42d-84456788df55&quot;,&quot;webId&quot;:&quot;38a71296-dfe7-4f64-a6a1-c1691144d90e&quot;,&quot;listId&quot;:&quot;907c478a-cf6b-4de9-90b0-b4f22bd27814&quot;,&quot;uniqueId&quot;:&quot;c19011cb-83b8-425b-b0b7-79fd04b31d5d&quot;},&quot;overlay&quot;:{&quot;color&quot;:&quot;#000000&quot;,&quot;opacity&quot;:0},&quot;useLightText&quot;:true},&quot;a30c823d-2e63-4df1-a5fe-52f91eab4072&quot;:{&quot;type&quot;:&quot;image&quot;,&quot;imageData&quot;:{&quot;fileName&quot;:&quot;1148676821-bg-bottom.png&quot;,&quot;width&quot;:3500,&quot;height&quot;:183,&quot;source&quot;:0,&quot;siteId&quot;:&quot;29b6b8d5-fe00-4e67-a42d-84456788df55&quot;,&quot;webId&quot;:&quot;38a71296-dfe7-4f64-a6a1-c1691144d90e&quot;,&quot;listId&quot;:&quot;907c478a-cf6b-4de9-90b0-b4f22bd27814&quot;,&quot;uniqueId&quot;:&quot;20ec7a9d-2f31-4fe0-af5d-7a031726939c&quot;},&quot;overlay&quot;:{&quot;color&quot;:&quot;#000000&quot;,&quot;opacity&quot;:0},&quot;useLightText&quot;:true},&quot;390cf201-859a-4448-994c-08d4cd142b28&quot;:{&quot;type&quot;:&quot;image&quot;,&quot;imageData&quot;:{&quot;fileName&quot;:&quot;425767eb-2911-4248-be6b-e86ac61c919b&quot;,&quot;width&quot;:3015,&quot;height&quot;:2010,&quot;source&quot;:2,&quot;stockMediaId&quot;:&quot;425767eb-2911-4248-be6b-e86ac61c919b&quot;,&quot;contentProvider&quot;:&quot;Hubble&quot;},&quot;overlay&quot;:{&quot;color&quot;:&quot;#000000&quot;,&quot;opacity&quot;:57},&quot;useLightText&quot;:true,&quot;focalPoint&quot;:{&quot;x&quot;:0.003682267775229356,&quot;y&quot;:0.5529762758027522}}},&quot;zoneThemeIndex&quot;:{&quot;5eb672c4-8357-40bf-9757-a08f2d9ed428&quot;:{&quot;lightIndex&quot;:1,&quot;darkIndex&quot;:1},&quot;505d8621-8e3b-421b-8d0a-c4077e1d72cf&quot;:{&quot;lightIndex&quot;:0,&quot;darkIndex&quot;:0},&quot;4090aa7c-12e2-4c7b-806a-e969e612db73&quot;:{&quot;lightIndex&quot;:1,&quot;darkIndex&quot;:1},&quot;390cf201-859a-4448-994c-08d4cd142b28&quot;:{&quot;lightIndex&quot;:0,&quot;darkIndex&quot;:0}}},&quot;serverProcessedContent&quot;:{&quot;htmlStrings&quot;:{},&quot;searchablePlainTexts&quot;:{},&quot;imageSources&quot;:{&quot;zoneBackground.2407fcbc-c1f2-419f-9b81-53a869f1609b.imageData.url&quot;:&quot;{site}/SiteAssets/SitePages/Home/2217331093-solar-panel-1308944675.jpg&quot;,&quot;zoneBackground.22ed21d0-941e-40a2-a886-f3a629b456c4.imageData.url&quot;:&quot;{site}/SiteAssets/SitePages/Home/3718650941-bg-top.png&quot;,&quot;zoneBackground.ab4e10c0-6327-4129-99b3-823e0436dd33.imageData.url&quot;:&quot;{site}/SiteAssets/SitePages/Home/3915280274-bg-bottom.png&quot;,&quot;zoneBackground.e59e302c-b30d-439a-a82f-d1c851f67a60.imageData.url&quot;:&quot;{site}/SiteAssets/SitePages/Home/2066642434-bg-top.png&quot;,&quot;zoneBackground.a30c823d-2e63-4df1-a5fe-52f91eab4072.imageData.url&quot;:&quot;{site}/SiteAssets/SitePages/Home/1148676821-bg-bottom.png&quot;,&quot;zoneBackground.390cf201-859a-4448-994c-08d4cd142b28.imageData.url&quot;:&quot;https://cdn.hubblecontent.osi.office.net/m365content/publish/425767eb-2911-4248-be6b-e86ac61c919b/515705348.jpg&quot;},&quot;links&quot;:{}},&quot;dynamicDataPaths&quot;:{},&quot;dynamicDataValues&quot;:{},&quot;dataVersion&quot;:&quot;1.0&quot;}" ControlId="1a5dad52-fc2e-4cda-9103-d53522d6b525" Order="4" Column="1" />
+                <pnp:CanvasControl WebPartType="Custom" JsonControlData="{&quot;webPartId&quot;:null,&quot;rteInstanceId&quot;:null,&quot;addedFromPersistedData&quot;:false,&quot;reservedHeight&quot;:0,&quot;reservedWidth&quot;:0,&quot;controlType&quot;:14,&quot;id&quot;:&quot;72c2457e-95f6-4f08-8964-20430b548d01&quot;,&quot;position&quot;:{&quot;controlIndex&quot;:4,&quot;zoneIndex&quot;:1,&quot;sectionIndex&quot;:1,&quot;sectionFactor&quot;:100,&quot;layoutIndex&quot;:1,&quot;zoneId&quot;:&quot;2407fcbc-c1f2-419f-9b81-53a869f1609b&quot;},&quot;emphasis&quot;:{&quot;zoneEmphasis&quot;:0},&quot;properties&quot;:{&quot;zoneBackground&quot;:{&quot;2407fcbc-c1f2-419f-9b81-53a869f1609b&quot;:{&quot;type&quot;:&quot;image&quot;,&quot;imageData&quot;:{&quot;fileName&quot;:&quot;2217331093-solar-panel-1308944675.jpg&quot;,&quot;width&quot;:3015,&quot;height&quot;:2010,&quot;source&quot;:0,&quot;siteId&quot;:&quot;29b6b8d5-fe00-4e67-a42d-84456788df55&quot;,&quot;webId&quot;:&quot;38a71296-dfe7-4f64-a6a1-c1691144d90e&quot;,&quot;listId&quot;:&quot;907c478a-cf6b-4de9-90b0-b4f22bd27814&quot;,&quot;uniqueId&quot;:&quot;c0e486ce-681b-4bbf-b1df-67786baa01bd&quot;},&quot;overlay&quot;:{&quot;color&quot;:{&quot;type&quot;:&quot;linear&quot;,&quot;key&quot;:&quot;dark&quot;,&quot;angle&quot;:0,&quot;stops&quot;:[{&quot;color&quot;:&quot;#000000&quot;,&quot;transparency&quot;:1},{&quot;color&quot;:&quot;#000000&quot;,&quot;transparency&quot;:0}]},&quot;opacity&quot;:85},&quot;useLightText&quot;:true},&quot;22ed21d0-941e-40a2-a886-f3a629b456c4&quot;:{&quot;type&quot;:&quot;image&quot;,&quot;imageData&quot;:{&quot;fileName&quot;:&quot;3718650941-bg-top.png&quot;,&quot;width&quot;:3500,&quot;height&quot;:100,&quot;source&quot;:0,&quot;siteId&quot;:&quot;29b6b8d5-fe00-4e67-a42d-84456788df55&quot;,&quot;webId&quot;:&quot;38a71296-dfe7-4f64-a6a1-c1691144d90e&quot;,&quot;listId&quot;:&quot;907c478a-cf6b-4de9-90b0-b4f22bd27814&quot;,&quot;uniqueId&quot;:&quot;fcfbd0a9-5f38-4e74-8eba-4be5d7432e9c&quot;},&quot;overlay&quot;:{&quot;color&quot;:&quot;#000000&quot;,&quot;opacity&quot;:0},&quot;useLightText&quot;:true},&quot;ab4e10c0-6327-4129-99b3-823e0436dd33&quot;:{&quot;type&quot;:&quot;image&quot;,&quot;imageData&quot;:{&quot;fileName&quot;:&quot;3915280274-bg-bottom.png&quot;,&quot;width&quot;:3500,&quot;height&quot;:100,&quot;source&quot;:0,&quot;siteId&quot;:&quot;29b6b8d5-fe00-4e67-a42d-84456788df55&quot;,&quot;webId&quot;:&quot;38a71296-dfe7-4f64-a6a1-c1691144d90e&quot;,&quot;listId&quot;:&quot;907c478a-cf6b-4de9-90b0-b4f22bd27814&quot;,&quot;uniqueId&quot;:&quot;441bb3bd-f921-44e5-88e7-fd0fc9969fd8&quot;},&quot;overlay&quot;:{&quot;color&quot;:&quot;#000000&quot;,&quot;opacity&quot;:0},&quot;useLightText&quot;:true},&quot;e59e302c-b30d-439a-a82f-d1c851f67a60&quot;:{&quot;type&quot;:&quot;image&quot;,&quot;imageData&quot;:{&quot;fileName&quot;:&quot;2066642434-bg-top.png&quot;,&quot;width&quot;:3500,&quot;height&quot;:100,&quot;source&quot;:0,&quot;siteId&quot;:&quot;29b6b8d5-fe00-4e67-a42d-84456788df55&quot;,&quot;webId&quot;:&quot;38a71296-dfe7-4f64-a6a1-c1691144d90e&quot;,&quot;listId&quot;:&quot;907c478a-cf6b-4de9-90b0-b4f22bd27814&quot;,&quot;uniqueId&quot;:&quot;c19011cb-83b8-425b-b0b7-79fd04b31d5d&quot;},&quot;overlay&quot;:{&quot;color&quot;:&quot;#000000&quot;,&quot;opacity&quot;:0},&quot;useLightText&quot;:true},&quot;a30c823d-2e63-4df1-a5fe-52f91eab4072&quot;:{&quot;type&quot;:&quot;image&quot;,&quot;imageData&quot;:{&quot;fileName&quot;:&quot;1148676821-bg-bottom.png&quot;,&quot;width&quot;:3500,&quot;height&quot;:183,&quot;source&quot;:0,&quot;siteId&quot;:&quot;29b6b8d5-fe00-4e67-a42d-84456788df55&quot;,&quot;webId&quot;:&quot;38a71296-dfe7-4f64-a6a1-c1691144d90e&quot;,&quot;listId&quot;:&quot;907c478a-cf6b-4de9-90b0-b4f22bd27814&quot;,&quot;uniqueId&quot;:&quot;20ec7a9d-2f31-4fe0-af5d-7a031726939c&quot;},&quot;overlay&quot;:{&quot;color&quot;:&quot;#000000&quot;,&quot;opacity&quot;:0},&quot;useLightText&quot;:true},&quot;390cf201-859a-4448-994c-08d4cd142b28&quot;:{&quot;type&quot;:&quot;image&quot;,&quot;imageData&quot;:{&quot;fileName&quot;:&quot;425767eb-2911-4248-be6b-e86ac61c919b&quot;,&quot;width&quot;:3015,&quot;height&quot;:2010,&quot;source&quot;:2,&quot;stockMediaId&quot;:&quot;425767eb-2911-4248-be6b-e86ac61c919b&quot;,&quot;contentProvider&quot;:&quot;Hubble&quot;},&quot;overlay&quot;:{&quot;color&quot;:&quot;#000000&quot;,&quot;opacity&quot;:57},&quot;useLightText&quot;:true,&quot;focalPoint&quot;:{&quot;x&quot;:0.003682267775229356,&quot;y&quot;:0.5529762758027522}}},&quot;zoneThemeIndex&quot;:{&quot;5eb672c4-8357-40bf-9757-a08f2d9ed428&quot;:{&quot;lightIndex&quot;:1,&quot;darkIndex&quot;:1},&quot;505d8621-8e3b-421b-8d0a-c4077e1d72cf&quot;:{&quot;lightIndex&quot;:0,&quot;darkIndex&quot;:0},&quot;4090aa7c-12e2-4c7b-806a-e969e612db73&quot;:{&quot;lightIndex&quot;:1,&quot;darkIndex&quot;:1},&quot;390cf201-859a-4448-994c-08d4cd142b28&quot;:{&quot;lightIndex&quot;:0,&quot;darkIndex&quot;:0}}},&quot;serverProcessedContent&quot;:{&quot;htmlStrings&quot;:{},&quot;searchablePlainTexts&quot;:{},&quot;imageSources&quot;:{&quot;zoneBackground.2407fcbc-c1f2-419f-9b81-53a869f1609b.imageData.url&quot;:&quot;{site}/SiteAssets/SitePages/Home/2217331093-solar-panel-1308944675.jpg&quot;,&quot;zoneBackground.22ed21d0-941e-40a2-a886-f3a629b456c4.imageData.url&quot;:&quot;{site}/SiteAssets/SitePages/Home/3718650941-bg-top.png&quot;,&quot;zoneBackground.ab4e10c0-6327-4129-99b3-823e0436dd33.imageData.url&quot;:&quot;{site}/SiteAssets/SitePages/Home/3915280274-bg-bottom.png&quot;,&quot;zoneBackground.e59e302c-b30d-439a-a82f-d1c851f67a60.imageData.url&quot;:&quot;{site}/SiteAssets/SitePages/Home/2066642434-bg-top.png&quot;,&quot;zoneBackground.a30c823d-2e63-4df1-a5fe-52f91eab4072.imageData.url&quot;:&quot;{site}/SiteAssets/SitePages/Home/1148676821-bg-bottom.png&quot;,&quot;zoneBackground.390cf201-859a-4448-994c-08d4cd142b28.imageData.url&quot;:&quot;https://cdn.hubblecontent.osi.office.net/m365content/publish/425767eb-2911-4248-be6b-e86ac61c919b/515705348.jpg&quot;},&quot;links&quot;:{}},&quot;dynamicDataPaths&quot;:{},&quot;dynamicDataValues&quot;:{},&quot;dataVersion&quot;:&quot;1.0&quot;}" ControlId="72c2457e-95f6-4f08-8964-20430b548d01" Order="4" Column="1" />
               </pnp:Controls>
             </pnp:Section>
             <pnp:Section Order="2" Type="OneColumn">
@@ -2827,7 +950,7 @@
             </pnp:Section>
             <pnp:Section Order="3" Type="OneColumn">
               <pnp:Controls>
-                <pnp:CanvasControl WebPartType="Custom" JsonControlData="{&quot;controlType&quot;:1,&quot;id&quot;:&quot;emptySection&quot;,&quot;position&quot;:{&quot;controlIndex&quot;:0,&quot;zoneIndex&quot;:3,&quot;sectionIndex&quot;:1,&quot;sectionFactor&quot;:100,&quot;layoutIndex&quot;:1,&quot;zoneId&quot;:&quot;22ed21d0-941e-40a2-a886-f3a629b456c4&quot;},&quot;emphasis&quot;:{&quot;zoneEmphasis&quot;:0}}" ControlId="34730c2c-5139-4d58-9b26-8d76d57abb29" Order="1" Column="1" />
+                <pnp:CanvasControl WebPartType="Custom" JsonControlData="{&quot;controlType&quot;:1,&quot;id&quot;:&quot;emptySection&quot;,&quot;position&quot;:{&quot;controlIndex&quot;:0,&quot;zoneIndex&quot;:3,&quot;sectionIndex&quot;:1,&quot;sectionFactor&quot;:100,&quot;layoutIndex&quot;:1,&quot;zoneId&quot;:&quot;22ed21d0-941e-40a2-a886-f3a629b456c4&quot;},&quot;emphasis&quot;:{&quot;zoneEmphasis&quot;:0}}" ControlId="ec2d555c-eb31-46fc-9da1-4ce4bcb2f7db" Order="1" Column="1" />
               </pnp:Controls>
             </pnp:Section>
             <pnp:Section Order="4" Type="OneColumn">
@@ -2845,7 +968,7 @@
             </pnp:Section>
             <pnp:Section Order="5" Type="OneColumn">
               <pnp:Controls>
-                <pnp:CanvasControl WebPartType="Custom" JsonControlData="{&quot;controlType&quot;:1,&quot;id&quot;:&quot;emptySection&quot;,&quot;position&quot;:{&quot;controlIndex&quot;:0,&quot;zoneIndex&quot;:5,&quot;sectionIndex&quot;:1,&quot;sectionFactor&quot;:100,&quot;layoutIndex&quot;:1,&quot;zoneId&quot;:&quot;ab4e10c0-6327-4129-99b3-823e0436dd33&quot;},&quot;emphasis&quot;:{&quot;zoneEmphasis&quot;:0}}" ControlId="96b1884f-6d52-4385-9e91-4d371cfd6aa0" Order="1" Column="1" />
+                <pnp:CanvasControl WebPartType="Custom" JsonControlData="{&quot;controlType&quot;:1,&quot;id&quot;:&quot;emptySection&quot;,&quot;position&quot;:{&quot;controlIndex&quot;:0,&quot;zoneIndex&quot;:5,&quot;sectionIndex&quot;:1,&quot;sectionFactor&quot;:100,&quot;layoutIndex&quot;:1,&quot;zoneId&quot;:&quot;ab4e10c0-6327-4129-99b3-823e0436dd33&quot;},&quot;emphasis&quot;:{&quot;zoneEmphasis&quot;:0}}" ControlId="b16ebc23-a514-4cc7-a887-898895cde887" Order="1" Column="1" />
               </pnp:Controls>
             </pnp:Section>
             <pnp:Section Order="6" Type="TwoColumnLeft">
@@ -2874,7 +997,7 @@
             </pnp:Section>
             <pnp:Section Order="7" Type="OneColumn">
               <pnp:Controls>
-                <pnp:CanvasControl WebPartType="Custom" JsonControlData="{&quot;controlType&quot;:1,&quot;id&quot;:&quot;emptySection&quot;,&quot;position&quot;:{&quot;controlIndex&quot;:0,&quot;zoneIndex&quot;:7,&quot;sectionIndex&quot;:1,&quot;sectionFactor&quot;:100,&quot;layoutIndex&quot;:1,&quot;zoneId&quot;:&quot;e59e302c-b30d-439a-a82f-d1c851f67a60&quot;},&quot;emphasis&quot;:{&quot;zoneEmphasis&quot;:0}}" ControlId="7b462628-e789-4a4e-8dcd-a8d282d85703" Order="1" Column="1" />
+                <pnp:CanvasControl WebPartType="Custom" JsonControlData="{&quot;controlType&quot;:1,&quot;id&quot;:&quot;emptySection&quot;,&quot;position&quot;:{&quot;controlIndex&quot;:0,&quot;zoneIndex&quot;:7,&quot;sectionIndex&quot;:1,&quot;sectionFactor&quot;:100,&quot;layoutIndex&quot;:1,&quot;zoneId&quot;:&quot;e59e302c-b30d-439a-a82f-d1c851f67a60&quot;},&quot;emphasis&quot;:{&quot;zoneEmphasis&quot;:0}}" ControlId="21d9346e-bb12-4827-a01b-02d9415667a4" Order="1" Column="1" />
               </pnp:Controls>
             </pnp:Section>
             <pnp:Section Order="8" Type="OneColumn">
@@ -2896,7 +1019,7 @@
             </pnp:Section>
             <pnp:Section Order="9" Type="OneColumn">
               <pnp:Controls>
-                <pnp:CanvasControl WebPartType="Custom" JsonControlData="{&quot;controlType&quot;:1,&quot;id&quot;:&quot;emptySection&quot;,&quot;position&quot;:{&quot;controlIndex&quot;:0,&quot;zoneIndex&quot;:9,&quot;sectionIndex&quot;:1,&quot;sectionFactor&quot;:100,&quot;layoutIndex&quot;:1,&quot;zoneId&quot;:&quot;a30c823d-2e63-4df1-a5fe-52f91eab4072&quot;},&quot;emphasis&quot;:{&quot;zoneEmphasis&quot;:0}}" ControlId="027d4f62-923e-4af0-818c-355f9b549e55" Order="1" Column="1" />
+                <pnp:CanvasControl WebPartType="Custom" JsonControlData="{&quot;controlType&quot;:1,&quot;id&quot;:&quot;emptySection&quot;,&quot;position&quot;:{&quot;controlIndex&quot;:0,&quot;zoneIndex&quot;:9,&quot;sectionIndex&quot;:1,&quot;sectionFactor&quot;:100,&quot;layoutIndex&quot;:1,&quot;zoneId&quot;:&quot;a30c823d-2e63-4df1-a5fe-52f91eab4072&quot;},&quot;emphasis&quot;:{&quot;zoneEmphasis&quot;:0}}" ControlId="6a54a8cf-5103-402f-8267-a3e89bcc57dd" Order="1" Column="1" />
               </pnp:Controls>
             </pnp:Section>
             <pnp:Section Order="10" Type="OneColumn">

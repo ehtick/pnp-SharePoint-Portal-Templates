@@ -72,29 +72,6 @@ foreach ($page in $sitePages) {
     if ($pageMetadata -and (Test-Path $folder)) {
 
         $dept = $pageMetadata.Department
-        # $thumbUrl = $pageMetadata.ThumbnailUrl
-
-        # $saSitePages = "/sites/$($siteUrl)/SiteAssets/SitePages"
-        # $saFolderName = $pageMetadata.PageName.Replace('.aspx', '')
-        # $saFolder = "$saSitePages/$($saFolderName)"
-
-        # $pageFolder = Get-PnPFolder -Connection $newSiteConnection -Url $saFolder -ErrorAction SilentlyContinue
-
-        # if (!$pageFolder) {
-        #     Add-PnPFolder -Connection $newSiteConnection -Name $saFolderName -Folder $saSitePages #| Out-Null
-        #     # New-Item -ItemType Directory -Path $saFolder | Out-Null
-        # }
-        # $fileName = [System.IO.Path]::GetFileName(([uri]$thumbUrl).AbsolutePath)
-            
-        # # Upload the file in $folder to the Site Assets library
-        # Write-Host -BackgroundColor Cyan "  Uploading thumbnail $($fileName) to $saFolder"
-
-        # Add-PnPFile -Connection $newSiteConnection -Path "$($folder)\$($fileName)" -Folder $saFolder #| Out-Null
-
-        # Set-PnPPage `
-        #     -Connection $newSiteConnection `
-        #     -Identity $page.FieldValues["FileLeafRef"] `
-        #     -ThumbnailUrl "/sites/$($siteUrl)/SiteAssets/SitePages/$($pageMetadata.PageName.Replace('.aspx', ''))/$fileName" # | Out-Null
 
         $newItem = Set-PnPListItem -Connection $newSiteConnection -List "Site Pages" -Identity $page.Id -Values @{
             "ol_Department" = $pageMetadata.Department

@@ -22,3 +22,25 @@ $xml.Provisioning.Templates.ProvisioningTemplate.ClientSidePages.ClientSidePage 
     }
 }
 $xml.Save("./templates/Solbound/PnPProvisioning/PnP-Provisioning-SolboundSite.xml")
+
+# Add the Events list items to the template's XML file, as they are not included in the template export, as we need to limit the columns we export to only the required columns for the Events list, and we need to add the items to the template XML file manually.
+$fields = @(
+    "Title",
+    "EventDate",
+    "EndDate",
+    "Location",
+    "Description",
+    "fAllDayEvent",
+    "fRecurrence",
+    "EventType",
+    "Category",
+    "BannerUrl"
+)
+
+Add-PnPDataRowsToSiteTemplate `
+    -Connection $templateSiteConnection `
+    -Path "./templates/Solbound/PnPProvisioning/PnP-Provisioning-SolboundSite.xml" `
+    -List "Events" `
+    -KeyColumn "Title" `
+    -Fields $fields `
+    -TokenizeUrls

@@ -17,12 +17,10 @@
                 "title": "Site Pages"
             },
             {
-                "title": "Site Assets",
-                "includeItems": true
+                "title": "Site Assets"
             },
             {
-                "title": "Events",
-                "includeItems": true
+                "title": "Events"
             }
         ]
     },
